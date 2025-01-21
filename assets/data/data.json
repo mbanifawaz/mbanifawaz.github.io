@@ -1,0 +1,36 @@
+{
+    "skills": 
+    {
+        "columns":2,
+        "data":[
+            { "name": "C#", "level": 80 },
+            { "name": "Java", "level": 75 },
+            { "name": "Python", "level": 85 },
+            { "name": "C++", "level": 70 },
+            { "name": "PHP", "level": 80 },
+            { "name": "HTML", "level": 100 },
+            { "name": "CSS", "level": 90 },
+            { "name": "JavaScript", "level": 75 },
+            { "name": "SQL/MySQL", "level": 80 },
+            { "name": "VB", "level": 60 },
+            { "name": "Visual Basic", "level": 65 },
+            { "name": "VBS", "level": 50 },
+            { "name": "BAT", "level": 45 },
+            { "name": "Visual Studio", "level": 85 },
+            { "name": ".NET", "level": 85 },
+            { "name": "ASP.net", "level": 70 },
+            { "name": "React", "level": 80 },
+            { "name": "Angular", "level": 70 },
+            { "name": "Laravel", "level": 75 },
+            { "name": "Flutter", "level": 65 },
+            { "name": "Node.js", "level": 70 },
+            { "name": "Frappe", "level": 85 },
+            { "name": "Jinja", "level": 70 },
+            { "name": "ERPNext", "level": 80 },
+            { "name": "Unreal Engine", "level": 60 },
+            { "name": "Unity", "level": 65 },
+            { "name": "Linux (Kali, Ubuntu, Manjaro)", "level": 85 },
+            { "name": "Docker", "level": 80 }
+          ]
+    }
+  }
