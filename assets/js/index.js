@@ -24,15 +24,39 @@ async function loadData() {
     const response = await fetch('assets/data/data.json'); // Fetch the JSON file
     const data = await response.json(); // Parse the JSON
 
+    await loadConfig(data.config)
+
     // Assuming skills data is located inside the response
-    loadSkills(data.skills); // Load skills
+    await loadSkills(data.skills); // Load skills
   } catch (error) {
     console.error('Error loading JSON data:', error);
   }
 }
 
+async function loadConfig(config) {
+  const maintenance_mode = config.maintenance_mode;
+  
+  if (maintenance_mode == 1) {
+    console.log('Maintenance Mode Active');
+    const iframe = document.createElement('iframe');
+    iframe.src = 'https://mbanifawaz.github.io/coming-soon/';
+    iframe.style.position = 'fixed';
+    iframe.style.top = '0';
+    iframe.style.left = '0';
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.style.border = 'none';
+    iframe.style.zIndex = '99999';  // Ensure the iframe is on top of other content
+
+    // Append the iframe to the body as an overlay
+    document.body.appendChild(iframe);
+    document.body.style.overflow = "hidden"
+  }
+  
+}
+
 // Function to dynamically load skills into columns
-function loadSkills(skills) {
+async function loadSkills(skills) {
   const skillsContainer = document.querySelector('.skills-content');
   const columns = skills.columns; // Define the number of columns (you can make this configurable)
   skills = skills.data

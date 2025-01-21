@@ -32,5 +32,9 @@
             { "name": "Linux (Kali, Ubuntu, Manjaro)", "level": 85 },
             { "name": "Docker", "level": 80 }
           ]
+    },
+    "config":
+    {
+        "maintenance_mode":1
     }
   }
