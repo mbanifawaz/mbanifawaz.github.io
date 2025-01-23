@@ -335,7 +335,7 @@ async function loadPortfolio(portfolio) {
           const portfolioItem = detailsLink.closest('.portfolio-item');
           const title = portfolioItem.querySelector('.portfolio-info h4').textContent;
           const item = globalData.portfolio.items.find(item => item.title === title);
-          const category = item.category.replace("filter-", "").replace(/^./, str => str.toUpperCase())
+          const category = item.category.replace(/filter-/g, "").replace(/\b\w/g, str => str.toUpperCase()).replace(/ /g, " | ");        
           const description = item.description
           const stack = item.stack
           const platform = item.platform

@@ -206,7 +206,7 @@
         "filters": [
           { "value": "*", "label": "All", "active": true },
           { "value": ".filter-app", "label": "Apps", "active": false },
-          { "value": ".filter-website", "label": "Websites", "active": false },
+          { "value": ".filter-web", "label": "Web", "active": false },
           { "value": ".filter-project", "label": "Projects", "active": false },
           { "value": ".filter-script", "label": "Scripts", "active": false },
           { "value": ".filter-courses", "label": "Courses", "active": false }
@@ -241,7 +241,7 @@
             "projectURLText":"TBA"
           },
           {
-            "category": "filter-website",
+            "category": "filter-web",
             "image": "assets/img/portfolio/iloveyou.png",
             "title": "I Love You ♥♥♥",
             "shortDescription": "A heartfelt interactive webpage featuring song lyrics with a typewriter effect.",
@@ -255,7 +255,7 @@
             "projectURLText": "Visit Website"
           },
           {
-            "category": "filter-website",
+            "category": "filter-web",
             "image": "assets/img/portfolio/comingsoon.png",
             "title": "Coming Soon Template",
             "shortDescription": "A responsive website template for a 'Coming Soon' page",
@@ -276,11 +276,25 @@
             "description": "This presentation will cover the basics of Python programming, from setting up your environment to exploring essential concepts and techniques. We will delve into data types, control flow, functions, modules and object-oriented programming, equipping you with the foundational knowledge necessary for effective Python development. Let's embark on this journey together!",
             "galleryGroup": "portfolio-gallery-website",
             "stack": "Python",
-            "platform": "*",
+            "platform": "The Human Mind",
             "client": "Munes Bani Fawaz",
             "projectDate": "Jan 11, 2025",
             "projectURL": "https://github.com/mbanifawaz/Python-Fundamentals-Presentation",
             "projectURLText": "Get Material"
+          },
+          {
+            "category": "filter-web filter-app filter-project",
+            "image": "assets/img/portfolio/pos.gif",
+            "title": "Point of Sale Client Demo",
+            "shortDescription": "A seamless checkout-free shopping experience.",
+            "description": "Experience the future of shopping with a smart Point of Sale (POS) demo inspired by Amazon Go. This cutting-edge system uses barcode scanning to enable a seamless, checkout-free shopping experience. Customers can simply enter, pick up their desired items, and leave—no lines, no waiting. Payments are handled automatically through the POS device, delivering unmatched convenience and efficiency. Ideal for busy individuals who prioritize their time and prefer hassle-free shopping!",
+            "galleryGroup": "portfolio-gallery-website",
+            "stack": "Angular | Node JS | SQLite",
+            "platform": "Web | PWA",
+            "client": "Wowly",
+            "projectDate": "2023",
+            "projectURL": "https://www.itswowly.com/home",
+            "projectURLText": "Client Page"
           }
           
         ]
