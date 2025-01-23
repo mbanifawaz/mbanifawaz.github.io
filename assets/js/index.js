@@ -26,8 +26,9 @@ async function loadData() {
 
     await loadConfig(data.config)
 
-    // Assuming skills data is located inside the response
-    await loadSkills(data.skills); // Load skills
+    await loadLinks(data.links)
+
+    await loadSkills(data.skills);
   } catch (error) {
     console.error('Error loading JSON data:', error);
   }
@@ -53,6 +54,16 @@ async function loadConfig(config) {
     document.body.style.overflow = "hidden"
   }
   
+}
+
+async function loadLinks(links) {
+  const linksContainer = document.querySelector('.social-links');
+  let linksHTML = '';
+  linksHTML += links.map(skill => `
+    <a href="${skill.href}" target="_blank"><i class="${skill.icon}"></i></a>
+  `)
+  .join('');
+  linksContainer.innerHTML = linksHTML;
 }
 
 // Function to dynamically load skills into columns
