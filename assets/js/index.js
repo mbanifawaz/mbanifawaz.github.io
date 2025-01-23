@@ -337,8 +337,18 @@ async function loadPortfolio(portfolio) {
             );
             
             if (hiddenLinks.length > 0) {
-                // Trigger the first link in the gallery
-                hiddenLinks[0].click();
+                const clickedItem = triggerLink.closest('.portfolio-item');
+                const clickedItemIndex = Array.from(clickedItem.parentNode.children).indexOf(clickedItem);
+                
+                const lightbox = GLightbox({
+                    selector: `.gallery-hidden-link[data-gallery="${galleryGroup}"]`,
+                    touchNavigation: true,
+                    loop: true,
+                    zoomable: true,
+                    startAt: hiddenLinks.length > 1 ? clickedItemIndex : 0
+                });
+                
+                lightbox.open();
             }
         }
         if (detailsLink) {
