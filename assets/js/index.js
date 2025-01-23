@@ -1,4 +1,4 @@
-
+let globalData;
 // Ensure the document is fully loaded
 document.addEventListener('DOMContentLoaded', async () => {
   await loadData();
@@ -23,6 +23,7 @@ async function loadData() {
   try {
     const response = await fetch('assets/data/data.json'); // Fetch the JSON file
     const data = await response.json(); // Parse the JSON
+    globalData = data; // Store the data in the global variable
 
     await loadConfig(data.config);
 
@@ -287,7 +288,7 @@ async function loadPortfolio(portfolio) {
                 <img src="${item.image}" class="img-fluid" alt="${item.title}" style="width:100%; height:auto; object-fit:cover;">
                 <div class="portfolio-info">
                     <h4>${item.title}</h4>
-                    <p>${item.description}</p>
+                    <p>${item.shortDescription}</p>
                     <a href="#" data-open-gallery="${item.galleryGroup}" 
                        class="gallery-trigger preview-link">
                        <i class="bi bi-zoom-in"></i>
@@ -331,26 +332,29 @@ async function loadPortfolio(portfolio) {
         }
         if (detailsLink) {
           e.preventDefault();
-      
-          // Get project details from the parent portfolio item
           const portfolioItem = detailsLink.closest('.portfolio-item');
-          const images = portfolioItem.querySelectorAll('img');
           const title = portfolioItem.querySelector('.portfolio-info h4').textContent;
-          const description = portfolioItem.querySelector('.portfolio-info p').textContent;
+          const item = globalData.portfolio.items.find(item => item.title === title);
+          const category = item.category.replace("filter-", "").replace(/^./, str => str.toUpperCase())
+          const description = item.description
+          const client = item.client
+          const projectDate = item.projectDate
+          const projectURL = item.projectURL
+          const projectURLText = item.projectURLText
       
           // Populate modal with the first image (or any image you prefer)
           const portfolioImage = document.querySelector('#portfolioDetailsModal .portfolio-image');
           portfolioImage.innerHTML = `
-              <img src="${images[0].src}" alt="${title}" class="img-fluid">
+              <img src="${item.image}" alt="${title}" class="img-fluid">
           `;
       
           // Populate project info (you can customize this)
           const portfolioInfo = document.querySelector('#portfolioDetailsModal .portfolio-info ul');
           portfolioInfo.innerHTML = `
-              <li><strong>Category</strong>: Web Design</li>
-              <li><strong>Client</strong>: Sample Client</li>
-              <li><strong>Project Date</strong>: 01 March, 2020</li>
-              <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+              <li><strong>Category</strong>: ${category}</li>
+              <li><strong>Client</strong>: ${client}</li>
+              <li><strong>Project Date</strong>: ${projectDate}</li>
+              <li><strong>Project URL</strong>: <a href="${projectURL}" target="_blank">${projectURLText}</a></li>
           `;
       
           // Populate description

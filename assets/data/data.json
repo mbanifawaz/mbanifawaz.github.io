@@ -203,8 +203,13 @@
             "category": "filter-app",
             "image": "assets/img/portfolio/jordan_prayer_times.png",
             "title": "Jordan Prayer Times",
+            "shortDescription":"Get accurate prayer times in Jordan with notifications.",
             "description": "Jordan Prayer Times is a comprehensive and easy-to-use app that helps you stay on track with your daily prayers. Whether you're at home, at work, or on the go, this app provides accurate prayer times based on your location in Jordan and allows you to have notifications to suit your preferences.",
-            "galleryGroup": "portfolio-gallery-app"
+            "galleryGroup": "portfolio-gallery-app",
+            "client":"Munes Bani Fawaz",
+            "projectDate":"Jan 8, 2025",
+            "projectURL":"https://play.google.com/store/apps/details?id=com.mbf.jordan_prayer_times_app",
+            "projectURLText":"Google Play Store"
           }
         ]
       },
