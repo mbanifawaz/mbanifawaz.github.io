@@ -237,8 +237,23 @@
             "client":"Munes Bani Fawaz",
             "projectDate":"TBA",
             "projectURL":"#",
-            "projectURLText":"Project In Development"
+            "projectURLText":"TBA"
+          },
+          {
+            "category": "filter-website",
+            "image": "assets/img/portfolio/iloveyou.png",
+            "title": "I Love You ♥♥♥",
+            "shortDescription": "A heartfelt interactive webpage featuring song lyrics with a typewriter effect.",
+            "description": "This project is a visually appealing and interactive webpage that displays song lyrics in a typewriter effect, inspired by the song 'All of Me' by John Legend. The page includes a heart-like button that, when clicked, starts the animation of the song lyrics and plays the music. The background and button transition between grayscale and normal modes to create a visually dynamic experience. The project is designed to evoke emotions through its heartwarming theme and smooth animations.",
+            "galleryGroup": "portfolio-gallery-website",
+            "stack": "HTML | CSS | JavaScript",
+            "platform": "Web",
+            "client": "Munes Bani Fawaz",
+            "projectDate": "Nov 15, 2022",
+            "projectURL": "https://mrgiveitaway-tpk.github.io/I_Love_You/",
+            "projectURLText": "Visit Website"
           }
+          
         ]
       },
     "config":
