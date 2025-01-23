@@ -292,7 +292,7 @@ async function loadPortfolio(portfolio) {
                        class="gallery-trigger preview-link">
                        <i class="bi bi-zoom-in"></i>
                     </a>
-                    <a href="portfolio-details.html" 
+                    <a href="#" 
                        title="More Details" 
                        class="details-link">
                        <i class="bi bi-link-45deg"></i>
@@ -312,9 +312,11 @@ async function loadPortfolio(portfolio) {
         zoomable: true
     });
 
-    // Gallery Trigger Logic
+    // Gallery & Details Trigger Logic
     document.addEventListener('click', function(e) {
         const triggerLink = e.target.closest('.gallery-trigger');
+        const portfolioDetailsModal = new bootstrap.Modal(document.getElementById('portfolioDetailsModal'));
+        const detailsLink = e.target.closest('.details-link');
         if (triggerLink) {
             e.preventDefault();
             const galleryGroup = triggerLink.getAttribute('data-open-gallery');
@@ -327,6 +329,41 @@ async function loadPortfolio(portfolio) {
                 hiddenLinks[0].click();
             }
         }
+        if (detailsLink) {
+          e.preventDefault();
+      
+          // Get project details from the parent portfolio item
+          const portfolioItem = detailsLink.closest('.portfolio-item');
+          const images = portfolioItem.querySelectorAll('img');
+          const title = portfolioItem.querySelector('.portfolio-info h4').textContent;
+          const description = portfolioItem.querySelector('.portfolio-info p').textContent;
+      
+          // Populate modal with the first image (or any image you prefer)
+          const portfolioImage = document.querySelector('#portfolioDetailsModal .portfolio-image');
+          portfolioImage.innerHTML = `
+              <img src="${images[0].src}" alt="${title}" class="img-fluid">
+          `;
+      
+          // Populate project info (you can customize this)
+          const portfolioInfo = document.querySelector('#portfolioDetailsModal .portfolio-info ul');
+          portfolioInfo.innerHTML = `
+              <li><strong>Category</strong>: Web Design</li>
+              <li><strong>Client</strong>: Sample Client</li>
+              <li><strong>Project Date</strong>: 01 March, 2020</li>
+              <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+          `;
+      
+          // Populate description
+          const portfolioDescription = document.querySelector('#portfolioDetailsModal .portfolio-description');
+          portfolioDescription.innerHTML = `
+              <h2>${title}</h2>
+              <p>${description}</p>
+          `;
+      
+          // Show the modal
+          portfolioDetailsModal.show();
+      }      
+
     });
 
     // Initialize Isotope with additional options
