@@ -189,7 +189,102 @@
           "name": "Mahmoud H. Sadder",
           "title": "Support | QA Engineer"
         }
-      ],      
+      ],   
+      "portfolio": {
+        "filters": [
+          { "value": "*", "label": "All", "active": true },
+          { "value": ".filter-app", "label": "App", "active": false },
+          { "value": ".filter-product", "label": "Product", "active": false },
+          { "value": ".filter-branding", "label": "Branding", "active": false },
+          { "value": ".filter-books", "label": "Books", "active": false }
+        ],
+        "items": [
+          {
+            "category": "filter-app",
+            "image": "assets/img/portfolio/app-1.jpg",
+            "title": "App 1",
+            "description": "Lorem ipsum, dolor sit amet consectetur",
+            "galleryGroup": "portfolio-gallery-app"
+          },
+          {
+            "category": "filter-product",
+            "image": "assets/img/portfolio/product-1.jpg", 
+            "title": "Product 1",
+            "description": "Lorem ipsum, dolor sit amet consectetur",
+            "galleryGroup": "portfolio-gallery-product"
+          },
+          {
+            "category": "filter-branding",
+            "image": "assets/img/portfolio/branding-1.jpg",
+            "title": "Branding 1", 
+            "description": "Lorem ipsum, dolor sit amet consectetur",
+            "galleryGroup": "portfolio-gallery-branding"
+          },
+          {
+            "category": "filter-books",
+            "image": "assets/img/portfolio/books-1.jpg",
+            "title": "Books 1",
+            "description": "Lorem ipsum, dolor sit amet consectetur", 
+            "galleryGroup": "portfolio-gallery-book"
+          },
+          {
+            "category": "filter-app",
+            "image": "assets/img/portfolio/app-2.jpg",
+            "title": "App 2",
+            "description": "Lorem ipsum, dolor sit amet consectetur",
+            "galleryGroup": "portfolio-gallery-app"
+          },
+          {
+            "category": "filter-product", 
+            "image": "assets/img/portfolio/product-2.jpg",
+            "title": "Product 2",
+            "description": "Lorem ipsum, dolor sit amet consectetur",
+            "galleryGroup": "portfolio-gallery-product"
+          },
+          {
+            "category": "filter-branding",
+            "image": "assets/img/portfolio/branding-2.jpg", 
+            "title": "Branding 2",
+            "description": "Lorem ipsum, dolor sit amet consectetur",
+            "galleryGroup": "portfolio-gallery-branding"
+          },
+          {
+            "category": "filter-books",
+            "image": "assets/img/portfolio/books-2.jpg",
+            "title": "Books 2", 
+            "description": "Lorem ipsum, dolor sit amet consectetur",
+            "galleryGroup": "portfolio-gallery-book"
+          },
+          {
+            "category": "filter-app",
+            "image": "assets/img/portfolio/app-3.jpg",
+            "title": "App 3",
+            "description": "Lorem ipsum, dolor sit amet consectetur", 
+            "galleryGroup": "portfolio-gallery-app"
+          },
+          {
+            "category": "filter-product",
+            "image": "assets/img/portfolio/product-3.jpg",
+            "title": "Product 3",
+            "description": "Lorem ipsum, dolor sit amet consectetur",
+            "galleryGroup": "portfolio-gallery-product"
+          },
+          {
+            "category": "filter-branding", 
+            "image": "assets/img/portfolio/branding-3.jpg",
+            "title": "Branding 3",
+            "description": "Lorem ipsum, dolor sit amet consectetur",
+            "galleryGroup": "portfolio-gallery-branding"
+          },
+          {
+            "category": "filter-books",
+            "image": "assets/img/portfolio/books-3.jpg",
+            "title": "Books 3",
+            "description": "Lorem ipsum, dolor sit amet consectetur",
+            "galleryGroup": "portfolio-gallery-book"
+          }
+        ]
+      },
     "config":
     {
         "maintenance_mode":0

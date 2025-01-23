@@ -32,7 +32,9 @@ async function loadData() {
 
     await loadResume(data.resume);
 
-    await loadTestimonials(data.testimonials)
+    await loadTestimonials(data.testimonials);
+
+    await loadPortfolio(data.portfolio);
   } catch (error) {
     console.error('Error loading JSON data:', error);
   }
@@ -158,32 +160,82 @@ async function loadResume(resume) {
 }
 
 async function loadTestimonials(testimonials) {
-  const container = document.getElementById("testimonial-container");
+  // Create the swiper container
+  const swiperContainer = document.createElement('div');
+  swiperContainer.classList.add('swiper', 'init-swiper');
 
+  // Create the Swiper config as a script tag and append it to the container
+  const swiperConfigScript = document.createElement('script');
+  swiperConfigScript.type = 'application/json';
+  swiperConfigScript.classList.add('swiper-config');
+  swiperConfigScript.innerText = JSON.stringify({
+    loop: true,
+    speed: 600,
+    autoplay: {
+      delay: 5000
+    },
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 40
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 1
+      }
+    }
+  });
+
+  swiperContainer.appendChild(swiperConfigScript);
+
+  // Create the swiper wrapper container
+  const swiperWrapper = document.createElement('div');
+  swiperWrapper.classList.add('swiper-wrapper');
+  swiperWrapper.id = 'testimonial-container';
+  swiperContainer.appendChild(swiperWrapper);
+
+  // Create the pagination container
+  const swiperPagination = document.createElement('div');
+  swiperPagination.classList.add('swiper-pagination');
+  swiperContainer.appendChild(swiperPagination);
+
+  // Append the swiper container to the body (or any other desired container)
+  document.querySelector('.swipermaincontainer').appendChild(swiperContainer);
+
+  // Add testimonial slides
   testimonials.forEach(testimonial => {
-    const slide = document.createElement("div");
-    slide.classList.add("swiper-slide");
+    const slide = document.createElement('div');
+    slide.classList.add('swiper-slide');
 
     slide.innerHTML = `
-  <div class="testimonial-item">
-    <p>
-      <i class="bi bi-quote quote-icon-left"></i>
-      <span class="testimonial-text">
-        ${shortenText(testimonial.text)} <span class="read-more" onclick="toggleText(this)">Read more...</span>
-      </span>
-      <span class="testimonial-full-text hide">
-        ${testimonial.text} <span class="read-less" onclick="toggleText(this)">Read less...</span>
-      </span>
-      <i class="bi bi-quote quote-icon-right"></i>
-    </p>
-    <img src="${testimonial.image}" class="testimonial-img" alt="">
-    <h3>${testimonial.name}</h3>
-    <h4>${testimonial.title}</h4>
-  </div>
-`;
+      <div class="testimonial-item">
+        <p>
+          <i class="bi bi-quote quote-icon-left"></i>
+          <span class="testimonial-text">
+            ${shortenText(testimonial.text)} <span class="read-more" onclick="toggleText(this)">Read more...</span>
+          </span>
+          <span class="testimonial-full-text hide">
+            ${testimonial.text} <span class="read-less" onclick="toggleText(this)">Read less...</span>
+          </span>
+          <i class="bi bi-quote quote-icon-right"></i>
+        </p>
+        <img src="${testimonial.image}" class="testimonial-img" alt="">
+        <h3>${testimonial.name}</h3>
+        <h4>${testimonial.title}</h4>
+      </div>
+    `;
 
-    container.appendChild(slide);
+    swiperWrapper.appendChild(slide);
   });
+
+  // Initialize Swiper after adding the testimonials
+  new Swiper('.swiper', JSON.parse(swiperConfigScript.innerText));
 }
 
 function shortenText(text, maxLength = 150) {
@@ -196,6 +248,116 @@ function toggleText(element) {
   const temp = testimonialText.innerHTML;
   testimonialText.innerHTML = fullText.innerHTML;
   fullText.innerHTML = temp;
+}
+
+async function loadPortfolio(portfolio) {
+
+    // Populate Filters
+    const filtersContainer = document.getElementById('portfolio-filters');
+    portfolio.filters.forEach(filter => {
+        const li = document.createElement('li');
+        li.setAttribute('data-filter', filter.value);
+        li.textContent = filter.label;
+        if (filter.active) li.classList.add('filter-active');
+        filtersContainer.appendChild(li);
+    });
+
+    // Prepare gallery groups
+    const galleryGroups = {};
+    portfolio.items.forEach(item => {
+        if (!galleryGroups[item.galleryGroup]) {
+            galleryGroups[item.galleryGroup] = [];
+        }
+        galleryGroups[item.galleryGroup].push(item.image);
+    });
+
+    // Populate Portfolio Items
+    const portfolioContainer = document.getElementById('portfolio-container');
+    portfolio.items.forEach(item => {
+        const div = document.createElement('div');
+        div.className = `col-lg-4 col-md-6 portfolio-item isotope-item ${item.category}`;
+        
+        // Generate hidden gallery links
+        const hiddenLinks = galleryGroups[item.galleryGroup]
+            .map(img => `<a href="${img}" class="gallery-hidden-link glightbox" data-gallery="${item.galleryGroup}"></a>`)
+            .join('');
+
+        div.innerHTML = `
+            <div class="portfolio-content h-100">
+                <img src="${item.image}" class="img-fluid" alt="${item.title}" style="width:100%; height:auto; object-fit:cover;">
+                <div class="portfolio-info">
+                    <h4>${item.title}</h4>
+                    <p>${item.description}</p>
+                    <a href="#" data-open-gallery="${item.galleryGroup}" 
+                       class="gallery-trigger preview-link">
+                       <i class="bi bi-zoom-in"></i>
+                    </a>
+                    <a href="portfolio-details.html" 
+                       title="More Details" 
+                       class="details-link">
+                       <i class="bi bi-link-45deg"></i>
+                    </a>
+                </div>
+                ${hiddenLinks}
+            </div>
+        `;
+        portfolioContainer.appendChild(div);
+    });
+
+    // Initialize Glightbox
+    const lightbox = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: true,
+        zoomable: true
+    });
+
+    // Gallery Trigger Logic
+    document.addEventListener('click', function(e) {
+        const triggerLink = e.target.closest('.gallery-trigger');
+        if (triggerLink) {
+            e.preventDefault();
+            const galleryGroup = triggerLink.getAttribute('data-open-gallery');
+            const hiddenLinks = document.querySelectorAll(
+                `.gallery-hidden-link[data-gallery="${galleryGroup}"]`
+            );
+            
+            if (hiddenLinks.length > 0) {
+                // Trigger the first link in the gallery
+                hiddenLinks[0].click();
+            }
+        }
+    });
+
+    // Initialize Isotope with additional options
+    const $container = $('.isotope-container');
+    $container.imagesLoaded(() => {
+        $container.isotope({
+            itemSelector: '.portfolio-item',
+            layoutMode: 'masonry',
+            percentPosition: true,
+            masonry: {
+                columnWidth: '.portfolio-item'
+            }
+        });
+    });
+
+    // Recalculate layout on window resize
+    $(window).on('resize', () => {
+        $container.isotope('layout');
+    });
+
+    // Filter Items
+    $('.portfolio-filters li').on('click', function() {
+        $('.portfolio-filters li').removeClass('filter-active');
+        $(this).addClass('filter-active');
+
+        const filterValue = $(this).attr('data-filter');
+        $container.isotope({ filter: filterValue });
+    });
+
+    // Initialize AOS
+    AOS.init();
 }
 
 // Calculate age based on the given birth date
