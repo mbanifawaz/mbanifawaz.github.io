@@ -208,7 +208,8 @@
           { "value": ".filter-app", "label": "Apps", "active": false },
           { "value": ".filter-website", "label": "Websites", "active": false },
           { "value": ".filter-project", "label": "Projects", "active": false },
-          { "value": ".filter-script", "label": "Scripts", "active": false }
+          { "value": ".filter-script", "label": "Scripts", "active": false },
+          { "value": ".filter-courses", "label": "Courses", "active": false }
         ],
         "items": [
           {
@@ -266,6 +267,20 @@
             "projectDate": "Feb 4, 2024",
             "projectURL": "https://mbanifawaz.github.io/coming-soon/",
             "projectURLText": "Visit Website"
+          },
+          {
+            "category": "filter-courses",
+            "image": "assets/img/portfolio/pythonfundementals.jpg",
+            "title": "Python Fundamentals",
+            "shortDescription": "Learn the basics of Python: setup, data types, control flow, functions, and OOP.",
+            "description": "This presentation will cover the basics of Python programming, from setting up your environment to exploring essential concepts and techniques. We will delve into data types, control flow, functions, modules and object-oriented programming, equipping you with the foundational knowledge necessary for effective Python development. Let's embark on this journey together!",
+            "galleryGroup": "portfolio-gallery-website",
+            "stack": "Python",
+            "platform": "*",
+            "client": "Munes Bani Fawaz",
+            "projectDate": "Jan 11, 2025",
+            "projectURL": "https://github.com/mbanifawaz/Python-Fundamentals-Presentation",
+            "projectURLText": "Get Material"
           }
           
         ]
