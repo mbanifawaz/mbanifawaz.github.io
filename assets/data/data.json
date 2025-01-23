@@ -188,7 +188,19 @@
           "image": "assets/img/testimonials/msader.jpg",
           "name": "Mahmoud H. Sadder",
           "title": "Support | QA Engineer"
-        }
+        },
+        {
+          "text": "I am writing to recommend Munes based on his exceptional performance during his tenure at Extensya under my guidance. Munes exhibited an impressive ability to rapidly grasp complex concepts and swiftly apply them to tasks. His remarkable aptitude for learning was evident as he consistently displayed a deep understanding of the projects he was involved in. Moreover, his organizational skills were remarkable, allowing him to handle multiple tasks efficiently and effectively. Munes's exceptional efficiency and dedication to meeting deadlines while maintaining a high standard of work made him a key contributor to our team's success. His resourcefulness, creative approach to problem-solving, and willingness to take initiative greatly contributed to the innovative solutions we were able to implement. Overall, Munes demonstrated intelligence, resourcefulness, and an exceptional work ethic, and his positive attitude and eagerness to learn served as an inspiration to his peers. I wholeheartedly recommend Munes for any role where his technical skills, adaptability, and dedication would be valued.",
+          "image": "assets/img/testimonials/empty.png",
+          "name": "Fadia Elmabrouk",
+          "title": "Software Engineer | Extensya"
+        },
+        {
+          "text": "It is my pleasure to strongly recommend Munes Bani Fawaz for a position as a Systems Development Officer. I am Murad Fares, a Systems Development Manager at Extensya, and with my 15 years of experience in software development, I have encountered many young professionals, but Munes stands out. During our time working together, Munes displayed great talents in technical applications and programming languages, including PHP, SQL DB, CSS, CMS, JavaScript, and various data visualization tools. I am confident that Munes would be a valuable asset to your company. He not only possesses the skills and experience you're seeking, but he will also contribute significantly and help your company grow.",
+          "image": "assets/img/testimonials/murad.jpg",
+          "name": "Murad Fares",
+          "title": "Systems Development Manager | Extensya"
+        }     
       ],   
       "portfolio": {
         "filters": [
