@@ -67,7 +67,7 @@
     {
         "summary": {
           "name": "MUNES BANI FAWAZ",
-          "description": "Passionate Software Engineer committed to delivering high-quality solutions through dedication, meticulous attention to detail, and strong organizational skills. Proficient in programming and coding with a solid understanding of software development principles. Driven to continuously learn, evolve, and achieve excellence in the field of Software Engineering.",
+          "description": "Senior Full Stack Developer A.K.A Mr. Automator AIO - Developer - Front, Back, Mobile, Shell- Just Name It!",
           "contact": [
             "Phone: +962789336602",
             "Email: m.banifawaz@outlook.com",
@@ -134,8 +134,64 @@
           }
         ]
       },
+      "testimonials":[
+        {
+          "text": "I highly recommend Munes as a talented and dedicated programmer. His proficiency in programming languages is commendable, and he excels in problem-solving. During our time as colleagues, Munes consistently demonstrated his expertise in coding and was a valuable asset to the team. Notably, Munes played a crucial role in assisting me during our training period. His willingness to share knowledge and provide support greatly contributed to my learning experience. I have witnessed firsthand his exceptional problem-solving skills and creative approach to programming challenges. Munes's commitment to excellence and collaborative spirit make him an outstanding team member. I am confident that his skills and positive attitude will continue to make significant contributions wherever he goes.",
+          "image": "assets/img/testimonials/aokasha.jpg",
+          "name": "Ahmad Okasha",
+          "title": "Software Engineer at Nixpend"
+        },
+        {
+          "text": "I am delighted to recommend Munis Fawaz as a software engineer. I had the pleasure of training Munis at Nixpend Sequential Technologies. His ability to grasp knowledge quickly and his innovative problem-solving skills make him a standout candidate. He is not the type of guy to complain when he faces a problem, rather he focuses on how to approach the problem and break it down. He is initiative, when discovers something to automate or a code to optimize he immediately raises the flag and takes the lead to handle it. He's got a beautiful sense of humor which is amazing to have especially in a stressful environment.",
+          "image": "assets/img/testimonials/mabdullah.jpg",
+          "name": "Mohammad Abdulla",
+          "title": "Software Engineer | AWS SAA"
+        },
+        {
+          "text": "I recommend Munes as a Full Stack Engineer. He possesses strong technical skills, consistently solving complex problems efficiently. One of the unique things about Munes is that he proposes improvements to the system, and is not just someone who carries out instructions.",
+          "image": "assets/img/testimonials/sfateh.jpg",
+          "name": "Salah Aldin Fateh",
+          "title": "DevOps Engineer at Nixpend"
+        },
+        {
+          "text": "I am writing to highly recommend my esteemed colleague, Munes Bani Fawaz, for any professional opportunity that he may pursue in the future. As a Senior Software Engineer, Munes has consistently demonstrated an extraordinary level of skill, dedication, and innovation in his work, earning him the affectionate moniker of \"Mr. Automator\" amongst our team. Munes's remarkable abilities in the field of software engineering have had a profound impact on our team and the projects we have undertaken. One of Munes's most outstanding qualities is his incredible proficiency in automating complex and time-consuming tasks. He has a unique talent for simplifying and optimizing workflows, making our daily work more efficient and less error-prone. The improvements he has made through automation have not only saved us countless hours but have also significantly reduced the margin for human error, improving the overall quality of our work. Munes is not just an automation wizard; he is also an exceptional problem solver. He possesses a keen analytical mind, which enables him to dissect complex issues and devise elegant solutions. His ability to approach challenges with creativity and logical thinking is a testament to his problem-solving prowess. Whenever our team has faced roadblocks, Munes has been the go-to person to find innovative solutions and guide us back on track. Munes's dedication to his work is unwavering. He consistently goes above and beyond to meet project deadlines and deliver high-quality results. His ability to adapt to new technologies and stay up-to-date with industry trends showcases his commitment to continuous learning and growth. His collaborative and communicative nature makes him an invaluable asset to our team, as he readily shares his knowledge and supports his colleagues.",
+          "image": "assets/img/testimonials/mshammout.jpg",
+          "name": "Moneeb Shammout",
+          "title": "Backend Engineer | Software Engineer"
+        },
+        {
+          "text": "Professional, team player & passionate about what he does! It was a privilege to work with Munes.",
+          "image": "assets/img/testimonials/akurdi.jpg",
+          "name": "Dr. Abdul Kareem Kurdi",
+          "title": "Manager of Pharmacies Department /Hakeem Claim (EHSI)"
+        },
+        {
+          "text": "I highly recommend Munes as a Full Stack Developer. His expertise in both front-end and back-end technologies is impressive. Munes consistently delivers high-quality, efficient solutions and is a valuable asset to any development team.",
+          "image": "assets/img/testimonials/wzoubi.jpg",
+          "name": "Wesam AL-Zoubi",
+          "title": "Accounting at AL-Balqa'a Applied University"
+        },
+        {
+          "text": "I have had the pleasure of working alongside Munes, and I can confidently attest to his exceptional skills as a developer. Collaborating with him is not only enjoyable but also incredibly enriching. Munes combines his technical prowess with a great sense of humor, making our work environment not just productive but also fun. His ability to lighten the atmosphere while delivering top-notch development solutions is truly remarkable. I wholeheartedly recommend Munes for his technical expertise, collaborative spirit, and the delightful touch of humor he brings to any team.",
+          "image": "assets/img/testimonials/sayman.jpg",
+          "name": "Sa'ed Ayman",
+          "title": "Software Developer @ Nixpend - Sequential Technologies"
+        },
+        {
+          "text": "I highly recommended Munes as a full_stack developer, he is very strong problem solver using simplest ways, and he is quick learner, eager to learn new things and mastered it in short time, he has a creativity thought to make special touches on his work and he is very supportive and helper person. Wish you all the best Munes.",
+          "image": "assets/img/testimonials/amomani.jpg",
+          "name": "As'har Momani",
+          "title": "Computer Engineering | Application Engineer"
+        },
+        {
+          "text": "I highly recommend Munes as a full-stack developer. His work ethic is unmatched, and he excels in resolving coding challenges. A go-to person for bug fixes, he willingly shares his extensive knowledge, making collaboration a breeze. His commitment and passion for continuous learning make him an invaluable asset to any team.",
+          "image": "assets/img/testimonials/msader.jpg",
+          "name": "Mahmoud H. Sadder",
+          "title": "Support | QA Engineer"
+        }
+      ],      
     "config":
     {
-        "maintenance_mode":1
+        "maintenance_mode":0
     }
   }

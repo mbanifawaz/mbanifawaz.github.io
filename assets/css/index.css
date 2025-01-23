@@ -9,3 +9,25 @@
 #stats {
     display: none;
 }
+
+#contact {
+    display: none;
+}
+
+.read-more,
+.read-less {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+.read-more:hover,
+.read-less:hover {
+  color: #0056b3;
+}
+
+.hide {
+    display: none;
+}

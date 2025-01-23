@@ -31,6 +31,8 @@ async function loadData() {
     await loadSkills(data.skills);
 
     await loadResume(data.resume);
+
+    await loadTestimonials(data.testimonials)
   } catch (error) {
     console.error('Error loading JSON data:', error);
   }
@@ -153,6 +155,47 @@ async function loadResume(resume) {
     });
 
     container.appendChild(experienceDiv);
+}
+
+async function loadTestimonials(testimonials) {
+  const container = document.getElementById("testimonial-container");
+
+  testimonials.forEach(testimonial => {
+    const slide = document.createElement("div");
+    slide.classList.add("swiper-slide");
+
+    slide.innerHTML = `
+  <div class="testimonial-item">
+    <p>
+      <i class="bi bi-quote quote-icon-left"></i>
+      <span class="testimonial-text">
+        ${shortenText(testimonial.text)} <span class="read-more" onclick="toggleText(this)">Read more...</span>
+      </span>
+      <span class="testimonial-full-text hide">
+        ${testimonial.text} <span class="read-less" onclick="toggleText(this)">Read less...</span>
+      </span>
+      <i class="bi bi-quote quote-icon-right"></i>
+    </p>
+    <img src="${testimonial.image}" class="testimonial-img" alt="">
+    <h3>${testimonial.name}</h3>
+    <h4>${testimonial.title}</h4>
+  </div>
+`;
+
+    container.appendChild(slide);
+  });
+}
+
+function shortenText(text, maxLength = 150) {
+  return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
+}
+
+function toggleText(element) {
+  const testimonialText = element.closest('.testimonial-item').querySelector('.testimonial-text');
+  const fullText = element.closest('.testimonial-item').querySelector('.testimonial-full-text');
+  const temp = testimonialText.innerHTML;
+  testimonialText.innerHTML = fullText.innerHTML;
+  fullText.innerHTML = temp;
 }
 
 // Calculate age based on the given birth date
