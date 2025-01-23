@@ -218,10 +218,26 @@
             "shortDescription":"Get accurate prayer times in Jordan with notifications.",
             "description": "Jordan Prayer Times is a comprehensive and easy-to-use app that helps you stay on track with your daily prayers. Whether you're at home, at work, or on the go, this app provides accurate prayer times based on your location in Jordan and allows you to have notifications to suit your preferences.",
             "galleryGroup": "portfolio-gallery-app",
+            "stack":"Flutter | Node JS",
+            "platform":"Android | iOS",
             "client":"Munes Bani Fawaz",
             "projectDate":"Jan 8, 2025",
             "projectURL":"https://play.google.com/store/apps/details?id=com.mbf.jordan_prayer_times_app",
             "projectURLText":"Google Play Store"
+          },
+          {
+            "category": "filter-app",
+            "image": "assets/img/portfolio/cmr.png",
+            "title": "Cubic Maze Runner",
+            "shortDescription":"Game Inspired By Subway And Piano Tiles",
+            "description": "Cubic Maze Runner is an exciting game inspired by the fast-paced action of Subway Surfers and the rhythm-based gameplay of Piano Tiles. In this game, players navigate through challenging levels while tapping to the beat of the music, avoiding obstacles, and scoring high points. With a smooth, addictive gameplay experience, this game will keep you engaged for hours as you aim to beat your best score.",
+            "galleryGroup": "portfolio-gallery-app",
+            "stack":"Unity | C#",
+            "platform":"Android | iOS | Windows",
+            "client":"Munes Bani Fawaz",
+            "projectDate":"TBA",
+            "projectURL":"#",
+            "projectURLText":"Project In Development"
           }
         ]
       },

@@ -337,6 +337,8 @@ async function loadPortfolio(portfolio) {
           const item = globalData.portfolio.items.find(item => item.title === title);
           const category = item.category.replace("filter-", "").replace(/^./, str => str.toUpperCase())
           const description = item.description
+          const stack = item.stack
+          const platform = item.platform
           const client = item.client
           const projectDate = item.projectDate
           const projectURL = item.projectURL
@@ -352,6 +354,8 @@ async function loadPortfolio(portfolio) {
           const portfolioInfo = document.querySelector('#portfolioDetailsModal .portfolio-info ul');
           portfolioInfo.innerHTML = `
               <li><strong>Category</strong>: ${category}</li>
+              <li><strong>Stack</strong>: ${stack}</li>
+              <li><strong>Platform</strong>: ${platform}</li>
               <li><strong>Client</strong>: ${client}</li>
               <li><strong>Project Date</strong>: ${projectDate}</li>
               <li><strong>Project URL</strong>: <a href="${projectURL}" target="_blank">${projectURLText}</a></li>
