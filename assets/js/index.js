@@ -269,7 +269,11 @@ async function loadPortfolio(portfolio) {
         if (!galleryGroups[item.galleryGroup]) {
             galleryGroups[item.galleryGroup] = [];
         }
-        galleryGroups[item.galleryGroup].push(item.image);
+        if (item.image) {
+            galleryGroups[item.galleryGroup].push(item.image);
+        } else if (item.video) {
+            galleryGroups[item.galleryGroup].push(item.video);
+        }
     });
 
     // Populate Portfolio Items
