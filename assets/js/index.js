@@ -24,11 +24,13 @@ async function loadData() {
     const response = await fetch('assets/data/data.json'); // Fetch the JSON file
     const data = await response.json(); // Parse the JSON
 
-    await loadConfig(data.config)
+    await loadConfig(data.config);
 
-    await loadLinks(data.links)
+    await loadLinks(data.links);
 
     await loadSkills(data.skills);
+
+    await loadResume(data.resume);
   } catch (error) {
     console.error('Error loading JSON data:', error);
   }
@@ -71,6 +73,8 @@ async function loadSkills(skills) {
   const skillsContainer = document.querySelector('.skills-content');
   const columns = skills.columns; // Define the number of columns (you can make this configurable)
   skills = skills.data
+  // Sort skills by level in descending order
+  skills.sort((a, b) => b.level - a.level);
   const itemsPerColumn = Math.ceil(skills.length / columns); // Evenly distribute items
 
   let columnHTML = '';
@@ -102,6 +106,53 @@ async function loadSkills(skills) {
 
   // Populate the skills section with the columns
   skillsContainer.innerHTML = columnHTML;
+}
+
+async function loadResume(resume) {
+  const container = document.querySelector(".resume .container .row");
+
+    // Load Summary
+    const summaryDiv = document.createElement("div");
+    summaryDiv.className = "col-lg-6";
+    summaryDiv.innerHTML = `
+      <h3 class="resume-title">Summary</h3>
+      <div class="resume-item pb-0">
+        <h4>${resume.summary.name}</h4>
+        <p><em>${resume.summary.description}</em></p>
+        <ul>${resume.summary.contact.map((item) => `<li>${item}</li>`).join("")}</ul>
+      </div>
+    `;
+    container.appendChild(summaryDiv);
+
+    // Load Education
+    summaryDiv.innerHTML += `<h3 class="resume-title">Education</h3>`;
+    resume.education.forEach((edu) => {
+      summaryDiv.innerHTML += `
+        <div class="resume-item">
+          <h4>${edu.degree}</h4>
+          <h5>${edu.year}</h5>
+          <p><em>${edu.institution}</em></p>
+          <p>${edu.description}</p>
+        </div>
+      `;
+    });
+
+    // Load Experience
+    const experienceDiv = document.createElement("div");
+    experienceDiv.className = "col-lg-6";
+    experienceDiv.innerHTML = `<h3 class="resume-title">Professional Experience</h3>`;
+    resume.experience.forEach((exp) => {
+      experienceDiv.innerHTML += `
+        <div class="resume-item">
+          <h4>${exp.title}</h4>
+          <h5>${exp.year}</h5>
+          <p><em>${exp.company}</em></p>
+          <ul>${exp.responsibilities.map((item) => `<li>${item}</li>`).join("")}</ul>
+        </div>
+      `;
+    });
+
+    container.appendChild(experienceDiv);
 }
 
 // Calculate age based on the given birth date

@@ -33,36 +33,107 @@
     {
         "columns":2,
         "data":[
-            { "name": "C#", "level": 80 },
-            { "name": "Java", "level": 75 },
-            { "name": "Python", "level": 85 },
-            { "name": "C++", "level": 70 },
-            { "name": "PHP", "level": 80 },
+            { "name": "C#", "level": 75 },
+            { "name": "Java", "level": 60 },
+            { "name": "Python", "level": 100 },
+            { "name": "C++", "level": 75 },
+            { "name": "PHP", "level": 100 },
             { "name": "HTML", "level": 100 },
-            { "name": "CSS", "level": 90 },
-            { "name": "JavaScript", "level": 75 },
-            { "name": "SQL/MySQL", "level": 80 },
+            { "name": "CSS", "level": 100 },
+            { "name": "JavaScript", "level": 100 },
+            { "name": "SQL/MySQL", "level": 100 },
             { "name": "VB", "level": 60 },
-            { "name": "Visual Basic", "level": 65 },
-            { "name": "VBS", "level": 50 },
-            { "name": "BAT", "level": 45 },
-            { "name": "Visual Studio", "level": 85 },
-            { "name": ".NET", "level": 85 },
-            { "name": "ASP.net", "level": 70 },
-            { "name": "React", "level": 80 },
-            { "name": "Angular", "level": 70 },
+            { "name": "Visual Basic", "level": 60 },
+            { "name": "VBS", "level": 60 },
+            { "name": "BAT", "level": 100 },
+            { "name": "Visual Studio", "level": 75 },
+            { "name": ".NET", "level": 60 },
+            { "name": "ASP.net", "level": 60 },
+            { "name": "React", "level": 75 },
+            { "name": "Angular", "level": 75 },
             { "name": "Laravel", "level": 75 },
-            { "name": "Flutter", "level": 65 },
-            { "name": "Node.js", "level": 70 },
-            { "name": "Frappe", "level": 85 },
-            { "name": "Jinja", "level": 70 },
-            { "name": "ERPNext", "level": 80 },
-            { "name": "Unreal Engine", "level": 60 },
-            { "name": "Unity", "level": 65 },
-            { "name": "Linux (Kali, Ubuntu, Manjaro)", "level": 85 },
-            { "name": "Docker", "level": 80 }
+            { "name": "Flutter", "level": 90 },
+            { "name": "Node.js", "level": 100 },
+            { "name": "Frappe", "level": 100 },
+            { "name": "Jinja", "level": 100 },
+            { "name": "ERPNext", "level": 100 },
+            { "name": "Unreal Engine", "level": 75 },
+            { "name": "Unity", "level": 90 },
+            { "name": "Linux (Kali, Ubuntu, Manjaro)", "level": 100 },
+            { "name": "Docker", "level": 90 }
           ]
     },
+    "resume":
+    {
+        "summary": {
+          "name": "MUNES BANI FAWAZ",
+          "description": "Passionate Software Engineer committed to delivering high-quality solutions through dedication, meticulous attention to detail, and strong organizational skills. Proficient in programming and coding with a solid understanding of software development principles. Driven to continuously learn, evolve, and achieve excellence in the field of Software Engineering.",
+          "contact": [
+            "Phone: +962789336602",
+            "Email: m.banifawaz@outlook.com",
+            "Date of Birth: 04/09/1998",
+            "Nationality: Jordanian"
+          ]
+        },
+        "education": [
+          {
+            "degree": "Bachelor’s Degree in Software Engineering",
+            "year": "10/2017 – 02/2021",
+            "institution": "Philadelphia University of Jordan (Amman, Jordan)",
+            "description": "Graduated with an average of 77.6% (Very Good), equivalent to a GPA of 3.1/4."
+          },
+          {
+            "degree": "High School Diploma",
+            "year": "2013 – 2016",
+            "institution": "First Secondary School of Abha (Abha, Saudi Arabia)",
+            "description": "Achieved an average of 96.03%, equivalent to 80.08% (Jordan Ministry of Education Certification)."
+          },
+          {
+            "degree": "Additional Education",
+            "year": "2001 – 2013",
+            "institution": "Various Institutions",
+            "description": "Mecca Intermediate School (Abha, Saudi Arabia) | 2010 – 2013\nAnjara Elementary School (Ajlun, Jordan) | 2009 – 2010\nRobert-Koch Realschule (Stuttgart, Germany) | 2008 – 2009\nPfaffenwald-Schule (Stuttgart, Germany) | 2004 – 2008\nKinderhaus Uni-Kids (Stuttgart, Germany) | 2001 – 2004"
+          }
+        ],
+        "experience": [
+          {
+            "title": "MID ERP Full Stack Developer",
+            "year": "December 2023 – Present",
+            "company": "Syarah",
+            "responsibilities": [
+                "Conducted Frappe/ERPNext, Python, and JavaScript training, mentoring team members to enhance technical skills.",
+                "Upgraded Frappe/ERPNext from v13 to v15, separating and optimizing a built-in Vue.js application.",
+                "Created a customizable Kanban board and resolved complex related issues.",
+                "Managed environments for UAT, QA, Preproduction, and Outsourcing pipelines.",
+                "Built the Frappe Developer Toolbox, increasing development efficiency."
+              ]
+          },
+          {
+            "title": "ERP Full Stack Developer",
+            "year": "September 2022 – December 2023",
+            "company": "Nixpend",
+            "responsibilities": [
+                "Built custom Doctypes and modules with related reports and functionalities, including HR, appointment bookings, accounting, and procedural enhancements.",
+                "Developed a Revenue Sharing Module to automate distribution of revenue via invoices for healthcare practitioners.",
+                "Created custom APIs and integrated the ERP system with external healthcare systems like Medical.",
+                "Oversaw ticket distribution and managed weekly updates/releases, including code reviews and merge requests.",
+                "Enhanced system scalability and reliability through cloud integrations and optimized configurations."
+              ]
+          },
+          {
+            "title": "System Development Officer",
+            "year": "June 2021 – March 2022",
+            "company": "Extensya",
+            "responsibilities": [
+                "Created and maintained web forms for quality evaluations and call logging, serving ~40 clients.",
+                "Developed internal systems such as ECT (employee announcements), online/English assessments, Extensya's chat tool, and live agent help desk.",
+                "Built custom APIs, including data retrieval from Zendesk and exporting data to Excel sheets (CSV/XLS).",
+                "Developed a digital library with a file manager for upload/delete operations and a tree-view structure for file browsing.",
+                "Streamlined company workflows by creating tools and scripts for editing, debugging, and testing internal systems."
+              ]
+          }
+        ]
+      },
     "config":
     {
         "maintenance_mode":1
