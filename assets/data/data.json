@@ -252,6 +252,20 @@
             "projectDate": "Nov 15, 2022",
             "projectURL": "https://mrgiveitaway-tpk.github.io/I_Love_You/",
             "projectURLText": "Visit Website"
+          },
+          {
+            "category": "filter-website",
+            "image": "assets/img/portfolio/comingsoon.png",
+            "title": "Coming Soon Template",
+            "shortDescription": "A responsive website template for a 'Coming Soon' page",
+            "description": "This 'Coming Soon' template is designed to showcase a website that is currently under construction. Featuring an engaging and smooth animation, it provides visitors with an exciting preview of what's to come. The layout is fully responsive, ensuring a seamless experience on all devices, from desktops to smartphones. Perfect for businesses or personal projects, this template sets the tone for what's next while keeping your audience engaged and informed about the upcoming launch.",
+            "galleryGroup": "portfolio-gallery-website",
+            "stack": "HTML | CSS | JavaScript",
+            "platform": "Web",
+            "client": "Munes Bani Fawaz",
+            "projectDate": "Feb 4, 2024",
+            "projectURL": "https://mbanifawaz.github.io/coming-soon/",
+            "projectURLText": "Visit Website"
           }
           
         ]
