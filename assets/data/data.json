@@ -284,7 +284,7 @@
           },
           {
             "category": "filter-web filter-app filter-project",
-            "image": "assets/img/portfolio/pos.gif",
+            "video": "assets/webm/portfolio/wowly.webm",
             "title": "Point of Sale Client Demo",
             "shortDescription": "A seamless checkout-free shopping experience.",
             "description": "Experience the future of shopping with a smart Point of Sale (POS) demo inspired by Amazon Go. This cutting-edge system uses barcode scanning to enable a seamless, checkout-free shopping experience. Customers can simply enter, pick up their desired items, and leave—no lines, no waiting. Payments are handled automatically through the POS device, delivering unmatched convenience and efficiency. Ideal for busy individuals who prioritize their time and prefer hassle-free shopping!",

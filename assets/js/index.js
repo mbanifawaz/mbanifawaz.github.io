@@ -285,7 +285,14 @@ async function loadPortfolio(portfolio) {
 
         div.innerHTML = `
             <div class="portfolio-content h-100">
-                <img src="${item.image}" class="img-fluid" alt="${item.title}" style="width:100%; height:auto; object-fit:cover;">
+                  ${item.image ? 
+                    `<img src="${item.image}" alt="${item.title}" class="img-fluid">` : 
+                    (item.video ? 
+                        `<video autoplay muted class="img-fluid" loop>
+                            <source src="${item.video}" type="video/webm" />
+                        </video>` : 
+                        '')
+                }
                 <div class="portfolio-info">
                     <h4>${item.title}</h4>
                     <p>${item.shortDescription}</p>
@@ -347,8 +354,17 @@ async function loadPortfolio(portfolio) {
           // Populate modal with the first image (or any image you prefer)
           const portfolioImage = document.querySelector('#portfolioDetailsModal .portfolio-image');
           portfolioImage.innerHTML = `
-              <img src="${item.image}" alt="${title}" class="img-fluid">
+              ${item.image ? 
+                  `<img src="${item.image}" alt="${title}" class="img-fluid">` : 
+                  (item.video ? 
+                      `<video autoplay muted loop width="100%">
+                          <source src="${item.video}" type="video/webm" />
+                      </video>` : 
+                      '')
+              }
           `;
+
+      
       
           // Populate project info (you can customize this)
           const portfolioInfo = document.querySelector('#portfolioDetailsModal .portfolio-info ul');
