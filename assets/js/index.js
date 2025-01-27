@@ -293,7 +293,7 @@ async function loadPortfolio(portfolio) {
                     `<img src="${item.image}" alt="${item.title}" class="img-fluid">` : 
                     (item.video ? 
                         `<video autoplay muted class="img-fluid" loop>
-                            <source src="${item.video}" type="video/webm" />
+                            <source src="${item.video}" />
                         </video>` : 
                         '')
                 }
@@ -373,7 +373,7 @@ async function loadPortfolio(portfolio) {
                   `<img src="${item.image}" alt="${title}" class="img-fluid">` : 
                   (item.video ? 
                       `<video autoplay muted loop width="100%">
-                          <source src="${item.video}" type="video/webm" />
+                          <source src="${item.video}" />
                       </video>` : 
                       '')
               }
