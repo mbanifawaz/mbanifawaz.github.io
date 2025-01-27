@@ -36,6 +36,10 @@ async function loadData() {
     await loadTestimonials(data.testimonials);
 
     await loadPortfolio(data.portfolio);
+    const videos = document.querySelectorAll('video');
+    videos.forEach(video => {
+        video.playbackRate = 2;
+    });
   } catch (error) {
     console.error('Error loading JSON data:', error);
   }

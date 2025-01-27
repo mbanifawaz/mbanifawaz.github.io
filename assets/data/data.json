@@ -284,7 +284,7 @@
           },
           {
             "category": "filter-project",
-            "video": "assets/webm/portfolio/wowly.webm",
+            "video": "assets/video/portfolio/wowly.webm",
             "title": "Point of Sale Client Demo",
             "shortDescription": "A seamless checkout-free shopping experience.",
             "description": "Experience the future of shopping with a smart Point of Sale (POS) demo inspired by Amazon Go. This cutting-edge system uses barcode scanning to enable a seamless, checkout-free shopping experience. Customers can simply enter, pick up their desired items, and leave—no lines, no waiting. Payments are handled automatically through the POS device, delivering unmatched convenience and efficiency. Ideal for busy individuals who prioritize their time and prefer hassle-free shopping!",
@@ -298,7 +298,7 @@
           },
           {
             "category": "filter-project",
-            "video": "assets/webm/portfolio/frappekanban.webm",
+            "video": "assets/video/portfolio/frappekanban.mp4",
             "title": "Frappe Kanban Demo",
             "shortDescription": "A better Kanban Board",
             "description": "A customizable Kanban board is a dynamic and versatile tool designed to streamline workflows, enhance collaboration, and adapt to the unique needs of any team or project. Its advanced flexibility allows for tailoring columns, fields, labels, and filters while integrating features like custom JavaScript buttons for real-time actions and a fully dynamic settings interface. This means users can modify workflows, add or remove buttons, and configure board behavior without reloading, creating a seamless and intuitive experience. The board also includes a powerful modal system, allowing users to click on a card and instantly access detailed information or edit data directly, reducing downtime and improving task management efficiency.With role-based access control, progress tracking, and integrations with other tools (e.g., calendars or analytics), it ensures every team member has the exact tools and information they need. Custom color coding, drag-and-drop prioritization, and detailed comments with file attachments help centralize communication and reduce fragmented processes. Whether managing agile development sprints, marketing campaigns, or personal goals, this Kanban board empowers teams with unparalleled customization, boosting productivity and enabling smarter, more agile decision-making.",
