@@ -31,3 +31,8 @@
 .hide {
     display: none;
 }
+
+.portfolio-image {
+  justify-content: center;
+  display: flex;
+}

@@ -376,7 +376,7 @@ async function loadPortfolio(portfolio) {
               ${item.image ? 
                   `<img src="${item.image}" alt="${title}" class="img-fluid">` : 
                   (item.video ? 
-                      `<video autoplay muted loop width="100%">
+                      `<video autoplay muted loop width="50%">
                           <source src="${item.video}" />
                       </video>` : 
                       '')
