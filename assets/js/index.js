@@ -1,4 +1,5 @@
 let globalData;
+let globalVideoPlayBackRate=4;
 // Ensure the document is fully loaded
 document.addEventListener('DOMContentLoaded', async () => {
   await loadData();
@@ -36,9 +37,8 @@ async function loadData() {
     await loadTestimonials(data.testimonials);
 
     await loadPortfolio(data.portfolio);
-    const videos = document.querySelectorAll('video');
-    videos.forEach(video => {
-        video.playbackRate = 2;
+    document.querySelectorAll('video').forEach(video => {
+        video.playbackRate = globalVideoPlayBackRate;
     });
   } catch (error) {
     console.error('Error loading JSON data:', error);
@@ -405,6 +405,11 @@ async function loadPortfolio(portfolio) {
       
           // Show the modal
           portfolioDetailsModal.show();
+          portfolioDetailsModal._element.addEventListener('shown.bs.modal', () => {
+              document.querySelectorAll('video').forEach(video => {
+                  video.playbackRate = globalVideoPlayBackRate; // Set the desired playback speed
+              });
+          });
       }      
 
     });
