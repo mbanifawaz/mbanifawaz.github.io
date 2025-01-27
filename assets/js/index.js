@@ -300,7 +300,7 @@ async function loadPortfolio(portfolio) {
                 <div class="portfolio-info">
                     <h4>${item.title}</h4>
                     <p>${item.shortDescription}</p>
-                    <a href="#" data-open-gallery="${item.galleryGroup}" 
+                    <a href="#" data-open-gallery="${item.galleryGroup}" src=${item.image ? item.image : (item.video ? item.video : '')}
                        class="gallery-trigger preview-link">
                        <i class="bi bi-zoom-in"></i>
                     </a>
@@ -337,15 +337,16 @@ async function loadPortfolio(portfolio) {
             );
             
             if (hiddenLinks.length > 0) {
-                const clickedItem = triggerLink.closest('.portfolio-item');
-                const clickedItemIndex = Array.from(clickedItem.parentNode.children).indexOf(clickedItem);
-                
+                const clickedItemGroup = triggerLink.closest('.portfolio-item');
+                const anchorTags = clickedItemGroup.querySelectorAll('a.gallery-hidden-link.glightbox');
+                const index = Array.from(anchorTags).findIndex(anchor => anchor.getAttribute('href').includes(triggerLink.getAttribute('src')));
+
                 const lightbox = GLightbox({
                     selector: `.gallery-hidden-link[data-gallery="${galleryGroup}"]`,
                     touchNavigation: true,
                     loop: true,
                     zoomable: true,
-                    startAt: hiddenLinks.length > 1 ? clickedItemIndex : 0
+                    startAt: hiddenLinks.length > 1 ? index : 0
                 });
                 
                 lightbox.open();
