@@ -10,10 +10,6 @@
     display: none;
 }
 
-#contact {
-    display: none;
-}
-
 .read-more,
 .read-less {
   color: #007bff;
@@ -35,4 +31,9 @@
 .portfolio-image {
   justify-content: center;
   display: flex;
+}
+
+button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
 }
