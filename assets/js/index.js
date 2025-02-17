@@ -2,6 +2,8 @@ let globalData;
 let globalVideoPlayBackRate=4;
 // Ensure the document is fully loaded
 document.addEventListener('DOMContentLoaded', async () => {
+  await loadAudio();
+
   await loadData();
 
   const birthdayElement = document.getElementById('birthday');
@@ -457,4 +459,92 @@ async function calculateAge(birthDate) {
     age--;
   }
   return age;
+}
+
+function loadAudio() {
+  const audio = document.getElementById("myAudio");
+
+  // Try to play audio immediately
+  audio.play().catch(() => {
+      console.log("Autoplay prevented. User interaction is required.");
+      document.querySelector('.portal-overlay').classList.remove('hide'); // Show play button if autoplay fails
+      initParticles();
+  });
+  
+}
+
+function createParticle() {
+  const particle = document.createElement('div');
+  particle.className = 'particle';
+  
+  const size = Math.random() * 4 + 2;
+  particle.style.width = `${size}px`;
+  particle.style.height = `${size}px`;
+  
+  const startX = Math.random() * window.innerWidth;
+  const startY = Math.random() * window.innerHeight;
+  
+  const xStart = Math.random() * 100 - 50;
+  const yStart = Math.random() * 100 - 50;
+  const xMid = Math.random() * 200 - 100;
+  const yMid = Math.random() * 200 - 100;
+  const xEnd = Math.random() * 100 - 50;
+  const yEnd = Math.random() * 100 - 50;
+  
+  particle.style.left = `${startX}px`;
+  particle.style.top = `${startY}px`;
+  particle.style.setProperty('--x-start', `${xStart}px`);
+  particle.style.setProperty('--y-start', `${yStart}px`);
+  particle.style.setProperty('--x-mid', `${xMid}px`);
+  particle.style.setProperty('--y-mid', `${yMid}px`);
+  particle.style.setProperty('--x-end', `${xEnd}px`);
+  particle.style.setProperty('--y-end', `${yEnd}px`);
+  
+  particle.style.opacity = Math.random() * 0.5 + 0.2;
+  const duration = Math.random() * 10 + 5;
+  particle.style.animation = `floatParticle ${duration}s infinite alternate ease-in-out`;
+  
+  document.getElementById('portalOverlay').appendChild(particle);
+  return particle;
+}
+
+let particles = [];
+function initParticles() {
+  for (let i = 0; i < 100; i++) {
+    particles.push(createParticle());
+  }
+}
+
+function enterKingdom() {
+  document.getElementById("myAudio").play()
+  const overlay = document.getElementById('portalOverlay');
+  const mainContent = document.getElementById('mainContent');
+  const portalContent = document.getElementById('portalContent');
+  const portalRing = document.getElementById('portalRing');
+  
+  portalContent.classList.add('fadeout');
+  portalRing.style.animation = 'portalOpen 2s ease-in-out forwards';
+  
+  const centerX = window.innerWidth / 2;
+  const centerY = window.innerHeight / 2;
+  
+  particles.forEach((particle) => {
+    const rect = particle.getBoundingClientRect();
+    const particleX = rect.left + rect.width / 2;
+    const particleY = rect.top + rect.height / 2;
+    
+    const dx = centerX - particleX;
+    const dy = centerY - particleY;
+    
+    particle.style.setProperty('--portal-x', `${dx}px`);
+    particle.style.setProperty('--portal-y', `${dy}px`);
+    particle.classList.add('particle-to-portal');
+  });
+  
+  setTimeout(() => {
+    overlay.style.opacity = '0';
+    setTimeout(() => {
+      overlay.style.display = 'none';
+    }, 2000);
+  }, 1000);
 }
