@@ -283,6 +283,20 @@
             "projectURLText": "Get Material"
           },
           {
+            "category": "filter-courses",
+            "image": "assets/img/portfolio/pythonadvanced.jpg",
+            "title": "Python Advanced Automation Class",
+            "shortDescription": "Master advanced Python automation: log monitoring, email alerts, web scraping, and task scheduling.",
+            "description": "This session dives into <b style='color: #007bff;'>advanced Python automation</b>, equipping you with the skills to handle real-world tasks efficiently. You'll implement a <b style='color: #dc3545;'>log monitoring</b> system that detects critical errors in real-time and triggers <b style='color: #ffc107;'>email alerts</b>. Additionally, you'll automate <b style='color: #17a2b8;'>web scraping</b> to extract and store structured data, using <b style='color: #28a745;'>BeautifulSoup</b> or <b style='color: #6f42c1;'>Scrapy</b>. With cross-platform compatibility and scheduling techniques, this lecture ensures your scripts run seamlessly on both Windows and Ubuntu. Get ready to elevate your automation skills! 🚀",            
+            "galleryGroup": "portfolio-gallery-courses",
+            "stack": "Python",
+            "platform": "Web | Windows | Ubuntu | Console",
+            "client": "Munes Bani Fawaz",
+            "projectDate": "Jan 11, 2025",
+            "projectURL": "https://github.com/mbanifawaz/Python-Advanced-Automation-Class",
+            "projectURLText": "Get Material"
+          },
+          {
             "category": "filter-project",
             "video": "assets/video/portfolio/wowly.webm",
             "title": "Point of Sale Client Demo",
