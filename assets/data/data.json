@@ -60,7 +60,8 @@
             { "name": "Unreal Engine", "level": 75 },
             { "name": "Unity", "level": 90 },
             { "name": "Linux (Kali, Ubuntu, Manjaro)", "level": 100 },
-            { "name": "Docker", "level": 90 }
+            { "name": "Docker", "level": 90 },
+            { "name": "Flask", "level": 100 }
           ]
     },
     "resume":
@@ -105,7 +106,8 @@
                 "Upgraded Frappe/ERPNext from v13 to v15, separating and optimizing a built-in Vue.js application.",
                 "Created a customizable Kanban board and resolved complex related issues.",
                 "Managed environments for UAT, QA, Preproduction, and Outsourcing pipelines.",
-                "Built the Frappe Developer Toolbox, increasing development efficiency."
+                "Built the Frappe Developer Toolbox, increasing development efficiency.",
+                "Built the Single View Connector, a seperate FLASK app to connect with various banking services and else."
               ]
           },
           {
