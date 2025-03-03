@@ -339,7 +339,21 @@
             "projectDate": "2024",
             "projectURL": "https://syarah.com",
             "projectURLText": "Client Page"
-          }
+          },
+          {
+            "category": "filter-project",
+            "video": "assets/video/portfolio/singleviewconnector.webm",
+            "title": "Single View Connector",
+            "shortDescription": "A unified interface for various services",
+            "description": "SingleViewConnector is a Flask application that connects various services into a single view, providing a unified interface for users. This application enhances productivity by allowing users to access multiple services seamlessly from one platform. With features like customizable <b style='color: #007bff;'>dashboards</b>, <b style='color: #28a745;'>user management</b>, and <b style='color: #ff6347;'>service integration</b>, it empowers teams to streamline their workflows and improve collaboration. The application is designed with a focus on <b style='color: #ffc107;'>user experience</b>, ensuring that all functionalities are easily accessible and intuitive. Whether managing <b style='color: #17a2b8;'>service consumers</b> or monitoring <b style='color: #6f42c1;'>system logs</b>, SingleViewConnector offers a comprehensive solution for modern service management.",
+            "galleryGroup": "portfolio-gallery-project",
+            "stack": "Flask | Python | Docker | SQLAlchemy",
+            "platform": "Web",
+            "client": "Syarah",
+            "projectDate": "2024",
+            "projectURL": "https://syarah.com",
+            "projectURLText": "Client Page"
+        }
           
         ]
       },
