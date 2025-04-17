@@ -353,6 +353,20 @@
             "projectDate": "2025",
             "projectURL": "https://syarah.com",
             "projectURLText": "Client Page"
+        },
+        {
+          "category": "filter-project",
+          "video": "assets/video/portfolio/cross.mp4",
+          "title": "Cross-Screen Objects",
+          "shortDescription": "A 3D visualization of interconnected spheres across multiple screens",
+          "description": "Cross-Screen Objects is an innovative web application that leverages <a href='https://threejs.org' target='_blank'>Three.js</a> to create a dynamic 3D visualization of interconnected spheres and particle systems. The application uses a custom <b style='color: #007bff;'>WindowManager</b> class to track and synchronize window positions across multiple screens via <b style='color: #28a745;'>localStorage</b>. Each window spawns a glowing main sphere with orbiting smaller spheres, connected by smooth <b style='color: #ff6347;'>Catmull-Rom curves</b> that animate in real-time. The visualization includes <b style='color: #ffc107;'>particle clouds</b> for a dense, web-like effect, with <b style='color: #17a2b8;'>custom shaders</b> for glowing aesthetics. The system supports <b style='color: #6f42c1;'>real-time updates</b> for window resizing and movement, ensuring seamless cross-screen interactions. Built with a focus on <b style='color: #dc3545;'>performance</b> and <b style='color: #fd7e14;'>visual appeal</b>, this project showcases advanced WebGL rendering and multi-window coordination.",
+          "galleryGroup": "portfolio-gallery-project",
+          "stack": "Three.js | JavaScript | Express | Node.js | WebGL",
+          "platform": "Web",
+          "client": "Personal Project",
+          "projectDate": "2024",
+          "projectURL": "https://mbanifawaz.github.io/",
+          "projectURLText": "Me :)"
         }
           
         ]
