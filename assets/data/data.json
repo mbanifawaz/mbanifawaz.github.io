@@ -98,8 +98,21 @@
         ],
         "experience": [
           {
+            "title": "Senior ERP Full Stack Developer / ERP Squad Lead",
+            "year": "April 2025 – Present",
+            "company": "Syarah",
+            "responsibilities": [
+              "As an ERP Squad Lead, I oversee the strategic direction and execution of ERPNext and Frappe-related projects, leading a dedicated team of developers to drive system enhancements, optimizations, and custom solutions.",
+              "In this role, I ensure seamless coordination across multiple teams, maintaining high-quality deliverables, managing project timelines, and ensuring the successful rollout of ERP upgrades and features.",
+              "I continue to apply my technical expertise in Python, JavaScript, and DevOps while taking on leadership responsibilities such as prioritizing tasks, mentoring team members, conducting performance reviews, and ensuring team alignment with company goals.",
+              "I lead code reviews to ensure clean, efficient, and maintainable code, fostering a culture of quality and collaboration within the team.",
+              "I have spearheaded the implementation of scalable solutions, including advanced database optimization and integration with third-party services, and played a critical role in the implementation of high-availability systems.",
+              "My focus remains on fostering a collaborative and innovative environment that drives continuous improvement and business growth."
+            ]            
+          },
+          {
             "title": "MID ERP Full Stack Developer",
-            "year": "December 2023 – Present",
+            "year": "December 2023 – April 2025",
             "company": "Syarah",
             "responsibilities": [
                 "Conducted Frappe/ERPNext, Python, and JavaScript training, mentoring team members to enhance technical skills.",
@@ -367,7 +380,35 @@
           "projectDate": "2024",
           "projectURL": "https://mbanifawaz.github.io/",
           "projectURLText": "Me :)"
-        }
+        },
+        {
+          "category": "filter-web",
+          "video": "assets/video/portfolio/raqmiyah.mp4",
+          "title": "Raqmiyah Company Main Page",
+          "shortDescription": "A modern, responsive website for a Saudi-based technology startup providing innovative IT solutions",
+          "description": "A visually stunning website built with modern web technologies featuring smooth animations, bilingual support (Arabic/English), and a dark theme. The site includes <b style='color: #007bff;'>responsive design</b> that works seamlessly across all devices, <b style='color: #28a745;'>interactive service tabs</b> showcasing ERP implementation, web development, mobile apps, custom systems and IT consulting services. The website utilizes <b style='color: #ff6347;'>ScrollReveal animations</b> for engaging user experience, <b style='color: #ffc107;'>RTL support</b> for Arabic content, and <b style='color: #17a2b8;'>custom CSS animations</b> for subtle visual effects. Features include a <b style='color: #6f42c1;'>floating contact button</b>, <b style='color: #dc3545;'>video background hero section</b>, and <b style='color: #fd7e14;'>dynamic theme switching</b>. Built with a focus on performance and user experience, this project demonstrates modern web development practices and attention to cultural requirements.",
+          "galleryGroup": "portfolio-gallery-web",
+          "stack": "HTML | CSS | JavaScript | PHP",
+          "platform": "Web",
+          "client": "Raqmiyah",
+          "projectDate": "2025",
+          "projectURL": "https://raqmiyah.com/",
+          "projectURLText": "Client Page"
+        },
+        {
+          "category": "filter-project",
+          "video": "assets/video/portfolio/ada.webm",
+          "title": "L.U.N.A - Learning, Understanding Neural Assistant",
+          "shortDescription": "A sophisticated AI assistant platform combining real-time conversation, multimodal interaction, and intelligent widgets for an enhanced user experience",
+          "description": "L.U.N.A is a cutting-edge AI assistant application that seamlessly integrates multiple technologies for natural interaction. Key features include <b style='color: #007bff;'>real-time voice communication</b> with speech-to-text and text-to-speech capabilities, <b style='color: #28a745;'>live webcam integration</b> for visual context processing, and <b style='color: #ff6347;'>intelligent widgets</b> providing weather updates, maps/directions, code execution, and web search results. The application leverages <b style='color: #ffc107;'>Google's Gemini AI</b> for advanced conversation capabilities and <b style='color: #17a2b8;'>WebSocket technology</b> for smooth real-time communication. Notable features include <b style='color: #6f42c1;'>ElevenLabs voice synthesis</b> for natural speech output, <b style='color: #dc3545;'>interactive visualization</b> showing the AI's status, and <b style='color: #fd7e14;'>multiple widget integrations</b> including weather services, Google Maps, and web search functionality. Built with a modern tech stack and emphasis on real-time performance, this project showcases advanced integration of AI services with a responsive web interface.",
+          "galleryGroup": "portfolio-gallery-project",
+          "stack": "Python | React | Flask | WebSocket | Google Gemini AI | ElevenLabs TTS | Web Speech API",
+          "platform": "Web",
+          "client": "Personal Project",
+          "projectDate": "2025",
+          "projectURL": "https://mbanifawaz.github.io/",
+          "projectURLText": "Me :)"
+      }
           
         ]
       },
