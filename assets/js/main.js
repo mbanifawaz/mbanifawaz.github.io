@@ -77,6 +77,27 @@
   document.addEventListener('scroll', toggleScrollTop);
 
   /**
+   * Mute button
+   */
+  let muteButton = document.querySelector('.mute-button');
+  let audio = document.getElementById('myAudio');
+  let isMuted = false;
+
+  function toggleMute() {
+    if (muteButton) {
+      muteButton.classList.add('active');
+      muteButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        isMuted = !isMuted;
+        audio.muted = isMuted;
+        muteButton.querySelector('i').className = isMuted ? 'bi bi-volume-mute-fill' : 'bi bi-volume-up-fill';
+      });
+    }
+  }
+
+  window.addEventListener('load', toggleMute);
+
+  /**
    * Animation on scroll function and init
    */
   function aosInit() {

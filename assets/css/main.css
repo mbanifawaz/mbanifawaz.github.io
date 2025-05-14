@@ -419,14 +419,13 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Scroll Top Button
+# Scroll Top & Mute Button
 --------------------------------------------------------------*/
-.scroll-top {
+.scroll-top, .mute-button {
   position: fixed;
   visibility: hidden;
   opacity: 0;
   right: 15px;
-  bottom: -15px;
   z-index: 99999;
   background-color: var(--accent-color);
   width: 44px;
@@ -435,21 +434,36 @@ h6 {
   transition: all 0.4s;
 }
 
-.scroll-top i {
+.scroll-top {
+  bottom: -15px;
+}
+
+.mute-button {
+  bottom: 45px;
+}
+
+.scroll-top i, .mute-button i {
   font-size: 24px;
   color: var(--contrast-color);
   line-height: 0;
 }
 
-.scroll-top:hover {
+.scroll-top:hover, .mute-button:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
   color: var(--contrast-color);
 }
 
-.scroll-top.active {
+.scroll-top.active, .mute-button.active {
   visibility: visible;
   opacity: 1;
+}
+
+.scroll-top.active {
   bottom: 15px;
+}
+
+.mute-button.active {
+  bottom: 75px;
 }
 
 /*--------------------------------------------------------------
