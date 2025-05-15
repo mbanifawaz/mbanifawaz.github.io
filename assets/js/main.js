@@ -59,12 +59,19 @@
    * Scroll top button
    */
   let scrollTop = document.querySelector('.scroll-top');
+  let whatsappButton = document.querySelector('.whatsapp-button');
+  let callButton = document.querySelector('.call-button');
 
-  function toggleScrollTop() {
+  function initializeButtons() {
     if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+      scrollTop.classList.add('active');
+    }
+    if (whatsappButton && callButton) {
+      whatsappButton.classList.add('active');
+      callButton.classList.add('active');
     }
   }
+
   scrollTop.addEventListener('click', (e) => {
     e.preventDefault();
     window.scrollTo({
@@ -73,8 +80,11 @@
     });
   });
 
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
+  window.addEventListener('load', initializeButtons);
+
+  /**
+   * Social buttons (WhatsApp and Call)
+   */
 
   /**
    * Mute button

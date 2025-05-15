@@ -421,7 +421,7 @@ h6 {
 /*--------------------------------------------------------------
 # Scroll Top & Mute Button
 --------------------------------------------------------------*/
-.scroll-top, .mute-button {
+.scroll-top, .mute-button, .whatsapp-button, .call-button {
   position: fixed;
   visibility: hidden;
   opacity: 0;
@@ -435,35 +435,35 @@ h6 {
 }
 
 .scroll-top {
-  bottom: -15px;
+  bottom: 195px;
 }
 
 .mute-button {
-  bottom: 45px;
+  bottom: 15px;
 }
 
-.scroll-top i, .mute-button i {
+.whatsapp-button {
+  bottom: 75px;
+}
+
+.call-button {
+  bottom: 135px;
+}
+
+.scroll-top i, .mute-button i, .whatsapp-button i, .call-button i {
   font-size: 24px;
   color: var(--contrast-color);
   line-height: 0;
 }
 
-.scroll-top:hover, .mute-button:hover {
+.scroll-top:hover, .mute-button:hover, .whatsapp-button:hover, .call-button:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
   color: var(--contrast-color);
 }
 
-.scroll-top.active, .mute-button.active {
+.scroll-top.active, .mute-button.active, .whatsapp-button.active, .call-button.active {
   visibility: visible;
   opacity: 1;
-}
-
-.scroll-top.active {
-  bottom: 15px;
-}
-
-.mute-button.active {
-  bottom: 75px;
 }
 
 /*--------------------------------------------------------------
