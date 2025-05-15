@@ -408,7 +408,21 @@
           "projectDate": "2025",
           "projectURL": "https://mbanifawaz.github.io/",
           "projectURLText": "Me :)"
-      }
+      },
+      {
+        "category": "filter-project",
+        "video": "assets/video/portfolio/bhr-maple.webm",
+        "title": "Frappe Custom Theme And App",
+        "shortDescription": "Frappe Customization Theme And Custom App Buisness Logic",
+        "description": "This project is a comprehensive customization of the <b style='color: #007bff;'>Frappe framework</b>, featuring a <b style='color: #28a745;'>custom theme</b> and a <b style='color: #ff6347;'>specialized app</b> designed to enhance user experience and functionality. The <b style='color: #6f42c1;'>custom theme</b> incorporates a modern design with a focus on usability, ensuring users can navigate the interface effortlessly. The <b style='color: #fd7e14;'>business logic</b> within the app is tailored to streamline processes and improve overall efficiency. This project showcases the <b style='color: #17a2b8;'>flexibility and power</b> of the Frappe framework in creating <b style='color: #dc3545;'>bespoke business solutions</b> for diverse operational needs.",
+        "galleryGroup": "portfolio-gallery-project",
+        "stack": "Frappe/ERPNext | Python | JS | MariaDB",
+        "platform": "Web",
+        "client": "Maple - Behar",
+        "projectDate": "2025",
+        "projectURL": "https://www.mapletele.com/",
+        "projectURLText": "Client Page"
+    }
           
         ]
       },
