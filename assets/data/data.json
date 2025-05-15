@@ -397,7 +397,7 @@
         },
         {
           "category": "filter-project",
-          "video": "assets/video/portfolio/ada.webm",
+          "video": "assets/video/portfolio/luna.webm",
           "title": "L.U.N.A - Learning, Understanding Neural Assistant",
           "shortDescription": "A sophisticated AI assistant platform combining real-time conversation, multimodal interaction, and intelligent widgets for an enhanced user experience",
           "description": "L.U.N.A is a cutting-edge AI assistant application that seamlessly integrates multiple technologies for natural interaction. Key features include <b style='color: #007bff;'>real-time voice communication</b> with speech-to-text and text-to-speech capabilities, <b style='color: #28a745;'>live webcam integration</b> for visual context processing, and <b style='color: #ff6347;'>intelligent widgets</b> providing weather updates, maps/directions, code execution, and web search results. The application leverages <b style='color: #ffc107;'>Google's Gemini AI</b> for advanced conversation capabilities and <b style='color: #17a2b8;'>WebSocket technology</b> for smooth real-time communication. Notable features include <b style='color: #6f42c1;'>ElevenLabs voice synthesis</b> for natural speech output, <b style='color: #dc3545;'>interactive visualization</b> showing the AI's status, and <b style='color: #fd7e14;'>multiple widget integrations</b> including weather services, Google Maps, and web search functionality. Built with a modern tech stack and emphasis on real-time performance, this project showcases advanced integration of AI services with a responsive web interface.",
