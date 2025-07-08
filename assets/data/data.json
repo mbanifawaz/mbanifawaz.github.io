@@ -99,7 +99,7 @@
         "experience": [
           {
             "title": "Senior ERP Full Stack Developer / ERP Squad Lead",
-            "year": "April 2025 – Present",
+            "year": "April 2025 – Present (Full-Time)",
             "company": "Syarah",
             "responsibilities": [
               "As an ERP Squad Lead, I oversee the strategic direction and execution of ERPNext and Frappe-related projects, leading a dedicated team of developers to drive system enhancements, optimizations, and custom solutions.",
@@ -112,7 +112,7 @@
           },
           {
             "title": "MID ERP Full Stack Developer",
-            "year": "December 2023 – April 2025",
+            "year": "December 2023 – April 2025 (Got Promoted) (Full-Time)",
             "company": "Syarah",
             "responsibilities": [
                 "Conducted Frappe/ERPNext, Python, and JavaScript training, mentoring team members to enhance technical skills.",
@@ -124,8 +124,25 @@
               ]
           },
           {
+            "title": "Senior Python / ERP Fullstack Developer & Consultant",
+            "year": "March 2025 – Present (Part-Time)",
+            "company": "Maple Telecommunications",
+            "responsibilities": [
+              "Designed and developed a fully dynamic Telegram bot management system using FastAPI and PostgreSQL, featuring a modern admin panel, granular permissions, and a superadmin console for process control.",
+              "Led the customization and optimization of Frappe ERPNext for Maple Telecommunications, implementing multi-company workflows, custom fields, and dynamic filters to enhance operational efficiency.",
+              "Architected a responsive HTML/JavaScript UI for the Telegram bot system, enabling seamless management of bots, commands, users, and permissions with real-time log viewing and section persistence.",
+              "Spearheaded the implementation of a robust permissions system (global and per-resource) and Dockerized deployment for scalable, production-ready Python applications.",
+              "Oversaw the integration of Telegram’s Bot API with custom API endpoints, facilitating versatile communication platforms for internal and external services.",
+              "Developed and maintained Python-based ERP solutions, including scripts for data processing, slot availability reporting, and duplicate detection in Frappe ERPNext child tables.",
+              "Provided technical consultation on ERPNext module customizations, REST API integrations, and JavaScript-based UI enhancements for improved user experience.",
+              "Mentored junior developers in Python, FastAPI, and Frappe Framework best practices, ensuring high-quality code delivery across multiple projects.",
+              "Collaborated with cross-functional teams to align ERP and Python project requirements with business objectives, driving process automation and system scalability.",
+              "Fulfilled a fully customized ERP solution for a high-profile client via Maple Telecommunications, tailoring Frappe ERPNext modules, workflows, and integrations to meet unique business requirements."
+            ]           
+          },
+          {
             "title": "ERP Full Stack Developer",
-            "year": "September 2022 – December 2023",
+            "year": "September 2022 – December 2023 (Full-Time)",
             "company": "Nixpend",
             "responsibilities": [
                 "Built custom Doctypes and modules with related reports and functionalities, including HR, appointment bookings, accounting, and procedural enhancements.",
@@ -137,7 +154,7 @@
           },
           {
             "title": "System Development Officer",
-            "year": "June 2021 – March 2022",
+            "year": "June 2021 – March 2022 (Full-Time)",
             "company": "Extensya",
             "responsibilities": [
                 "Created and maintained web forms for quality evaluations and call logging, serving ~40 clients.",
@@ -422,7 +439,20 @@
         "projectDate": "2025",
         "projectURL": "https://www.mapletele.com/",
         "projectURLText": "Client Page"
-    }
+    },{
+    "category": "filter-project",
+    "video": "assets/video/portfolio/telegram.webm",
+    "title": "Telegram Multi-Bot API System & Admin Panel",
+    "shortDescription": "Dynamic Multi-Bot Telegram API with Admin Panel, Permissions, and Console",
+    "description": "This project is a <b style='color: #007bff;'>fully dynamic Telegram bot management system</b> designed to manage <b style='color: #e83e8c;'>multiple Telegram bots</b> with a <b style='color: #28a745;'>modern admin panel</b>, <b style='color: #ff6347;'>granular permissions</b>, and a <b style='color: #6f42c1;'>superadmin console</b>. Built with <b style='color: #fd7e14;'>FastAPI</b> and <b style='color: #17a2b8;'>PostgreSQL</b>, it supports <b style='color: #20c997;'>dynamic command registration</b>, <b style='color: #ffc107;'>per-resource sharing</b>, and <b style='color: #d63384;'>ownership-based access control</b>. The <b style='color: #dc3545;'>responsive HTML/JS UI</b> enables <b style='color: #00bcd4;'>seamless management</b> of bots, commands, users, and permissions, with <b style='color: #6610f2;'>section persistence</b> and <b style='color: #f1c40f;'>real-time log viewing</b>. Features include a <b style='color: #007bff;'>robust permissions system</b> (global and per-resource), a <b style='color: #28a745;'>superadmin console</b> for <b style='color: #c82333;'>process control</b> (start/stop/restart), and <b style='color: #ff6347;'>Dockerized deployment</b> for <b style='color: #17a2b8;'>scalability</b>. The system is <b style='color: #6f42c1;'>extensible</b>, <b style='color: #28a745;'>secure</b>, and <b style='color: #fd7e14;'>production-ready</b>, showcasing the power of <b style='color: #6f42c1;'>Python</b> and <b style='color: #fd7e14;'>Telegram’s Bot API</b> for building <b style='color: #00bcd4;'>versatile communication platforms</b>. The main goal of this bot is to call <b style='color: #e83e8c;'>custom API endpoints</b> with parameters and handle the <b style='color: #20c997;'>responses</b>, making it a powerful tool for <b style='color: #ffc107;'>integrating Telegram with various services</b>.",
+    "galleryGroup": "portfolio-gallery-project",
+    "stack": "Python | FastAPI | PostgreSQL | Telegram Bot API | JavaScript | HTML/CSS | Docker | Uvicorn",
+    "platform": "Web | Telegram",
+    "client": "Maple Telecommunications",
+    "projectDate": "2025",
+    "projectURL": "https://www.mapletele.com/",
+    "projectURLText": "Client Page"
+}
           
         ]
       },
