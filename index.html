@@ -332,7 +332,7 @@
         height: auto;
         min-height: 100vh;
         justify-content: flex-start;
-        padding-top: 60px;
+        padding-top: max(80px, env(safe-area-inset-top) + 60px);
       }
 
       .portals {
@@ -395,7 +395,7 @@
     /* Small mobile devices */
     @media (max-width: 480px) {
       .portal-container {
-        padding-top: 40px;
+        padding-top: max(60px, env(safe-area-inset-top) + 40px);
       }
       
       .portal {
