@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munes Bani Fawaz | Futuristic Portfolio</title>
+    
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    
+    <!-- CSS Files -->
+    <link href="assets/css/futuristic.css" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Scan Line Effect -->
+    <div class="scan-line"></div>
+    
+    <!-- Matrix Rain Background -->
+    <canvas id="matrix-rain" class="matrix-rain"></canvas>
+    
+    <!-- Data Streams -->
+    <div class="data-stream"></div>
+    
+    <!-- Cyber Lines -->
+    <div class="cyber-lines"></div>
+    
+    <!-- Navigation -->
+    <nav class="future-nav" id="navbar">
+        <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; position: relative;">
+            <div class="neon-text" style="font-size: 1.5rem;">MBF</div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+            <div style="display: flex; gap: 1rem;" id="nav-menu">
+                <a href="#home" class="nav-link">HOME</a>
+                <a href="#about" class="nav-link">ABOUT</a>
+                <a href="#skills" class="nav-link">SKILLS</a>
+                <a href="#resume" class="nav-link">RESUME</a>
+                <a href="#services" class="nav-link">SERVICES</a>
+                <a href="#portfolio" class="nav-link">PROJECTS</a>
+                <a href="#testimonials" class="nav-link">TESTIMONIALS</a>
+                <a href="#contact" class="nav-link">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero-section circuit-pattern" id="home">
+        <canvas id="particle-network" class="particle-network"></canvas>
+        <div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-up">MUNES BANI FAWAZ</h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                <span class="typing-text"></span><span class="cursor">_</span>
+            </p>
+            <div data-aos="fade-up" data-aos-delay="400" style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                <button class="cyber-btn" onclick="scrollToSection('portfolio')">VIEW PROJECTS</button>
+                <button class="cyber-btn" onclick="scrollToSection('contact')">CONTACT ME</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section style="padding: 100px 20px;" id="about">
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <h2 class="neon-text" style="font-size: 3rem; text-align: center; margin-bottom: 3rem;">ABOUT ME</h2>
+            
+            <div class="cyber-grid">
+                <div class="holo-card floating" data-aos="fade-right">
+                    <h3 style="color: var(--neon-blue); margin-bottom: 1rem; font-family: var(--font-display);">PROFILE</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">
+                        Senior Full Stack Developer specializing in cutting-edge technologies and innovative solutions. 
+                        Expert in Python, JavaScript, and modern frameworks with a passion for automation and optimization.
+                    </p>
+                </div>
+                
+                <div class="holo-card floating" data-aos="fade-up" style="animation-delay: 0.2s;">
+                    <h3 style="color: var(--neon-purple); margin-bottom: 1rem; font-family: var(--font-display);">EXPERIENCE</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">
+                        ERP Squad Lead at Syarah, leading development teams and architecting scalable solutions. 
+                        Extensive experience with Frappe/ERPNext, cloud infrastructure, and DevOps practices.
+                    </p>
+                </div>
+                
+                <div class="holo-card floating" data-aos="fade-left" style="animation-delay: 0.4s;">
+                    <h3 style="color: var(--neon-pink); margin-bottom: 1rem; font-family: var(--font-display);">VISION</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">
+                        Pioneering the future of software development through automation, AI integration, and 
+                        innovative problem-solving approaches that transform business operations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section style="padding: 100px 20px; background: var(--dark-surface);" id="skills">
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <h2 class="neon-text" style="font-size: 3rem; text-align: center; margin-bottom: 3rem;">TECHNICAL SKILLS</h2>
+            
+            <div class="terminal-section" data-aos="fade-up">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <div class="terminal-dot red"></div>
+                        <div class="terminal-dot yellow"></div>
+                        <div class="terminal-dot green"></div>
+                    </div>
+                    <div class="terminal-title">skills.exe</div>
+                </div>
+                
+                <div class="terminal-content">
+                    <div class="cyber-grid" id="skills-container">
+                        <!-- Skills will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Resume Section -->
+    <section style="padding: 100px 20px; background: var(--dark-surface);" id="resume">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="neon-text" style="font-size: 3rem; text-align: center; margin-bottom: 3rem;">RESUME</h2>
+            
+            <div class="holo-card" data-aos="fade-up">
+                <p style="color: var(--text-secondary); text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">
+                    Access my comprehensive CV/Resume for detailed professional information
+                </p>
+                <div style="text-align: center;">
+                    <a href="https://mrgiveitaway-tpk.github.io/C.V/" target="_blank" 
+                       class="cyber-button" 
+                       style="display: inline-block; padding: 15px 40px; background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple)); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s; box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);">
+                        <span class="glow-text">Download Full Resume</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section style="padding: 100px 20px;" id="services">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="neon-text" style="font-size: 3rem; text-align: center; margin-bottom: 3rem;">SERVICES</h2>
+            <p style="color: var(--text-secondary); text-align: center; margin-bottom: 3rem; font-size: 1.2rem;">
+                Comprehensive technical solutions for the digital frontier
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                <div class="holo-card" data-aos="fade-up" data-aos-delay="100">
+                    <div style="color: var(--neon-green); font-size: 2.5rem; margin-bottom: 1rem;">⌘</div>
+                    <h3 class="glow-text" style="color: var(--neon-blue); margin-bottom: 1rem;">Full Stack Development</h3>
+                    <p style="color: var(--text-secondary);">Custom ERP solutions, web applications with React, Angular, Vue.js. Expert in Python, JavaScript, and cutting-edge frameworks.</p>
+                </div>
+                
+                <div class="holo-card" data-aos="fade-up" data-aos-delay="200">
+                    <div style="color: var(--neon-purple); font-size: 2.5rem; margin-bottom: 1rem;">☁</div>
+                    <h3 class="glow-text" style="color: var(--neon-green); margin-bottom: 1rem;">DevOps & Cloud</h3>
+                    <p style="color: var(--text-secondary);">Infrastructure management, cloud migrations, Docker containerization, AWS solutions, and production pipelines.</p>
+                </div>
+                
+                <div class="holo-card" data-aos="fade-up" data-aos-delay="300">
+                    <div style="color: var(--neon-blue); font-size: 2.5rem; margin-bottom: 1rem;">⚡</div>
+                    <h3 class="glow-text" style="color: var(--neon-purple); margin-bottom: 1rem;">System Integration</h3>
+                    <p style="color: var(--text-secondary);">Custom API development, webhook implementation, cloud service integrations, and bespoke module creation.</p>
+                </div>
+                
+                <div class="holo-card" data-aos="fade-up" data-aos-delay="400">
+                    <div style="color: var(--neon-green); font-size: 2.5rem; margin-bottom: 1rem;">⚙</div>
+                    <h3 class="glow-text" style="color: var(--neon-blue); margin-bottom: 1rem;">Performance Optimization</h3>
+                    <p style="color: var(--text-secondary);">SQL query optimization, system scalability improvements, database indexing, and high-performance solutions.</p>
+                </div>
+                
+                <div class="holo-card" data-aos="fade-up" data-aos-delay="500">
+                    <div style="color: var(--neon-purple); font-size: 2.5rem; margin-bottom: 1rem;">◉</div>
+                    <h3 class="glow-text" style="color: var(--neon-green); margin-bottom: 1rem;">Training & Mentorship</h3>
+                    <p style="color: var(--text-secondary);">Technical training in modern frameworks, Python, JavaScript, and software development best practices.</p>
+                </div>
+                
+                <div class="holo-card" data-aos="fade-up" data-aos-delay="600">
+                    <div style="color: var(--neon-blue); font-size: 2.5rem; margin-bottom: 1rem;">⟁</div>
+                    <h3 class="glow-text" style="color: var(--neon-purple); margin-bottom: 1rem;">Automation & Workflow</h3>
+                    <p style="color: var(--text-secondary);">Creating custom scripts, automating processes, developing efficiency tools, and streamlined workflow solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section style="padding: 100px 20px; background: var(--dark-surface);" id="portfolio" class="hex-pattern">
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <h2 class="neon-text" style="font-size: 3rem; text-align: center; margin-bottom: 3rem;">PROJECTS</h2>
+            
+            <div style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap;">
+                <button class="cyber-btn filter-btn active" data-filter="*">ALL</button>
+                <button class="cyber-btn filter-btn" data-filter=".filter-app">APPS</button>
+                <button class="cyber-btn filter-btn" data-filter=".filter-web">WEB</button>
+                <button class="cyber-btn filter-btn" data-filter=".filter-project">PROJECTS</button>
+                <button class="cyber-btn filter-btn" data-filter=".filter-courses">COURSES</button>
+            </div>
+            
+            <div class="cyber-grid" id="portfolio-container">
+                <!-- Portfolio items will be loaded here -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section style="padding: 100px 20px; position: relative; min-height: 400px;" id="testimonials">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="neon-text" style="font-size: 3rem; text-align: center; margin-bottom: 3rem;">TESTIMONIALS</h2>
+            <p style="color: #b8b8c8; text-align: center; margin-bottom: 3rem; font-size: 1.2rem;">
+                Feedback from the digital matrix
+            </p>
+            
+            <div class="swipermaincontainer" style="position: relative; min-height: 200px; display: block;">
+                <!-- Testimonials will be dynamically loaded here -->
+                <div style="text-align: center; color: #b8b8c8; padding: 2rem;">Loading testimonials...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section style="padding: 100px 20px; background: var(--dark-surface);" id="contact">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 class="neon-text" style="font-size: 3rem; text-align: center; margin-bottom: 3rem;">CONNECT</h2>
+            
+            <div class="holo-card" data-aos="zoom-in">
+                <div style="text-align: center;">
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.2rem;">
+                        Ready to build the future together?
+                    </p>
+                    
+                    <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem;">
+                        <a href="tel:+962789336602" class="glow-text" style="color: var(--neon-green); text-decoration: none;">
+                            +962 789 336 602
+                        </a>
+                        <a href="mailto:m.banifawaz@outlook.com" class="glow-text" style="color: var(--neon-blue); text-decoration: none;">
+                            m.banifawaz@outlook.com
+                        </a>
+                    </div>
+                    
+                    <div id="social-links" style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+                        <!-- Social links will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer style="padding: 2rem; text-align: center; border-top: 1px solid rgba(0, 255, 255, 0.2);">
+        <p style="color: var(--text-secondary); font-family: var(--font-mono);">
+            © 2025 Munes Bani Fawaz | Crafted with <span style="color: var(--neon-pink);">♥</span> and Code
+        </p>
+    </footer>
+    
+    <!-- Project Modal -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" onclick="closeModal()">×</button>
+                <h2 class="modal-title" id="modalTitle">Project Title</h2>
+            </div>
+            <div class="modal-body">
+                <div id="modalMedia"></div>
+                <div class="modal-description" id="modalDescription"></div>
+                <div class="modal-info" id="modalInfo"></div>
+                <div class="modal-actions" id="modalActions"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/futuristic.js"></script>
+</body>
+</html>

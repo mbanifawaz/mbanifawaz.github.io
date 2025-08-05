@@ -1,547 +1,781 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Munes Bani Fawaz</title>
+  <title>Portal - Choose Your Kingdom</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+  
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    body {
+      font-family: 'Orbitron', monospace;
+      background: #000;
+      overflow: hidden;
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+    }
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-  <link href="assets/css/index.css" rel="stylesheet">
+    /* Animated starfield background */
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
 
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 3s infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    /* Main portal container */
+    .portal-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      padding: 20px;
+      max-width: 1200px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    /* Title */
+    .portal-title {
+      font-size: clamp(1.5rem, 8vw, 4rem);
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientShift 3s ease infinite;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-shadow: 0 0 40px rgba(0, 255, 255, 0.5);
+      padding: 0 10px;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .subtitle {
+      font-size: clamp(0.8rem, 3vw, 1.2rem);
+      color: #888;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-family: 'Space Mono', monospace;
+      letter-spacing: 0.05em;
+      padding: 0 10px;
+    }
+
+    /* Portal buttons container */
+    .portals {
+      display: flex;
+      gap: clamp(1rem, 5vw, 4rem);
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    /* Individual portal */
+    .portal {
+      position: relative;
+      width: min(80vw, 300px);
+      height: clamp(300px, 50vh, 400px);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      margin-bottom: 60px;
+    }
+
+    .portal:hover {
+      transform: scale(1.05);
+    }
+
+    /* Portal frame */
+    .portal-frame {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      background: linear-gradient(135deg, transparent 20%, rgba(255, 255, 255, 0.1) 50%, transparent 80%);
+      box-shadow: 
+        inset 0 0 50px rgba(0, 255, 255, 0.5),
+        0 0 100px rgba(0, 255, 255, 0.3),
+        0 0 150px rgba(0, 255, 255, 0.2);
+      animation: portalPulse 3s ease-in-out infinite;
+    }
+
+    .portal.futuristic .portal-frame {
+      box-shadow: 
+        inset 0 0 50px rgba(255, 0, 255, 0.5),
+        0 0 100px rgba(255, 0, 255, 0.3),
+        0 0 150px rgba(255, 0, 255, 0.2);
+    }
+
+    @keyframes portalPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+
+    /* Portal vortex effect */
+    .portal-vortex {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: 60%;
+      border-radius: 50%;
+      background: radial-gradient(ellipse at center, 
+        rgba(0, 255, 255, 0.8) 0%,
+        rgba(0, 150, 255, 0.6) 20%,
+        rgba(0, 50, 150, 0.4) 40%,
+        rgba(0, 0, 50, 0.2) 60%,
+        transparent 80%);
+      animation: vortexSpin 10s linear infinite;
+      filter: blur(2px);
+    }
+
+    .portal.futuristic .portal-vortex {
+      background: radial-gradient(ellipse at center, 
+        rgba(255, 0, 255, 0.8) 0%,
+        rgba(200, 0, 200, 0.6) 20%,
+        rgba(150, 0, 150, 0.4) 40%,
+        rgba(100, 0, 100, 0.2) 60%,
+        transparent 80%);
+    }
+
+    @keyframes vortexSpin {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* Portal inner glow */
+    .portal-inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      height: 45%;
+      border-radius: 50%;
+      background: radial-gradient(ellipse at center,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(0, 255, 255, 0.6) 30%,
+        transparent 70%);
+      animation: innerPulse 2s ease-in-out infinite alternate;
+    }
+
+    .portal.futuristic .portal-inner {
+      background: radial-gradient(ellipse at center,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(255, 0, 255, 0.6) 30%,
+        transparent 70%);
+    }
+
+    @keyframes innerPulse {
+      from { opacity: 0.6; transform: translate(-50%, -50%) scale(0.8); }
+      to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    }
+
+    /* Portal button */
+    .portal-button {
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: clamp(10px, 2vh, 15px) clamp(20px, 5vw, 40px);
+      font-size: clamp(0.9rem, 3vw, 1.1rem);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: linear-gradient(45deg, #00ffff, #0099ff);
+      border: 2px solid rgba(0, 255, 255, 0.5);
+      color: white;
+      cursor: pointer;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 
+        0 0 20px rgba(0, 255, 255, 0.5),
+        inset 0 0 20px rgba(0, 255, 255, 0.2);
+      font-family: 'Rajdhani', sans-serif;
+      white-space: nowrap;
+    }
+
+    .portal.futuristic .portal-button {
+      background: linear-gradient(45deg, #ff00ff, #9900ff);
+      border: 2px solid rgba(255, 0, 255, 0.5);
+      box-shadow: 
+        0 0 20px rgba(255, 0, 255, 0.5),
+        inset 0 0 20px rgba(255, 0, 255, 0.2);
+    }
+
+    .portal-button:hover {
+      transform: translateX(-50%) translateY(-5px);
+      box-shadow: 
+        0 10px 30px rgba(0, 255, 255, 0.7),
+        inset 0 0 30px rgba(0, 255, 255, 0.3);
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+
+    .portal.futuristic .portal-button:hover {
+      box-shadow: 
+        0 10px 30px rgba(255, 0, 255, 0.7),
+        inset 0 0 30px rgba(255, 0, 255, 0.3);
+    }
+
+    /* Portal label */
+    .portal-label {
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: clamp(1.2rem, 4vw, 1.5rem);
+      font-weight: 700;
+      color: #00ffff;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+      font-family: 'Rajdhani', sans-serif;
+      white-space: nowrap;
+    }
+
+    .portal.futuristic .portal-label {
+      color: #ff00ff;
+      text-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
+    }
+
+    /* Particle effects */
+    .particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(0, 255, 255, 0.8);
+      border-radius: 50%;
+      animation: float 8s infinite linear;
+    }
+
+    .portal.futuristic .particle {
+      background: rgba(255, 0, 255, 0.8);
+    }
+
+    @keyframes float {
+      from {
+        transform: translateY(100%) translateX(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-100vh) translateX(100px);
+        opacity: 0;
+      }
+    }
+
+    /* Mobile optimizations */
+    @media (max-width: 768px) {
+      .portal-container {
+        padding: 10px;
+      }
+
+      .portals {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 10px;
+      }
+      
+      .portal {
+        width: min(90vw, 280px);
+        height: min(40vh, 320px);
+        margin-bottom: 50px;
+      }
+      
+      .portal-title {
+        font-size: clamp(1.8rem, 10vw, 2.5rem);
+        margin-bottom: 0.5rem;
+      }
+
+      .subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .portal-label {
+        font-size: 1.1rem;
+        top: -30px;
+      }
+
+      .portal-button {
+        font-size: 0.85rem;
+        padding: 10px 20px;
+        bottom: -40px;
+      }
+
+      .audio-control {
+        bottom: 10px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    /* Small mobile devices */
+    @media (max-width: 480px) {
+      .portal {
+        width: 85vw;
+        height: 35vh;
+        min-height: 250px;
+      }
+
+      .portal-title {
+        font-size: 1.5rem;
+      }
+
+      .subtitle {
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Landscape mobile */
+    @media (max-height: 600px) and (orientation: landscape) {
+      .portal-container {
+        padding: 5px;
+      }
+
+      .portals {
+        flex-direction: row;
+        gap: 2rem;
+      }
+
+      .portal {
+        width: 200px;
+        height: 60vh;
+        margin-bottom: 40px;
+      }
+
+      .portal-title {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .subtitle {
+        margin-bottom: 1rem;
+      }
+    }
+
+    /* Lightning effect */
+    .lightning {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      opacity: 0;
+      animation: lightning 4s infinite;
+    }
+
+    @keyframes lightning {
+      0%, 90%, 100% { opacity: 0; }
+      91% { opacity: 1; }
+      92% { opacity: 0; }
+      93% { opacity: 0.8; }
+      94% { opacity: 0; }
+    }
+
+    .lightning-bolt {
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(to bottom, 
+        transparent,
+        rgba(255, 255, 255, 0.8),
+        rgba(0, 255, 255, 1),
+        transparent);
+      filter: blur(1px);
+      transform: skewX(-5deg);
+    }
+
+    /* Audio control */
+    .audio-control {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background: rgba(0, 255, 255, 0.2);
+      border: 2px solid rgba(0, 255, 255, 0.5);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 100;
+      transition: all 0.3s ease;
+    }
+
+    .audio-control:hover {
+      background: rgba(0, 255, 255, 0.4);
+      transform: scale(1.1);
+    }
+
+    .audio-control.muted {
+      background: rgba(255, 0, 0, 0.2);
+      border-color: rgba(255, 0, 0, 0.5);
+    }
+
+    .audio-icon {
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+  </style>
 </head>
 
-<body class="index-page">
+<body>
+  <!-- Audio Control Button -->
+  <div class="audio-control" id="audioControl" onclick="toggleSound()" style="opacity: 0; transition: opacity 1s ease-in;">
+    <svg class="audio-icon" viewBox="0 0 24 24" id="audioIcon">
+      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+    </svg>
+  </div>
 
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <div class="profile-img">
-      <img src="assets/img/1715514527414.jpeg" alt="" class="img-fluid rounded-circle">
-    </div>
-
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Munes Bani Fawaz</h1>
-    </a>
-
-    <div class="social-links text-center">
-    </div>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#skills"><i class="bi bi-tools navicon"></i> Skills</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-        <!-- <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li> -->
-        <li><a href="#testimonials"><i class="bi bi-clipboard-check navicon"></i> Testimonials</a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
-      </ul>
-    </nav>
-
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/DSC09461.JPG" alt="" data-aos="fade-in" class="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Munes Bani Fawaz</h2>
-        <p>I'm a <span class="typed" data-typed-items="Senior Full Stack Developer/Software Engineer/ERP Squad Lead, Freelancer, Side Dev-Ops, Gamer, Video Editor">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>Passionate Software Engineer
-          committed to delivering high-quality
-          solutions through dedication,
-          meticulous attention to detail, and
-          strong organizational skills. Proficient
-          in programming and coding with a
-          solid understanding of software
-          development principles. Driven to
-          continuously learn, evolve, and achieve
-          excellence in the field of Software
-          Engineering.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/100308806.jpeg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 content">
-            <h2>Senior Full Stack Developer &amp; Software Engineer.</h2>
-            <p class="fst-italic py-3">
-              I specialize in creating seamless user experiences, optimizing system performance, and collaborating with cross-functional teams to solve complex problems. Passionate about innovation, I consistently leverage cutting-edge tools and best practices to ensure the success of every project I undertake.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span id="birthday">4 Sep 1998</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span><a href="https://www.mbanifawaz.com" target="_blank">www.mbanifawaz.com</a></span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+962 789 336602</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Amman, Jordan</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span id="age">0</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor’s in Software Engineering</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>m.banifawaz@outlook.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
-              </div>
-            </div>
-            <p class="py-3">
-              Driven by a commitment to excellence, I aim to contribute to impactful projects that merge technology with user-centric solutions, fostering growth and efficiency for businesses.
-            </p>
-          </div>
+  <!-- Starfield background -->
+  <div class="stars" id="stars" style="opacity: 0; transition: opacity 1s ease-in;"></div>
+  
+  <!-- Main container -->
+  <div class="portal-container" id="portalContainer" style="opacity: 0; transition: opacity 1s ease-in;">
+    <h1 class="portal-title">Choose Your Destiny</h1>
+    <p class="subtitle">Enter the realm that calls to you</p>
+    
+    <div class="portals">
+      <!-- Classic Kingdom Portal -->
+      <div class="portal classic" onclick="enterPortal('index-classic.html')">
+        <div class="portal-label">Classic</div>
+        <div class="particles" id="classicParticles"></div>
+        <div class="portal-frame"></div>
+        <div class="portal-vortex"></div>
+        <div class="portal-inner"></div>
+        <button class="portal-button">Enter Classic Portfolio</button>
+        <div class="lightning">
+          <div class="lightning-bolt" style="left: 30%;"></div>
+          <div class="lightning-bolt" style="left: 70%; animation-delay: 0.5s;"></div>
         </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
-              <span class="counter-plus-sign">+</span>
-              <p><strong>Happy Clients</strong> <span>Trusted by numerous satisfied clients for delivering exceptional service.</span></p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="78" data-purecounter-duration="1" class="purecounter"></span>
-              <span class="counter-plus-sign">+</span>
-              <p><strong>Projects</strong> <span>Successfully executed a wide range of projects across various industries.</span></p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="45" data-purecounter-duration="1" class="purecounter"></span>
-              <span class="counter-plus-sign">+</span>
-              <p><strong>Hours Of Support</strong> <span>Offering reliable and responsive support whenever you need it.</span></p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-              <span class="counter-plus-sign">+</span>
-              <p><strong>Hard Workers</strong> <span>A team of skilled experts dedicated to driving success.</span></p>
-            </div>
-          </div><!-- End Stats Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Stats Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>I enjoy working with many programming languages and exploring new technologies. I’ve created projects in a variety of languages, mastering some while experimenting with others. For me, coding is more about understanding concepts and problem-solving; the language is just a different syntax to express the logic. This perspective keeps me motivated to try anything out and continuously expand my skill set.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row skills-content skills-animation"></div>
       </div>
       
-    </section><!-- /Skills Section -->
-
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p>For an overview of my CV/Resume, you can view a brief summary below. To access the complete version and download a copy, please press <a href="https://mrgiveitaway-tpk.github.io/C.V/" target="_blank">here</a></p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row">
-
+      <!-- Futuristic Kingdom Portal -->
+      <div class="portal futuristic" onclick="enterPortal('index-futuristic.html')">
+        <div class="portal-label">Futuristic</div>
+        <div class="particles" id="futuristicParticles"></div>
+        <div class="portal-frame"></div>
+        <div class="portal-vortex"></div>
+        <div class="portal-inner"></div>
+        <button class="portal-button">Enter Cyber Portfolio</button>
+        <div class="lightning">
+          <div class="lightning-bolt" style="left: 30%;"></div>
+          <div class="lightning-bolt" style="left: 70%; animation-delay: 0.5s;"></div>
         </div>
-
       </div>
-
-    </section><!-- /Resume Section -->
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Welcome to my portfolio! Here, I showcase a variety of things that highlight my expertise. Each represents a unique challenge, demonstrating my ability.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-            <ul id="portfolio-filters" class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-                <!-- Filters will be dynamically populated -->
-            </ul>
-
-            <div id="portfolio-container" class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-                <!-- Portfolio items will be dynamically populated -->
-            </div>
-        </div>
     </div>
+  </div>
 
-    </section><!-- /Portfolio Section -->
+  <!-- Background Audio -->
+  <audio id="backgroundAudio" loop>
+    <source src="assets/audio/background.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Experienced Full Stack Software Engineer specializing in enterprise solutions, web development, and system optimization. Offering comprehensive technical services across multiple domains.</p>
-    </div>
-    
-    <div class="container">
-        <div class="row gy-4">
-            <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-                <div class="icon flex-shrink-0"><i class="bi bi-code-slash"></i></div>
-                <div>
-                    <h4 class="title">Full Stack Development</h4>
-                    <p class="description">Custom ERP solutions using Frappe/ERPNext, web applications with React, Angular, and Vue.js. Expertise in Python, JavaScript, and multiple frameworks.</p>
-                </div>
-            </div>
-    
-            <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <div class="icon flex-shrink-0"><i class="bi bi-cloud-upload"></i></div>
-                <div>
-                    <h4 class="title">DevOps & Cloud Services</h4>
-                    <p class="description">Infrastructure management, cloud migrations, Docker containerization, AWS Cloud solutions, Environment setups and production pipelines.</p>
-                </div>
-            </div>
-    
-            <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon flex-shrink-0"><i class="bi bi-tools"></i></div>
-                <div>
-                    <h4 class="title">System Customization & Integration</h4>
-                    <p class="description">Custom API development, webhook implementation, cloud service integrations, and bespoke module creation for enhanced business workflows.</p>
-                </div>
-            </div>
-    
-            <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <div class="icon flex-shrink-0"><i class="bi bi-speedometer2"></i></div>
-                <div>
-                    <h4 class="title">Performance Optimization</h4>
-                    <p class="description">SQL query optimization, system scalability improvements, database indexing, and development of high-performance custom solutions.</p>
-                </div>
-            </div>
-    
-            <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
-                <div class="icon flex-shrink-0"><i class="bi bi-people"></i></div>
-                <div>
-                    <h4 class="title">Training & Mentorship</h4>
-                    <p class="description">Technical training in Frappe/ERPNext, Python, JavaScript, and software development best practices. Team mentoring and skill enhancement programs.</p>
-                </div>
-            </div>
-    
-            <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
-                <div class="icon flex-shrink-0"><i class="bi bi-diagram-3"></i></div>
-                <div>
-                    <h4 class="title">Automation & Workflow Design</h4>
-                    <p class="description">Creating custom scripts, automating operational processes, developing tools for efficiency, and designing streamlined workflow solutions.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    </section><!-- /Services Section -->
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Discover what others have to say about my work and experience. Read testimonials from clients and colleagues who have worked closely with me and seen the results firsthand.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container swipermaincontainer" data-aos="fade-up" data-aos-delay="100">
-        
+  <!-- Audio Permission Overlay -->
+  <div id="audioPrompt" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+    backdrop-filter: blur(15px);
+    transition: opacity 0.5s ease-out;
+  ">
+    <div style="
+      background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
+      border: 2px solid rgba(0, 255, 255, 0.5);
+      border-radius: 20px;
+      padding: 3rem;
+      text-align: center;
+      max-width: 500px;
+      animation: glow 2s ease-in-out infinite alternate;
+    ">
+      <h2 style="color: #00ffff; font-size: 1rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 2px;">
+        Welcome To Munes Bani Fawaz Portofolio Portal
+      </h2>
+      <p style="color: #b8b8c8; margin-bottom: 2rem; font-size: 1.1rem;">
+        Please Enable immersive audio for the full experience
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center;">
+        <button onclick="enableAudio()" style="
+          padding: 15px 40px;
+          background: linear-gradient(45deg, #00ffff, #0099ff);
+          border: none;
+          color: white;
+          font-size: 1.1rem;
+          font-weight: bold;
+          border-radius: 50px;
+          cursor: pointer;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          transition: transform 0.3s;
+        " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          Enable Audio
+        </button>
+        <button onclick="skipAudio()" style="
+          padding: 15px 40px;
+          background: transparent;
+          border: 2px solid rgba(255, 255, 255, 0.3);
+          color: #b8b8c8;
+          font-size: 1.1rem;
+          border-radius: 50px;
+          cursor: pointer;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          transition: all 0.3s;
+        " onmouseover="this.style.borderColor='rgba(255, 255, 255, 0.6)'" onmouseout="this.style.borderColor='rgba(255, 255, 255, 0.3)'">
+          Continue Silent
+        </button>
       </div>
+    </div>
+  </div>
+
+  <script>
+    // Audio management
+    let audioEnabled = false;
+    let isMuted = false;
+    const backgroundAudio = document.getElementById('backgroundAudio');
+    backgroundAudio.volume = 0.3;
+
+    function showPortalContent() {
+      // Fade in the portal content
+      document.getElementById('portalContainer').style.opacity = '1';
+      document.getElementById('stars').style.opacity = '1';
+      document.getElementById('audioControl').style.opacity = '1';
+    }
+
+    function enableAudio() {
+      audioEnabled = true;
+      backgroundAudio.play().then(() => {
+        console.log('Audio started successfully');
+      }).catch(err => {
+        console.log('Audio play failed:', err);
+      });
       
+      // Fade out the prompt
+      const prompt = document.getElementById('audioPrompt');
+      prompt.style.opacity = '0';
+      setTimeout(() => {
+        prompt.style.display = 'none';
+        showPortalContent();
+      }, 500);
+      
+      // Update audio control button
+      const audioControl = document.getElementById('audioControl');
+      audioControl.classList.remove('muted');
+    }
 
-    </section><!-- /Testimonials Section -->
+    function skipAudio() {
+      audioEnabled = false;
+      isMuted = true;
+      
+      // Fade out the prompt
+      const prompt = document.getElementById('audioPrompt');
+      prompt.style.opacity = '0';
+      setTimeout(() => {
+        prompt.style.display = 'none';
+        showPortalContent();
+      }, 500);
+      
+      // Update audio control button
+      const audioControl = document.getElementById('audioControl');
+      audioControl.classList.add('muted');
+    }
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-          <h2>Contact</h2>
-          <p>Feel free to contact me at anytime.</p>
-      </div><!-- End Section Title -->
-  
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="row gy-4">
-
-              <div class="col-lg-5">
-
-                  <div class="info-wrap">
-                      <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                          <i class="bi bi-geo-alt flex-shrink-0"></i>
-                          <div>
-                              <h3>Address</h3>
-                              <p>Hijaz Towers, Mecca St., Amman</p>
-                          </div>
-                      </div><!-- End Info Item -->
-  
-                      <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                          <i class="bi bi-telephone flex-shrink-0"></i>
-                          <div>
-                              <h3>Call Me</h3>
-                              <p>+962789336602</p>
-                          </div>
-                      </div><!-- End Info Item -->
-  
-                      <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                          <i class="bi bi-envelope flex-shrink-0"></i>
-                          <div>
-                              <h3>Email Me</h3>
-                              <p>m.banifawaz@outlook.com</p>
-                          </div>
-                      </div><!-- End Info Item -->
-  
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211.5276291894249!2d35.86105425756346!3d31.976029690556633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca1b04db4f433%3A0x2876c6f891849e8d!2z2KfYqNix2KfYrCDYp9mE2K3YrNin2LI!5e0!3m2!1sen!2sjo!4v1738236495401!5m2!1sen!2sjo" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                  </div>
-              </div>
-  
-              <div class="col-lg-7">
-                  <form id="contact-form" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-                      <div class="row gy-4">
-
-                          <div class="col-md-6">
-                              <label for="name-field" class="pb-2">Your Name</label>
-                              <input type="text" name="name" id="name-field" class="form-control" required>
-                          </div>
-  
-                          <div class="col-md-6">
-                              <label for="email-field" class="pb-2">Your Email</label>
-                              <input type="email" class="form-control" name="email" id="email-field" required>
-                          </div>
-  
-                          <div class="col-md-12">
-                              <label for="subject-field" class="pb-2">Subject</label>
-                              <input type="text" class="form-control" name="subject" id="subject-field" required>
-                          </div>
-  
-                          <div class="col-md-12">
-                              <label for="message-field" class="pb-2">Message</label>
-                              <textarea class="form-control" name="message" rows="10" id="message-field" required></textarea>
-                          </div>
-  
-                          <div class="col-md-12 text-center">
-                              <div class="loading">Loading</div>
-                              <div class="error-message"></div>
-                              <div class="sent-message">Your message has been sent. Thank you!</div>
-  
-                              <button type="submit">Send Message</button>
-                          </div>
-
-                      </div>
-                  </form>
-              </div><!-- End Contact Form -->
-
-          </div>
-
-      </div>
-
-  </section><!-- /Contact Section -->
-
-  <!-- Audio Overlay-->
-
-    <audio id="myAudio" loop>
-        <source src="assets/audio/background.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
-    <div class="portal-overlay hide" id="portalOverlay">
-      <div class="portal-content" id="portalContent">
-        <h1 class="kingdom-title">M.BANIFAWAZ</h1>
-        <button class="enter-button" onclick="enterKingdom()">Press To Enter Kingdom</button>
-      </div>
-      <div class="portal-ring" id="portalRing"></div>
-    </div>
-
-  <!-- Audio Overlay-->
-
-  </main>
-
-  <footer id="footer" class="footer position-relative light-background">
-
-    <div class="container">
-      <div class="text-center">
-        <p>© 2025 MBANIFAWAZ™</p>
-        <p>® 2025 MUNES BANI FAWAZ</p>
-      </div>
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Mute Button -->
-  <a href="#" id="mute-button" class="mute-button d-flex align-items-center justify-content-center"><i class="bi bi-volume-up-fill"></i></a>
-
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/962789336602" target="_blank" id="whatsapp-button" class="whatsapp-button d-flex align-items-center justify-content-center"><i class="bi bi-whatsapp"></i></a>
-
-  <!-- Call Button -->
-  <a href="tel:+962789336602" id="call-button" class="call-button d-flex align-items-center justify-content-center"><i class="bi bi-telephone-fill"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Details Modal -->
-  <div class="modal fade" id="portfolioDetailsModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h5 class="modal-title">Details</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
+    function toggleSound() {
+      const audioControl = document.getElementById('audioControl');
+      const audioIcon = document.getElementById('audioIcon');
+      
+      if (!audioEnabled) {
+        // Enable audio
+        audioEnabled = true;
+        isMuted = false;
+        backgroundAudio.play();
+        audioControl.classList.remove('muted');
+        audioIcon.innerHTML = '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>';
+      } else {
+        // Toggle mute/unmute
+        isMuted = !isMuted;
         
-        <!-- Modal Body -->
-        <div class="modal-body">
-          <div class="row gy-4">
-            <!-- Portfolio Image/Video Section -->
-            <div class="portfolio-image">
-              <!-- Image/Video will be dynamically populated -->
-            </div>
-          </div>
-  
-          <div class="row gy-4">
-            <!-- Portfolio Info Section -->
-            <div class="portfolio-info">
-              <h3>Project Information</h3>
-              <ul>
-                <!-- Project info will be dynamically populated -->
-              </ul>
-            </div>
-  
-            <!-- Portfolio Description Section -->
-            <div class="portfolio-description">
-              <!-- Description will be dynamically populated -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>  
+        if (isMuted) {
+          backgroundAudio.pause();
+          audioControl.classList.add('muted');
+          audioIcon.innerHTML = '<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>';
+        } else {
+          backgroundAudio.play();
+          audioControl.classList.remove('muted');
+          audioIcon.innerHTML = '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>';
+        }
+      }
+    }
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/3.6.0/jquery.min.js"></script>
-  <script src="assets/vendor/email/email.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    // Show audio prompt immediately on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      // Audio prompt is already visible by default (no display: none)
+      // Just ensure it's showing
+      const audioPrompt = document.getElementById('audioPrompt');
+      audioPrompt.style.display = 'flex';
+      audioPrompt.style.opacity = '1';
+      
+      // Add glow animation
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes glow {
+          from { box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); }
+          to { box-shadow: 0 0 40px rgba(0, 255, 255, 0.8), 0 0 60px rgba(255, 0, 255, 0.4); }
+        }
+      `;
+      document.head.appendChild(style);
+      
+      // Initialize stars and particles but keep them hidden
+      createStars();
+      createParticles('classicParticles');
+      createParticles('futuristicParticles');
+    });
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/index.js"></script>
-  <script src="assets/js/email.js"></script>
-
+    // Create starfield
+    function createStars() {
+      const starsContainer = document.getElementById('stars');
+      const numStars = 200;
+      
+      for (let i = 0; i < numStars; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.animationDelay = Math.random() * 3 + 's';
+        star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        starsContainer.appendChild(star);
+      }
+    }
+    
+    // Create particles for portals
+    function createParticles(containerId, color) {
+      const container = document.getElementById(containerId);
+      const numParticles = 20;
+      
+      for (let i = 0; i < numParticles; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 8 + 's';
+        particle.style.animationDuration = (Math.random() * 5 + 5) + 's';
+        container.appendChild(particle);
+      }
+    }
+    
+    // Portal navigation
+    function enterPortal(destination) {
+      const portal = event.currentTarget;
+      portal.style.animation = 'portalEnter 1s ease-in forwards';
+      
+      // Add zoom effect to body
+      document.body.style.transition = 'transform 1s ease-in, opacity 1s ease-in';
+      document.body.style.transform = 'scale(10)';
+      document.body.style.opacity = '0';
+      
+      // Fade out audio when leaving
+      if (backgroundAudio && !backgroundAudio.paused) {
+        let currentVolume = backgroundAudio.volume;
+        const fadeInterval = setInterval(() => {
+          if (currentVolume > 0.01) {
+            currentVolume -= 0.05;
+            backgroundAudio.volume = Math.max(0, currentVolume);
+          } else {
+            clearInterval(fadeInterval);
+            backgroundAudio.pause();
+          }
+        }, 50);
+      }
+      
+      setTimeout(() => {
+        window.location.href = destination;
+      }, 1000);
+    }
+    
+    // Add portal enter animation
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes portalEnter {
+        to {
+          transform: scale(5);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
 </body>
-
 </html>
