@@ -90,11 +90,11 @@
    * Mute button
    */
   let muteButton = document.querySelector('.mute-button');
-  let audio = document.getElementById('myAudio');
+  let audio = document.getElementById('backgroundAudio') || document.getElementById('myAudio');
   let isMuted = false;
 
   function toggleMute() {
-    if (muteButton) {
+    if (muteButton && audio) {
       muteButton.classList.add('active');
       muteButton.addEventListener('click', (e) => {
         e.preventDefault();

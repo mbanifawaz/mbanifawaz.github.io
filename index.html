@@ -329,39 +329,45 @@
     @media (max-width: 768px) {
       .portal-container {
         padding: 10px;
+        height: auto;
+        min-height: 100vh;
+        justify-content: flex-start;
+        padding-top: 60px;
       }
 
       .portals {
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
         padding: 0 10px;
+        margin-top: 1rem;
       }
       
       .portal {
-        width: min(90vw, 280px);
-        height: min(40vh, 320px);
-        margin-bottom: 50px;
+        width: min(85vw, 280px);
+        height: min(35vh, 280px);
+        margin-bottom: 80px;
+        min-height: 240px;
       }
       
       .portal-title {
-        font-size: clamp(1.8rem, 10vw, 2.5rem);
+        font-size: clamp(1.5rem, 8vw, 2rem);
         margin-bottom: 0.5rem;
       }
 
       .subtitle {
-        font-size: 0.9rem;
-        margin-bottom: 1.5rem;
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
       }
 
       .portal-label {
-        font-size: 1.1rem;
-        top: -30px;
+        font-size: 1rem;
+        top: -25px;
       }
 
       .portal-button {
-        font-size: 0.85rem;
-        padding: 10px 20px;
-        bottom: -40px;
+        font-size: 0.8rem;
+        padding: 8px 16px;
+        bottom: -35px;
       }
 
       .audio-control {
@@ -370,22 +376,69 @@
         width: 35px;
         height: 35px;
       }
+      
+      .portal-frame {
+        box-shadow: 
+          inset 0 0 30px rgba(0, 255, 255, 0.5),
+          0 0 50px rgba(0, 255, 255, 0.3),
+          0 0 80px rgba(0, 255, 255, 0.2);
+      }
+      
+      .portal.futuristic .portal-frame {
+        box-shadow: 
+          inset 0 0 30px rgba(255, 0, 255, 0.5),
+          0 0 50px rgba(255, 0, 255, 0.3),
+          0 0 80px rgba(255, 0, 255, 0.2);
+      }
     }
 
     /* Small mobile devices */
     @media (max-width: 480px) {
+      .portal-container {
+        padding-top: 40px;
+      }
+      
       .portal {
-        width: 85vw;
-        height: 35vh;
-        min-height: 250px;
+        width: 80vw;
+        height: 30vh;
+        min-height: 220px;
+        margin-bottom: 70px;
       }
 
       .portal-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        margin-bottom: 0.3rem;
       }
 
       .subtitle {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+        margin-bottom: 0.8rem;
+      }
+      
+      .portal-label {
+        font-size: 0.9rem;
+        top: -20px;
+      }
+
+      .portal-button {
+        font-size: 0.75rem;
+        padding: 8px 15px;
+        bottom: -30px;
+      }
+      
+      .portal-vortex {
+        width: 70%;
+        height: 50%;
+      }
+      
+      .portal-inner {
+        width: 50%;
+        height: 35%;
+      }
+      
+      /* Hide particles on very small screens for performance */
+      .particles {
+        display: none;
       }
     }
 
@@ -393,26 +446,51 @@
     @media (max-height: 600px) and (orientation: landscape) {
       .portal-container {
         padding: 5px;
+        padding-top: 20px;
+        min-height: 100vh;
       }
 
       .portals {
         flex-direction: row;
-        gap: 2rem;
+        gap: 1.5rem;
       }
 
       .portal {
-        width: 200px;
-        height: 60vh;
-        margin-bottom: 40px;
+        width: 180px;
+        height: 50vh;
+        margin-bottom: 60px;
+        min-height: 200px;
       }
 
       .portal-title {
-        font-size: 1.8rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
+        margin-bottom: 0.3rem;
       }
 
       .subtitle {
-        margin-bottom: 1rem;
+        font-size: 0.8rem;
+        margin-bottom: 0.8rem;
+      }
+      
+      .portal-label {
+        font-size: 0.9rem;
+        top: -20px;
+      }
+
+      .portal-button {
+        font-size: 0.7rem;
+        padding: 6px 12px;
+        bottom: -30px;
+      }
+      
+      .portal-vortex {
+        width: 70%;
+        height: 50%;
+      }
+      
+      .portal-inner {
+        width: 50%;
+        height: 35%;
       }
     }
 
@@ -552,49 +630,55 @@
     z-index: 100000;
     backdrop-filter: blur(15px);
     transition: opacity 0.5s ease-out;
+    padding: 20px;
   ">
     <div style="
       background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
       border: 2px solid rgba(0, 255, 255, 0.5);
       border-radius: 20px;
-      padding: 3rem;
+      padding: 2rem;
       text-align: center;
       max-width: 500px;
+      width: 100%;
       animation: glow 2s ease-in-out infinite alternate;
     ">
-      <h2 style="color: #00ffff; font-size: 1rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 2px;">
-        Welcome To Munes Bani Fawaz Portofolio Portal
+      <h2 style="color: #00ffff; font-size: clamp(0.9rem, 3vw, 1.2rem); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px;">
+        Welcome To Munes Bani Fawaz Portfolio Portal
       </h2>
-      <p style="color: #b8b8c8; margin-bottom: 2rem; font-size: 1.1rem;">
+      <p style="color: #b8b8c8; margin-bottom: 2rem; font-size: clamp(0.9rem, 3vw, 1.1rem);">
         Please Enable immersive audio for the full experience
       </p>
-      <div style="display: flex; gap: 1rem; justify-content: center;">
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
         <button onclick="enableAudio()" style="
-          padding: 15px 40px;
+          padding: 12px 30px;
           background: linear-gradient(45deg, #00ffff, #0099ff);
           border: none;
           color: white;
-          font-size: 1.1rem;
+          font-size: clamp(0.9rem, 3vw, 1.1rem);
           font-weight: bold;
           border-radius: 50px;
           cursor: pointer;
           text-transform: uppercase;
           letter-spacing: 1px;
           transition: transform 0.3s;
+          flex: 1;
+          min-width: 120px;
         " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           Enable Audio
         </button>
         <button onclick="skipAudio()" style="
-          padding: 15px 40px;
+          padding: 12px 30px;
           background: transparent;
           border: 2px solid rgba(255, 255, 255, 0.3);
           color: #b8b8c8;
-          font-size: 1.1rem;
+          font-size: clamp(0.9rem, 3vw, 1.1rem);
           border-radius: 50px;
           cursor: pointer;
           text-transform: uppercase;
           letter-spacing: 1px;
           transition: all 0.3s;
+          flex: 1;
+          min-width: 120px;
         " onmouseover="this.style.borderColor='rgba(255, 255, 255, 0.6)'" onmouseout="this.style.borderColor='rgba(255, 255, 255, 0.3)'">
           Continue Silent
         </button>
@@ -659,25 +743,28 @@
       const audioIcon = document.getElementById('audioIcon');
       
       if (!audioEnabled) {
-        // Enable audio
+        // First time enabling audio
         audioEnabled = true;
         isMuted = false;
+        backgroundAudio.muted = false;
         backgroundAudio.play();
         audioControl.classList.remove('muted');
         audioIcon.innerHTML = '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>';
-      } else {
-        // Toggle mute/unmute
-        isMuted = !isMuted;
-        
-        if (isMuted) {
-          backgroundAudio.pause();
-          audioControl.classList.add('muted');
-          audioIcon.innerHTML = '<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>';
-        } else {
+      } else if (isMuted) {
+        // Unmute audio
+        isMuted = false;
+        backgroundAudio.muted = false;
+        if (backgroundAudio.paused) {
           backgroundAudio.play();
-          audioControl.classList.remove('muted');
-          audioIcon.innerHTML = '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>';
         }
+        audioControl.classList.remove('muted');
+        audioIcon.innerHTML = '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>';
+      } else {
+        // Mute audio (keep playing but muted)
+        isMuted = true;
+        backgroundAudio.muted = true;
+        audioControl.classList.add('muted');
+        audioIcon.innerHTML = '<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>';
       }
     }
 
@@ -746,16 +833,23 @@
       document.body.style.transform = 'scale(10)';
       document.body.style.opacity = '0';
       
-      // Fade out audio when leaving
+      // Store audio state for the next page
+      if (backgroundAudio) {
+        sessionStorage.setItem('audioEnabled', audioEnabled ? 'true' : 'false');
+        sessionStorage.setItem('audioMuted', isMuted ? 'true' : 'false');
+        sessionStorage.setItem('audioTime', backgroundAudio.currentTime.toString());
+        sessionStorage.setItem('fromPortal', 'true');
+      }
+      
+      // Don't stop the audio, just fade slightly
       if (backgroundAudio && !backgroundAudio.paused) {
         let currentVolume = backgroundAudio.volume;
         const fadeInterval = setInterval(() => {
-          if (currentVolume > 0.01) {
-            currentVolume -= 0.05;
-            backgroundAudio.volume = Math.max(0, currentVolume);
+          if (currentVolume > 0.1) {
+            currentVolume -= 0.02;
+            backgroundAudio.volume = Math.max(0.1, currentVolume);
           } else {
             clearInterval(fadeInterval);
-            backgroundAudio.pause();
           }
         }, 50);
       }

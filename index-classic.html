@@ -433,6 +433,86 @@
 
   </main>
 
+  <!-- Background Audio -->
+  <audio id="backgroundAudio" loop>
+    <source src="assets/audio/background.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Audio Control Button -->
+  <a href="#" id="audioControl" class="mute-button d-flex align-items-center justify-content-center active" onclick="toggleSound(); return false;">
+    <i class="bi bi-volume-mute-fill" id="audioIcon"></i>
+  </a>
+
+  <script>
+    // Check if we're coming from the portal or it's a fresh page load
+    const fromPortal = sessionStorage.getItem('fromPortal') === 'true';
+    let audioEnabled, isMuted, audioTime;
+    
+    if (fromPortal) {
+      // Coming from portal - restore audio state
+      audioEnabled = sessionStorage.getItem('audioEnabled') === 'true';
+      isMuted = sessionStorage.getItem('audioMuted') === 'true';
+      audioTime = parseFloat(sessionStorage.getItem('audioTime') || '0');
+      sessionStorage.removeItem('fromPortal'); // Clear the flag
+    } else {
+      // Fresh page load/refresh - start muted
+      audioEnabled = false;
+      isMuted = true;
+      audioTime = 0;
+    }
+    
+    const backgroundAudio = document.getElementById('backgroundAudio');
+    const audioControl = document.getElementById('audioControl');
+    const audioIcon = document.getElementById('audioIcon');
+    
+    // Set initial volume
+    backgroundAudio.volume = 0.3;
+    
+    // Apply the audio state
+    if (fromPortal && audioEnabled && !isMuted) {
+      // Continue playing from portal
+      backgroundAudio.currentTime = audioTime;
+      backgroundAudio.muted = false;
+      backgroundAudio.play().catch(err => console.log('Audio autoplay blocked:', err));
+      audioIcon.className = 'bi bi-volume-up-fill';
+    } else {
+      // Start muted
+      backgroundAudio.muted = true;
+      audioIcon.className = 'bi bi-volume-mute-fill';
+    }
+    
+    function toggleSound() {
+      const audioIcon = document.getElementById('audioIcon');
+      
+      if (!audioEnabled) {
+        // First time enabling audio
+        audioEnabled = true;
+        isMuted = false;
+        backgroundAudio.muted = false;
+        backgroundAudio.play();
+        audioIcon.className = 'bi bi-volume-up-fill';
+      } else if (isMuted) {
+        // Unmute audio
+        isMuted = false;
+        backgroundAudio.muted = false;
+        if (backgroundAudio.paused) {
+          backgroundAudio.play();
+        }
+        audioIcon.className = 'bi bi-volume-up-fill';
+      } else {
+        // Mute audio (keep playing but muted)
+        isMuted = true;
+        backgroundAudio.muted = true;
+        audioIcon.className = 'bi bi-volume-mute-fill';
+      }
+      
+      // Don't store state - always start muted on refresh
+    }
+    
+    // Don't store audio time - always start fresh on refresh
+  </script>
+
   <footer id="footer" class="footer position-relative light-background">
 
     <div class="container">
@@ -457,8 +537,6 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Mute Button -->
-  <a href="#" id="mute-button" class="mute-button d-flex align-items-center justify-content-center"><i class="bi bi-volume-up-fill"></i></a>
 
   <!-- WhatsApp Button -->
   <a href="https://wa.me/962789336602" target="_blank" id="whatsapp-button" class="whatsapp-button d-flex align-items-center justify-content-center"><i class="bi bi-whatsapp"></i></a>
