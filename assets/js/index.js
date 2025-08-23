@@ -328,10 +328,16 @@ async function loadPortfolio(portfolio) {
         zoomable: true
     });
 
+    // Create modal instance once
+    const portfolioDetailsModalElement = document.getElementById('portfolioDetailsModal');
+    let portfolioDetailsModal = null;
+    if (portfolioDetailsModalElement) {
+        portfolioDetailsModal = new bootstrap.Modal(portfolioDetailsModalElement);
+    }
+
     // Gallery & Details Trigger Logic
     document.addEventListener('click', function(e) {
         const triggerLink = e.target.closest('.gallery-trigger');
-        const portfolioDetailsModal = new bootstrap.Modal(document.getElementById('portfolioDetailsModal'));
         const detailsLink = e.target.closest('.details-link');
         if (triggerLink) {
             e.preventDefault();
@@ -404,12 +410,17 @@ async function loadPortfolio(portfolio) {
           `;
       
           // Show the modal
-          portfolioDetailsModal.show();
-          portfolioDetailsModal._element.addEventListener('shown.bs.modal', () => {
-              document.querySelectorAll('video').forEach(video => {
-                  video.playbackRate = globalVideoPlayBackRate; // Set the desired playback speed
-              });
-          });
+          if (portfolioDetailsModal) {
+              portfolioDetailsModal.show();
+              // Remove any existing event listeners to prevent duplicates
+              const videoHandler = () => {
+                  document.querySelectorAll('video').forEach(video => {
+                      video.playbackRate = globalVideoPlayBackRate; // Set the desired playback speed
+                  });
+              };
+              portfolioDetailsModalElement.removeEventListener('shown.bs.modal', videoHandler);
+              portfolioDetailsModalElement.addEventListener('shown.bs.modal', videoHandler);
+          }
       }      
 
     });
