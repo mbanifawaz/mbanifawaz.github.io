@@ -251,7 +251,7 @@ async function loadPortfolio() {
     const container = document.getElementById('portfolio-container');
     if (!container) return;
     
-    const portfolioHTML = data.portfolio.items.slice(0, 9).map((item, index) => `
+    const portfolioHTML = data.portfolio.items.map((item, index) => `
         <div class="holo-card portfolio-item ${item.category}" data-aos="zoom-in" data-aos-delay="${index * 100}" onclick="openProjectModal(${index})">
             ${item.video ? 
                 `<video src="${item.video}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;" autoplay muted loop></video>` :
