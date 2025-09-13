@@ -1,444 +1,553 @@
 {
-    "links": [
-        {
-            "href": "https://www.linkedin.com/in/munes-bani-fawaz-799151204",
-            "icon": "bi bi-linkedin"
-        },
-        {
-            "href": "https://github.com/MrGiveItAway-TPK",
-            "icon": "bi bi-github"
-        },
-        {
-            "href": "https://www.youtube.com/@munesbanifawaz",
-            "icon": "bi bi-youtube"
-        },
-        {
-            "href": "https://wa.me/962789336602",
-            "icon": "bi bi-whatsapp"
-        },
-        {
-            "href": "https://www.facebook.com/munes.mutasem.1",
-            "icon": "bi bi-facebook"
-        },
-        {
-            "href": "https://www.instagram.com/munes.bani.fawaz",
-            "icon": "bi bi-instagram"
-        },
-        {
-            "href": "https://www.twitch.tv/mrgiveitaway_tpk",
-            "icon": "bi bi-twitch"
-        }
-    ],
-    "skills": 
+  "links": [
     {
-        "columns":2,
-        "data":[
-            { "name": "C#", "level": 75 },
-            { "name": "Java", "level": 60 },
-            { "name": "Python", "level": 100 },
-            { "name": "C++", "level": 75 },
-            { "name": "PHP", "level": 100 },
-            { "name": "HTML", "level": 100 },
-            { "name": "CSS", "level": 100 },
-            { "name": "JavaScript", "level": 100 },
-            { "name": "SQL/MySQL", "level": 100 },
-            { "name": "VB", "level": 60 },
-            { "name": "Visual Basic", "level": 60 },
-            { "name": "VBS", "level": 60 },
-            { "name": "BAT", "level": 100 },
-            { "name": "Visual Studio", "level": 75 },
-            { "name": ".NET", "level": 60 },
-            { "name": "ASP.net", "level": 60 },
-            { "name": "React", "level": 75 },
-            { "name": "Angular", "level": 75 },
-            { "name": "Laravel", "level": 75 },
-            { "name": "Flutter", "level": 90 },
-            { "name": "Node.js", "level": 100 },
-            { "name": "Frappe", "level": 100 },
-            { "name": "Jinja", "level": 100 },
-            { "name": "ERPNext", "level": 100 },
-            { "name": "Unreal Engine", "level": 75 },
-            { "name": "Unity", "level": 90 },
-            { "name": "Linux (Kali, Ubuntu, Manjaro)", "level": 100 },
-            { "name": "Docker", "level": 90 },
-            { "name": "Flask", "level": 100 }
-          ]
+      "href": "https://www.linkedin.com/in/munes-bani-fawaz-799151204",
+      "icon": "bi bi-linkedin"
     },
-    "resume":
     {
-        "summary": {
-          "name": "MUNES BANI FAWAZ",
-          "description": "Senior Full Stack Developer A.K.A Mr. Automator AIO - Developer - Front, Back, Mobile, Shell- Just Name It!",
-          "contact": [
-            "Phone: +962789336602",
-            "Email: m.banifawaz@outlook.com",
-            "Date of Birth: 04/09/1998",
-            "Nationality: Jordanian"
-          ]
-        },
-        "education": [
-          {
-            "degree": "Bachelor’s Degree in Software Engineering",
-            "year": "10/2017 – 02/2021",
-            "institution": "Philadelphia University of Jordan (Amman, Jordan)",
-            "description": "Graduated with an average of 77.6% (Very Good), equivalent to a GPA of 3.1/4."
-          },
-          {
-            "degree": "High School Diploma",
-            "year": "2013 – 2016",
-            "institution": "First Secondary School of Abha (Abha, Saudi Arabia)",
-            "description": "Achieved an average of 96.03%, equivalent to 80.08% (Jordan Ministry of Education Certification)."
-          },
-          {
-            "degree": "Additional Education",
-            "year": "2001 – 2013",
-            "institution": "Various Institutions",
-            "description": "Mecca Intermediate School (Abha, Saudi Arabia) | 2010 – 2013\nAnjara Elementary School (Ajlun, Jordan) | 2009 – 2010\nRobert-Koch Realschule (Stuttgart, Germany) | 2008 – 2009\nPfaffenwald-Schule (Stuttgart, Germany) | 2004 – 2008\nKinderhaus Uni-Kids (Stuttgart, Germany) | 2001 – 2004"
-          }
-        ],
-        "experience": [
-          {
-            "title": "Senior ERP Full Stack Developer / ERP Squad Lead",
-            "year": "April 2025 – Present (Full-Time)",
-            "company": "Syarah",
-            "responsibilities": [
-              "As an ERP Squad Lead, I oversee the strategic direction and execution of ERPNext and Frappe-related projects, leading a dedicated team of developers to drive system enhancements, optimizations, and custom solutions.",
-              "In this role, I ensure seamless coordination across multiple teams, maintaining high-quality deliverables, managing project timelines, and ensuring the successful rollout of ERP upgrades and features.",
-              "I continue to apply my technical expertise in Python, JavaScript, and DevOps while taking on leadership responsibilities such as prioritizing tasks, mentoring team members, conducting performance reviews, and ensuring team alignment with company goals.",
-              "I lead code reviews to ensure clean, efficient, and maintainable code, fostering a culture of quality and collaboration within the team.",
-              "I have spearheaded the implementation of scalable solutions, including advanced database optimization and integration with third-party services, and played a critical role in the implementation of high-availability systems.",
-              "My focus remains on fostering a collaborative and innovative environment that drives continuous improvement and business growth."
-            ]            
-          },
-          {
-            "title": "MID ERP Full Stack Developer",
-            "year": "December 2023 – April 2025 (Got Promoted) (Full-Time)",
-            "company": "Syarah",
-            "responsibilities": [
-                "Conducted Frappe/ERPNext, Python, and JavaScript training, mentoring team members to enhance technical skills.",
-                "Upgraded Frappe/ERPNext from v13 to v15, separating and optimizing a built-in Vue.js application.",
-                "Created a customizable Kanban board and resolved complex related issues.",
-                "Managed environments for UAT, QA, Preproduction, and Outsourcing pipelines.",
-                "Built the Frappe Developer Toolbox, increasing development efficiency.",
-                "Built the Single View Connector, a seperate FLASK app to connect with various banking services and else."
-              ]
-          },
-          {
-            "title": "Senior Python / ERP Fullstack Developer & Consultant",
-            "year": "March 2025 – Present (Part-Time)",
-            "company": "Maple Telecommunications",
-            "responsibilities": [
-              "Designed and developed a fully dynamic Telegram bot management system using FastAPI and PostgreSQL, featuring a modern admin panel, granular permissions, and a superadmin console for process control.",
-              "Led the customization and optimization of Frappe ERPNext for Maple Telecommunications, implementing multi-company workflows, custom fields, and dynamic filters to enhance operational efficiency.",
-              "Architected a responsive HTML/JavaScript UI for the Telegram bot system, enabling seamless management of bots, commands, users, and permissions with real-time log viewing and section persistence.",
-              "Spearheaded the implementation of a robust permissions system (global and per-resource) and Dockerized deployment for scalable, production-ready Python applications.",
-              "Oversaw the integration of Telegram’s Bot API with custom API endpoints, facilitating versatile communication platforms for internal and external services.",
-              "Developed and maintained Python-based ERP solutions, including scripts for data processing, slot availability reporting, and duplicate detection in Frappe ERPNext child tables.",
-              "Provided technical consultation on ERPNext module customizations, REST API integrations, and JavaScript-based UI enhancements for improved user experience.",
-              "Mentored junior developers in Python, FastAPI, and Frappe Framework best practices, ensuring high-quality code delivery across multiple projects.",
-              "Collaborated with cross-functional teams to align ERP and Python project requirements with business objectives, driving process automation and system scalability.",
-              "Fulfilled a fully customized ERP solution for a high-profile client via Maple Telecommunications, tailoring Frappe ERPNext modules, workflows, and integrations to meet unique business requirements."
-            ]           
-          },
-          {
-            "title": "ERP Full Stack Developer",
-            "year": "September 2022 – December 2023 (Full-Time)",
-            "company": "Nixpend",
-            "responsibilities": [
-                "Built custom Doctypes and modules with related reports and functionalities, including HR, appointment bookings, accounting, and procedural enhancements.",
-                "Developed a Revenue Sharing Module to automate distribution of revenue via invoices for healthcare practitioners.",
-                "Created custom APIs and integrated the ERP system with external healthcare systems like Medical.",
-                "Oversaw ticket distribution and managed weekly updates/releases, including code reviews and merge requests.",
-                "Enhanced system scalability and reliability through cloud integrations and optimized configurations."
-              ]
-          },
-          {
-            "title": "System Development Officer",
-            "year": "June 2021 – March 2022 (Full-Time)",
-            "company": "Extensya",
-            "responsibilities": [
-                "Created and maintained web forms for quality evaluations and call logging, serving ~40 clients.",
-                "Developed internal systems such as ECT (employee announcements), online/English assessments, Extensya's chat tool, and live agent help desk.",
-                "Built custom APIs, including data retrieval from Zendesk and exporting data to Excel sheets (CSV/XLS).",
-                "Developed a digital library with a file manager for upload/delete operations and a tree-view structure for file browsing.",
-                "Streamlined company workflows by creating tools and scripts for editing, debugging, and testing internal systems."
-              ]
-          }
+      "href": "https://github.com/MrGiveItAway-TPK",
+      "icon": "bi bi-github"
+    },
+    {
+      "href": "https://www.youtube.com/@munesbanifawaz",
+      "icon": "bi bi-youtube"
+    },
+    {
+      "href": "https://wa.me/962789336602",
+      "icon": "bi bi-whatsapp"
+    },
+    {
+      "href": "https://www.facebook.com/munes.mutasem.1",
+      "icon": "bi bi-facebook"
+    },
+    {
+      "href": "https://www.instagram.com/munes.bani.fawaz",
+      "icon": "bi bi-instagram"
+    },
+    {
+      "href": "https://www.twitch.tv/mrgiveitaway_tpk",
+      "icon": "bi bi-twitch"
+    }
+  ],
+  "skills": {
+    "columns": 2,
+    "data": [
+      {
+        "name": "C#",
+        "level": 75
+      },
+      {
+        "name": "Java",
+        "level": 60
+      },
+      {
+        "name": "Python",
+        "level": 100
+      },
+      {
+        "name": "C++",
+        "level": 75
+      },
+      {
+        "name": "PHP",
+        "level": 100
+      },
+      {
+        "name": "HTML",
+        "level": 100
+      },
+      {
+        "name": "CSS",
+        "level": 100
+      },
+      {
+        "name": "JavaScript",
+        "level": 100
+      },
+      {
+        "name": "SQL/MySQL",
+        "level": 100
+      },
+      {
+        "name": "VB",
+        "level": 60
+      },
+      {
+        "name": "Visual Basic",
+        "level": 60
+      },
+      {
+        "name": "VBS",
+        "level": 60
+      },
+      {
+        "name": "BAT",
+        "level": 100
+      },
+      {
+        "name": "Visual Studio",
+        "level": 75
+      },
+      {
+        "name": ".NET",
+        "level": 60
+      },
+      {
+        "name": "ASP.net",
+        "level": 60
+      },
+      {
+        "name": "React",
+        "level": 75
+      },
+      {
+        "name": "Angular",
+        "level": 75
+      },
+      {
+        "name": "Laravel",
+        "level": 75
+      },
+      {
+        "name": "Flutter",
+        "level": 90
+      },
+      {
+        "name": "Node.js",
+        "level": 100
+      },
+      {
+        "name": "Frappe",
+        "level": 100
+      },
+      {
+        "name": "Jinja",
+        "level": 100
+      },
+      {
+        "name": "ERPNext",
+        "level": 100
+      },
+      {
+        "name": "Unreal Engine",
+        "level": 75
+      },
+      {
+        "name": "Unity",
+        "level": 90
+      },
+      {
+        "name": "Linux (Kali, Ubuntu, Manjaro)",
+        "level": 100
+      },
+      {
+        "name": "Docker",
+        "level": 90
+      },
+      {
+        "name": "Flask",
+        "level": 100
+      }
+    ]
+  },
+  "resume": {
+    "summary": {
+      "name": "MUNES BANI FAWAZ",
+      "description": "Senior Full Stack Developer A.K.A Mr. Automator AIO - Developer - Front, Back, Mobile, Shell- Just Name It!",
+      "contact": [
+        "Phone: +962789336602",
+        "Email: m.banifawaz@outlook.com",
+        "Date of Birth: 04/09/1998",
+        "Nationality: Jordanian"
+      ]
+    },
+    "education": [
+      {
+        "degree": "Bachelor’s Degree in Software Engineering",
+        "year": "10/2017 – 02/2021",
+        "institution": "Philadelphia University of Jordan (Amman, Jordan)",
+        "description": "Graduated with an average of 77.6% (Very Good), equivalent to a GPA of 3.1/4."
+      },
+      {
+        "degree": "High School Diploma",
+        "year": "2013 – 2016",
+        "institution": "First Secondary School of Abha (Abha, Saudi Arabia)",
+        "description": "Achieved an average of 96.03%, equivalent to 80.08% (Jordan Ministry of Education Certification)."
+      },
+      {
+        "degree": "Additional Education",
+        "year": "2001 – 2013",
+        "institution": "Various Institutions",
+        "description": "Mecca Intermediate School (Abha, Saudi Arabia) | 2010 – 2013\nAnjara Elementary School (Ajlun, Jordan) | 2009 – 2010\nRobert-Koch Realschule (Stuttgart, Germany) | 2008 – 2009\nPfaffenwald-Schule (Stuttgart, Germany) | 2004 – 2008\nKinderhaus Uni-Kids (Stuttgart, Germany) | 2001 – 2004"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Senior ERP Full Stack Developer / ERP Squad Lead",
+        "year": "April 2025 – Present (Full-Time)",
+        "company": "Syarah",
+        "responsibilities": [
+          "As an ERP Squad Lead, I oversee the strategic direction and execution of ERPNext and Frappe-related projects, leading a dedicated team of developers to drive system enhancements, optimizations, and custom solutions.",
+          "In this role, I ensure seamless coordination across multiple teams, maintaining high-quality deliverables, managing project timelines, and ensuring the successful rollout of ERP upgrades and features.",
+          "I continue to apply my technical expertise in Python, JavaScript, and DevOps while taking on leadership responsibilities such as prioritizing tasks, mentoring team members, conducting performance reviews, and ensuring team alignment with company goals.",
+          "I lead code reviews to ensure clean, efficient, and maintainable code, fostering a culture of quality and collaboration within the team.",
+          "I have spearheaded the implementation of scalable solutions, including advanced database optimization and integration with third-party services, and played a critical role in the implementation of high-availability systems.",
+          "My focus remains on fostering a collaborative and innovative environment that drives continuous improvement and business growth."
         ]
       },
-      "testimonials":[
-        {
-          "text": "I highly recommend Munes as a talented and dedicated programmer. His proficiency in programming languages is commendable, and he excels in problem-solving. During our time as colleagues, Munes consistently demonstrated his expertise in coding and was a valuable asset to the team. Notably, Munes played a crucial role in assisting me during our training period. His willingness to share knowledge and provide support greatly contributed to my learning experience. I have witnessed firsthand his exceptional problem-solving skills and creative approach to programming challenges. Munes's commitment to excellence and collaborative spirit make him an outstanding team member. I am confident that his skills and positive attitude will continue to make significant contributions wherever he goes.",
-          "image": "assets/img/testimonials/aokasha.jpg",
-          "name": "Ahmad Okasha",
-          "title": "Software Engineer at Nixpend"
-        },
-        {
-          "text": "I am delighted to recommend Munis Fawaz as a software engineer. I had the pleasure of training Munis at Nixpend Sequential Technologies. His ability to grasp knowledge quickly and his innovative problem-solving skills make him a standout candidate. He is not the type of guy to complain when he faces a problem, rather he focuses on how to approach the problem and break it down. He is initiative, when discovers something to automate or a code to optimize he immediately raises the flag and takes the lead to handle it. He's got a beautiful sense of humor which is amazing to have especially in a stressful environment.",
-          "image": "assets/img/testimonials/mabdullah.jpg",
-          "name": "Mohammad Abdulla",
-          "title": "Software Engineer | AWS SAA"
-        },
-        {
-          "text": "I recommend Munes as a Full Stack Engineer. He possesses strong technical skills, consistently solving complex problems efficiently. One of the unique things about Munes is that he proposes improvements to the system, and is not just someone who carries out instructions.",
-          "image": "assets/img/testimonials/sfateh.jpg",
-          "name": "Salah Aldin Fateh",
-          "title": "DevOps Engineer at Nixpend"
-        },
-        {
-          "text": "I am writing to highly recommend my esteemed colleague, Munes Bani Fawaz, for any professional opportunity that he may pursue in the future. As a Senior Software Engineer, Munes has consistently demonstrated an extraordinary level of skill, dedication, and innovation in his work, earning him the affectionate moniker of \"Mr. Automator\" amongst our team. Munes's remarkable abilities in the field of software engineering have had a profound impact on our team and the projects we have undertaken. One of Munes's most outstanding qualities is his incredible proficiency in automating complex and time-consuming tasks. He has a unique talent for simplifying and optimizing workflows, making our daily work more efficient and less error-prone. The improvements he has made through automation have not only saved us countless hours but have also significantly reduced the margin for human error, improving the overall quality of our work. Munes is not just an automation wizard; he is also an exceptional problem solver. He possesses a keen analytical mind, which enables him to dissect complex issues and devise elegant solutions. His ability to approach challenges with creativity and logical thinking is a testament to his problem-solving prowess. Whenever our team has faced roadblocks, Munes has been the go-to person to find innovative solutions and guide us back on track. Munes's dedication to his work is unwavering. He consistently goes above and beyond to meet project deadlines and deliver high-quality results. His ability to adapt to new technologies and stay up-to-date with industry trends showcases his commitment to continuous learning and growth. His collaborative and communicative nature makes him an invaluable asset to our team, as he readily shares his knowledge and supports his colleagues.",
-          "image": "assets/img/testimonials/mshammout.jpg",
-          "name": "Moneeb Shammout",
-          "title": "Backend Engineer | Software Engineer"
-        },
-        {
-          "text": "Professional, team player & passionate about what he does! It was a privilege to work with Munes.",
-          "image": "assets/img/testimonials/akurdi.jpg",
-          "name": "Dr. Abdul Kareem Kurdi",
-          "title": "Manager of Pharmacies Department /Hakeem Claim (EHSI)"
-        },
-        {
-          "text": "I highly recommend Munes as a Full Stack Developer. His expertise in both front-end and back-end technologies is impressive. Munes consistently delivers high-quality, efficient solutions and is a valuable asset to any development team.",
-          "image": "assets/img/testimonials/wzoubi.jpg",
-          "name": "Wesam AL-Zoubi",
-          "title": "Accounting at AL-Balqa'a Applied University"
-        },
-        {
-          "text": "I have had the pleasure of working alongside Munes, and I can confidently attest to his exceptional skills as a developer. Collaborating with him is not only enjoyable but also incredibly enriching. Munes combines his technical prowess with a great sense of humor, making our work environment not just productive but also fun. His ability to lighten the atmosphere while delivering top-notch development solutions is truly remarkable. I wholeheartedly recommend Munes for his technical expertise, collaborative spirit, and the delightful touch of humor he brings to any team.",
-          "image": "assets/img/testimonials/sayman.jpg",
-          "name": "Sa'ed Ayman",
-          "title": "Software Developer @ Nixpend - Sequential Technologies"
-        },
-        {
-          "text": "I highly recommended Munes as a full_stack developer, he is very strong problem solver using simplest ways, and he is quick learner, eager to learn new things and mastered it in short time, he has a creativity thought to make special touches on his work and he is very supportive and helper person. Wish you all the best Munes.",
-          "image": "assets/img/testimonials/amomani.jpg",
-          "name": "As'har Momani",
-          "title": "Computer Engineering | Application Engineer"
-        },
-        {
-          "text": "I highly recommend Munes as a full-stack developer. His work ethic is unmatched, and he excels in resolving coding challenges. A go-to person for bug fixes, he willingly shares his extensive knowledge, making collaboration a breeze. His commitment and passion for continuous learning make him an invaluable asset to any team.",
-          "image": "assets/img/testimonials/msader.jpg",
-          "name": "Mahmoud H. Sadder",
-          "title": "Support | QA Engineer"
-        },
-        {
-          "text": "I am writing to recommend Munes based on his exceptional performance during his tenure at Extensya under my guidance. Munes exhibited an impressive ability to rapidly grasp complex concepts and swiftly apply them to tasks. His remarkable aptitude for learning was evident as he consistently displayed a deep understanding of the projects he was involved in. Moreover, his organizational skills were remarkable, allowing him to handle multiple tasks efficiently and effectively. Munes's exceptional efficiency and dedication to meeting deadlines while maintaining a high standard of work made him a key contributor to our team's success. His resourcefulness, creative approach to problem-solving, and willingness to take initiative greatly contributed to the innovative solutions we were able to implement. Overall, Munes demonstrated intelligence, resourcefulness, and an exceptional work ethic, and his positive attitude and eagerness to learn served as an inspiration to his peers. I wholeheartedly recommend Munes for any role where his technical skills, adaptability, and dedication would be valued.",
-          "image": "assets/img/testimonials/empty.png",
-          "name": "Fadia Elmabrouk",
-          "title": "Software Engineer | Extensya"
-        },
-        {
-          "text": "It is my pleasure to strongly recommend Munes Bani Fawaz for a position as a Systems Development Officer. I am Murad Fares, a Systems Development Manager at Extensya, and with my 15 years of experience in software development, I have encountered many young professionals, but Munes stands out. During our time working together, Munes displayed great talents in technical applications and programming languages, including PHP, SQL DB, CSS, CMS, JavaScript, and various data visualization tools. I am confident that Munes would be a valuable asset to your company. He not only possesses the skills and experience you're seeking, but he will also contribute significantly and help your company grow.",
-          "image": "assets/img/testimonials/murad.jpg",
-          "name": "Murad Fares",
-          "title": "Systems Development Manager | Extensya"
-        }     
-      ],   
-      "portfolio": {
-        "filters": [
-          { "value": "*", "label": "All", "active": true },
-          { "value": ".filter-app", "label": "Apps", "active": false },
-          { "value": ".filter-web", "label": "Web", "active": false },
-          { "value": ".filter-project", "label": "Projects", "active": false },
-          { "value": ".filter-script", "label": "Scripts", "active": false },
-          { "value": ".filter-courses", "label": "Courses", "active": false }
-        ],
-        "items": [
-          {
-            "category": "filter-app",
-            "image": "assets/img/portfolio/jordan_prayer_times.png",
-            "title": "Jordan Prayer Times",
-            "shortDescription":"Get accurate prayer times in Jordan with notifications.",
-            "description": "Jordan Prayer Times is a comprehensive and easy-to-use app that helps you stay on track with your daily <b style='color: #007bff;'>prayers</b>. Whether you're at home, at work, or on the go, this app provides accurate <b style='color: #28a745;'>prayer times</b> based on your location in <b style='color: #dc3545;'>Jordan</b> and allows you to have <b style='color: #ff6347;'>notifications</b> to suit your preferences.",
-            "galleryGroup": "portfolio-gallery-app",
-            "stack":"Flutter | Node JS",
-            "platform":"Android | iOS",
-            "client":"Munes Bani Fawaz",
-            "projectDate":"Jan 8, 2025",
-            "projectURL":"https://play.google.com/store/apps/details?id=com.mbf.jordan_prayer_times_app",
-            "projectURLText":"Google Play Store"
-          },
-          {
-            "category": "filter-app",
-            "image": "assets/img/portfolio/cmr.png",
-            "title": "Cubic Maze Runner",
-            "shortDescription":"Game Inspired By Subway And Piano Tiles",
-            "description": "Cubic Maze Runner is an exciting game inspired by the fast-paced action of <b style='color: #007bff;'>Subway Surfers</b> and the rhythm-based gameplay of <b style='color: #28a745;'>Piano Tiles</b>. In this game, players navigate through challenging levels while tapping to the beat of the music, avoiding obstacles, and scoring high points. With a smooth, addictive <b style='color: #ffc107;'>gameplay experience</b>, this game will keep you engaged for hours as you aim to beat your best <b style='color: #dc3545;'>score</b>.",
-            "galleryGroup": "portfolio-gallery-app",
-            "stack":"Unity | C#",
-            "platform":"Android | iOS | Windows",
-            "client":"Munes Bani Fawaz",
-            "projectDate":"TBA",
-            "projectURL":"#",
-            "projectURLText":"TBA"
-          },
-          {
-            "category": "filter-web",
-            "image": "assets/img/portfolio/iloveyou.png",
-            "title": "I Love You ♥♥♥",
-            "shortDescription": "A heartfelt interactive webpage featuring song lyrics with a typewriter effect.",
-            "description": "This project is a visually appealing and interactive webpage that displays <b style='color: #007bff;'>song lyrics</b> in a <b style='color: #28a745;'>typewriter effect</b>, inspired by the song '<b style='color: #ff6347;'>All of Me</b>' by <b style='color: #6f42c1;'>John Legend</b>. The page includes a <b style='color: #dc3545;'>heart-like button</b> that, when clicked, starts the animation of the song lyrics and plays the music. The background and button transition between <b style='color: #ff9900;'>grayscale</b> and <b style='color: #17a2b8;'>normal modes</b> to create a visually dynamic experience. The project is designed to evoke emotions through its <b style='color: #28a745;'>heartwarming theme</b> and smooth <b style='color: #ffc107;'>animations</b>.",
-            "galleryGroup": "portfolio-gallery-web",
-            "stack": "HTML | CSS | JavaScript",
-            "platform": "Web",
-            "client": "Munes Bani Fawaz",
-            "projectDate": "Nov 15, 2022",
-            "projectURL": "https://mrgiveitaway-tpk.github.io/I_Love_You/",
-            "projectURLText": "Visit Website"
-          },
-          {
-            "category": "filter-web",
-            "image": "assets/img/portfolio/comingsoon.png",
-            "title": "Coming Soon Template",
-            "shortDescription": "A responsive website template for a 'Coming Soon' page",
-            "description": "This '<b style='color: #007bff;'>Coming Soon</b>' template is designed to showcase a website that is currently under construction. Featuring an engaging and smooth <b style='color: #28a745;'>animation</b>, it provides visitors with an exciting preview of what's to come. The layout is fully <b style='color: #ffc107;'>responsive</b>, ensuring a seamless experience on all devices, from <b style='color: #17a2b8;'>desktops</b> to <b style='color: #ff6347;'>smartphones</b>. Perfect for <b style='color: #28a745;'>businesses</b> or <b style='color: #6f42c1;'>personal projects</b>, this template sets the tone for what's next while keeping your audience engaged and informed about the upcoming <b style='color: #dc3545;'>launch</b>.",
-            "galleryGroup": "portfolio-gallery-web",
-            "stack": "HTML | CSS | JavaScript",
-            "platform": "Web",
-            "client": "Munes Bani Fawaz",
-            "projectDate": "Feb 4, 2024",
-            "projectURL": "https://mbanifawaz.github.io/coming-soon/",
-            "projectURLText": "Visit Website"
-          },
-          {
-            "category": "filter-courses",
-            "image": "assets/img/portfolio/pythonfundementals.jpg",
-            "title": "Python Fundamentals",
-            "shortDescription": "Learn the basics of Python: setup, data types, control flow, functions, and OOP.",
-            "description": "This presentation will cover the basics of <b style='color: #007bff;'>Python programming</b>, from setting up your environment to exploring essential concepts and techniques. We will delve into <b style='color: #28a745;'>data types</b>, <b style='color: #ffc107;'>control flow</b>, <b style='color: #17a2b8;'>functions</b>, <b style='color: #ff6347;'>modules</b> and <b style='color: #6f42c1;'>object-oriented programming</b>, equipping you with the foundational knowledge necessary for effective <b style='color: #28a745;'>Python development</b>. Let's embark on this journey together!",
-            "galleryGroup": "portfolio-gallery-courses",
-            "stack": "Python",
-            "platform": "The Human Mind",
-            "client": "Munes Bani Fawaz",
-            "projectDate": "Jan 11, 2025",
-            "projectURL": "https://github.com/mbanifawaz/Python-Fundamentals-Presentation",
-            "projectURLText": "Get Material"
-          },
-          {
-            "category": "filter-courses",
-            "image": "assets/img/portfolio/pythonadvanced.jpg",
-            "title": "Python Advanced Automation Class",
-            "shortDescription": "Master advanced Python automation: log monitoring, email alerts, web scraping, and task scheduling.",
-            "description": "This session dives into <b style='color: #007bff;'>advanced Python automation</b>, equipping you with the skills to handle real-world tasks efficiently. You'll implement a <b style='color: #dc3545;'>log monitoring</b> system that detects critical errors in real-time and triggers <b style='color: #ffc107;'>email alerts</b>. Additionally, you'll automate <b style='color: #17a2b8;'>web scraping</b> to extract and store structured data, using <b style='color: #28a745;'>BeautifulSoup</b> or <b style='color: #6f42c1;'>Scrapy</b>. With cross-platform compatibility and scheduling techniques, this lecture ensures your scripts run seamlessly on both Windows and Ubuntu. Get ready to elevate your automation skills! 🚀",            
-            "galleryGroup": "portfolio-gallery-courses",
-            "stack": "Python",
-            "platform": "Web | Windows | Ubuntu | Console",
-            "client": "Munes Bani Fawaz",
-            "projectDate": "Jan 11, 2025",
-            "projectURL": "https://github.com/mbanifawaz/Python-Advanced-Automation-Class",
-            "projectURLText": "Get Material"
-          },
-          {
-            "category": "filter-project",
-            "video": "assets/video/portfolio/wowly.webm",
-            "title": "Point of Sale Client Demo",
-            "shortDescription": "A seamless checkout-free shopping experience.",
-            "description": "Experience the future of shopping with a smart <b style='color: #007bff;'>Point of Sale (POS)</b> demo inspired by <a href='https://www.amazon.com' target='_blank'><b style='color: #ff9900;'>Amazon Go</b></a>. This cutting-edge system uses <b style='color: #28a745;'>barcode scanning</b> to enable a seamless, <b style='color: #ffc107;'>checkout-free</b> shopping experience. Customers can simply enter, pick up their desired items, and leave—no lines, no waiting. Payments are handled automatically through the <b style='color: #17a2b8;'>POS device</b>, delivering unmatched <b style='color: #dc3545;'>convenience</b> and <b style='color: #28a745;'>efficiency</b>. Ideal for busy individuals who prioritize their time and prefer <b style='color: #ff6347;'>hassle-free shopping</b>!",
-            "galleryGroup": "portfolio-gallery-project",
-            "stack": "Angular | Node JS | SQLite",
-            "platform": "Web | PWA",
-            "client": "Wowly",
-            "projectDate": "2023",
-            "projectURL": "https://www.itswowly.com/home",
-            "projectURLText": "Client Page"
-          },
-          {
-            "category": "filter-project",
-            "video": "assets/video/portfolio/frappekanban.mp4",
-            "title": "Frappe Kanban Demo",
-            "shortDescription": "A better Kanban Board",
-            "description": "A customizable <b style='color: #007bff;'>Kanban board</b> is a dynamic and versatile tool designed to streamline workflows, enhance collaboration, and adapt to the unique needs of any team or project. Its advanced flexibility allows for tailoring <b style='color: #28a745;'>columns</b>, <b style='color: #ff6347;'>fields</b>, <b style='color: #ffc107;'>labels</b>, and <b style='color: #17a2b8;'>filters</b> while integrating features like custom <b style='color: #6f42c1;'>JavaScript buttons</b> for real-time actions and a fully dynamic <b style='color: #fd7e14;'>settings interface</b>. This means users can modify <b style='color: #007bff;'>workflows</b>, add or remove buttons, and configure board behavior without reloading, creating a seamless and intuitive experience. The board also includes a powerful <b style='color: #6f42c1;'>modal system</b>, allowing users to click on a card and instantly access detailed information or edit data directly, reducing downtime and improving <b style='color: #dc3545;'>task management efficiency</b>. With <b style='color: #17a2b8;'>role-based access control</b>, <b style='color: #28a745;'>progress tracking</b>, and integrations with other tools (e.g., calendars or analytics), it ensures every team member has the exact tools and information they need. Custom <b style='color: #ff9900;'>color coding</b>, <b style='color: #28a745;'>drag-and-drop prioritization</b>, and detailed <b style='color: #17a2b8;'>comments</b> with <b style='color: #ffc107;'>file attachments</b> help centralize communication and reduce fragmented processes. Whether managing <b style='color: #007bff;'>agile development sprints</b>, <b style='color: #ffc107;'>marketing campaigns</b>, or <b style='color: #28a745;'>personal goals</b>, this Kanban board empowers teams with unparalleled customization, boosting productivity and enabling smarter, more agile <b style='color: #dc3545;'>decision-making</b>.",
-            "galleryGroup": "portfolio-gallery-project",
-            "stack": "Frappe/ERPNext | Python | JS | MariaDB",
-            "platform": "Web",
-            "client": "Syarah",
-            "projectDate": "2024",
-            "projectURL": "https://syarah.com",
-            "projectURLText": "Client Page"
-          },
-          {
-            "category": "filter-project",
-            "video": "assets/video/portfolio/docgenerator.webm",
-            "title": "Frappe DocGenerator Demo",
-            "shortDescription": "A better Document Generator / Template Engine",
-            "description": "The DocGenerator feature, inspired by <a href='https://www.docmosis.com' target='_blank'>Docmosis</a>, is a document generation tool designed specifically for ERP systems. It enables the dynamic creation of documents based on pre-defined Word templates, supporting both <b style='color: #007bff;'>English</b> and <b style='color: #28a745;'>Arabic</b> content. The templates preserve all <b style='color: #ff6347;'>formatting</b>, including <b style='color: #ff9900;'>colors</b>, <b style='color: #6f42c1;'>fonts</b>, and <b style='color: #17a2b8;'>styles</b>, ensuring that the final output maintains a <b style='color: #dc3545;'>professional</b> and <b style='color: #ffc107;'>consistent</b> appearance. The system also allows for the application of <b style='color: #fd7e14;'>filters</b> based on the document's data, prevents <b style='color: #dc3545;'>duplicate document creation</b> by checking for existing files, and offers a <b style='color: #17a2b8;'>preview</b> option for generated documents in <b style='color: #6f42c1;'>PDF</b> format. After generating the document, it can be converted into a <b style='color: #007bff;'>PDF</b>, with an option to exclude specific pages, and uploaded to an <b style='color: #28a745;'>S3 bucket</b> for <b style='color: #dc3545;'>secure storage</b>. This automated process efficiently handles <b style='color: #ffc107;'>document creation</b>, <b style='color: #17a2b8;'>management</b>, and <b style='color: #28a745;'>storage</b>, offering a seamless solution for ERP systems to generate formatted documents from scratch.",
-            "galleryGroup": "portfolio-gallery-project",
-            "stack": "Frappe/ERPNext | Python | JS | MariaDB",
-            "platform": "Web",
-            "client": "Syarah",
-            "projectDate": "2024",
-            "projectURL": "https://syarah.com",
-            "projectURLText": "Client Page"
-          },
-          {
-            "category": "filter-project",
-            "video": "assets/video/portfolio/singleviewconnector.mp4",
-            "title": "Single View Connector",
-            "shortDescription": "A unified interface for various services",
-            "description": "SingleViewConnector is a Flask application that connects various services into a single view, providing a unified interface for users. This application enhances productivity by allowing users to access multiple services seamlessly from one platform. With features like customizable <b style='color: #007bff;'>dashboards</b>, <b style='color: #28a745;'>user management</b>, and <b style='color: #ff6347;'>service integration</b>, it empowers teams to streamline their workflows and improve collaboration. The application is designed with a focus on <b style='color: #ffc107;'>user experience</b>, ensuring that all functionalities are easily accessible and intuitive. Whether managing <b style='color: #17a2b8;'>service consumers</b> or monitoring <b style='color: #6f42c1;'>system logs</b>, SingleViewConnector offers a comprehensive solution for modern service management.",
-            "galleryGroup": "portfolio-gallery-project",
-            "stack": "Flask | Python | Docker | SQLAlchemy",
-            "platform": "Web",
-            "client": "Syarah",
-            "projectDate": "2025",
-            "projectURL": "https://syarah.com",
-            "projectURLText": "Client Page"
-        },
-        {
-          "category": "filter-project",
-          "video": "assets/video/portfolio/cross.mp4",
-          "title": "Cross-Screen Objects",
-          "shortDescription": "A 3D visualization of interconnected spheres across multiple screens",
-          "description": "Cross-Screen Objects is an innovative web application that leverages <a href='https://threejs.org' target='_blank'>Three.js</a> to create a dynamic 3D visualization of interconnected spheres and particle systems. The application uses a custom <b style='color: #007bff;'>WindowManager</b> class to track and synchronize window positions across multiple screens via <b style='color: #28a745;'>localStorage</b>. Each window spawns a glowing main sphere with orbiting smaller spheres, connected by smooth <b style='color: #ff6347;'>Catmull-Rom curves</b> that animate in real-time. The visualization includes <b style='color: #ffc107;'>particle clouds</b> for a dense, web-like effect, with <b style='color: #17a2b8;'>custom shaders</b> for glowing aesthetics. The system supports <b style='color: #6f42c1;'>real-time updates</b> for window resizing and movement, ensuring seamless cross-screen interactions. Built with a focus on <b style='color: #dc3545;'>performance</b> and <b style='color: #fd7e14;'>visual appeal</b>, this project showcases advanced WebGL rendering and multi-window coordination.",
-          "galleryGroup": "portfolio-gallery-project",
-          "stack": "Three.js | JavaScript | Express | Node.js | WebGL",
-          "platform": "Web",
-          "client": "Personal Project",
-          "projectDate": "2024",
-          "projectURL": "https://mbanifawaz.github.io/",
-          "projectURLText": "Me :)"
-        },
-        {
-          "category": "filter-web",
-          "video": "assets/video/portfolio/raqmiyah.mp4",
-          "title": "Raqmiyah Company Main Page",
-          "shortDescription": "A modern, responsive website for a Saudi-based technology startup providing innovative IT solutions",
-          "description": "A visually stunning website built with modern web technologies featuring smooth animations, bilingual support (Arabic/English), and a dark theme. The site includes <b style='color: #007bff;'>responsive design</b> that works seamlessly across all devices, <b style='color: #28a745;'>interactive service tabs</b> showcasing ERP implementation, web development, mobile apps, custom systems and IT consulting services. The website utilizes <b style='color: #ff6347;'>ScrollReveal animations</b> for engaging user experience, <b style='color: #ffc107;'>RTL support</b> for Arabic content, and <b style='color: #17a2b8;'>custom CSS animations</b> for subtle visual effects. Features include a <b style='color: #6f42c1;'>floating contact button</b>, <b style='color: #dc3545;'>video background hero section</b>, and <b style='color: #fd7e14;'>dynamic theme switching</b>. Built with a focus on performance and user experience, this project demonstrates modern web development practices and attention to cultural requirements.",
-          "galleryGroup": "portfolio-gallery-web",
-          "stack": "HTML | CSS | JavaScript | PHP",
-          "platform": "Web",
-          "client": "Raqmiyah",
-          "projectDate": "2025",
-          "projectURL": "https://raqmiyah.com/",
-          "projectURLText": "Client Page"
-        },
-        {
-          "category": "filter-project",
-          "video": "assets/video/portfolio/node_consumer_demo.webm",
-          "title": "Global VoIP Infrastructure & Communication Platform",
-          "shortDescription": "Massive-scale distributed VoIP system operating across 1000+ servers globally with WhatsApp/Telegram automation",
-          "description": "A revolutionary <b style='color: #dc3545;'>hyperscale distributed VoIP infrastructure</b> operating across <b style='color: #ff6347;'>1000+ servers in 50+ countries</b>, orchestrating <b style='color: #ffc107;'>50,000+ Android Virtual Devices</b> to create <b style='color: #28a745;'>indistinguishable human communication patterns</b> that prevent detection and blocking. This enterprise-grade platform bridges <b style='color: #28a745;'>WhatsApp</b> and <b style='color: #17a2b8;'>Telegram</b> calls through <b style='color: #6f42c1;'>Zoiper SIP channels</b>, achieving <b style='color: #dc3545;'>90% cost reduction</b> in international calling.<br><br><b style='color: #007bff;'>🏗️ MICROSERVICES ARCHITECTURE:</b><br>• <b style='color: #28a745;'>Node Consumer:</b> Core orchestration managing AVDs, WhatsApp/Telegram activation, behavior simulation, call bridging<br>• <b style='color: #ff6347;'>Virtual Number Service:</b> Real phone numbers, OTP reception/forwarding, multi-country SMS gateways<br>• <b style='color: #17a2b8;'>API Gateway:</b> Service discovery, authentication, rate limiting, real-time metrics<br>• <b style='color: #ffc107;'>Data Consumer:</b> Analytics, CDR processing, billing, performance monitoring<br>• <b style='color: #6f42c1;'>Element Service:</b> Matrix protocol, cross-platform messaging bridge<br><br><b style='color: #dc3545;'>⚡ SCALE & PERFORMANCE:</b><br>• <b style='color: #28a745;'>500,000+</b> active WhatsApp/Telegram accounts<br>• <b style='color: #ff6347;'>100,000+</b> concurrent calls supported<br>• <b style='color: #17a2b8;'>1M+ calls</b> and <b style='color: #ffc107;'>10M+ messages</b> processed daily<br>• <b style='color: #6f42c1;'>100TB+</b> monthly data transfer<br>• <b style='color: #dc3545;'>99.99%</b> uptime with geo-redundancy<br>• <b style='color: #28a745;'><2 seconds</b> global call setup time<br>• <b style='color: #ff6347;'><50ms</b> p99 API latency<br><br><b style='color: #007bff;'>🤖 ADVANCED HUMAN BEHAVIOR SIMULATION:</b><br>• <b style='color: #dc3545;'>WhatsApp Status Updates:</b> Posting stories, viewing other nodes' statuses, reacting to updates<br>• <b style='color: #ffc107;'>Natural typing patterns</b> with variable speeds and typo corrections<br>• <b style='color: #28a745;'>Dual reply mechanisms</b> (normal text + quoted replies) for authentic interactions<br>• <b style='color: #17a2b8;'>Online/offline presence</b> management mimicking human sleep/work patterns<br>• <b style='color: #6f42c1;'>GPT-powered</b> contextual conversations with emotion simulation<br>• <b style='color: #ff6347;'>Voice/video calls</b> with duration randomization (30s-45min)<br>• <b style='color: #dc3545;'>Read receipt timing</b> variations (10s-5min delays) to avoid bot detection<br>• <b style='color: #ffc107;'>Media sharing</b> (images, documents, voice messages) with realistic intervals<br>• <b style='color: #28a745;'>Group participation</b> with lurking and occasional contributions<br>• <b style='color: #17a2b8;'>Profile updates</b> with AI-generated photos and bios<br>• <b style='color: #6f42c1;'>Contact synchronization</b> and gradual social graph building<br>• <b style='color: #ff6347;'>Account warming</b> with progressive activity increase to maintain authenticity<br><br><b style='color: #dc3545;'>🚀 KEY INNOVATIONS:</b><br>• <b style='color: #007bff;'>First-of-its-kind</b> WhatsApp/Telegram to VoIP bridge<br>• <b style='color: #28a745;'>Anti-detection algorithms</b> ensuring accounts remain unblocked<br>• <b style='color: #ff6347;'>Self-healing architecture</b> with automatic failover<br>• <b style='color: #17a2b8;'>Cross-server communication</b> via RabbitMQ clusters<br>• <b style='color: #ffc107;'>Dynamic scaling</b> based on demand<br>• <b style='color: #6f42c1;'>Zero-trust security</b> with end-to-end encryption<br>• <b style='color: #dc3545;'>Intelligent account rotation</b> to prevent rate limiting<br><br><b style='color: #007bff;'>💼 BUSINESS IMPACT:</b><br>• <b style='color: #dc3545;'>$10M+ annual savings</b> for enterprise clients<br>• <b style='color: #28a745;'>$50M+ revenue potential</b> annually<br>• <b style='color: #ff6347;'>75% reduction</b> in infrastructure costs vs traditional telco<br>• <b style='color: #17a2b8;'>60% reduction</b> in operational overhead<br>• <b style='color: #ffc107;'>40% reduction</b> in wasted resources via auto-scaling<br>• <b style='color: #6f42c1;'>80% reduction</b> in MTTR with self-healing<br><br><b style='color: #dc3545;'>🔧 TECHNICAL STACK:</b><br><b style='color: #28a745;'>Backend:</b> Python 3.x, Pika (RabbitMQ), Redis-py, Paramiko, Loguru<br><b style='color: #17a2b8;'>Android:</b> UIAutomator2, ADB, QEMU, Termux<br><b style='color: #ffc107;'>AI/Vision:</b> OpenCV, Pillow, scikit-image, Faker, Custom LLM<br><b style='color: #6f42c1;'>Infrastructure:</b> Boto3 (AWS), Docker/Kubernetes, Terraform<br><b style='color: #ff6347;'>Monitoring:</b> Prometheus/Grafana, ELK Stack<br><b style='color: #007bff;'>VoIP:</b> Zoiper SDK, Baresip, SIP Protocol<br><br>This platform represents a <b style='color: #dc3545;'>revolutionary approach</b> to global telecommunications, demonstrating technical mastery in distributed systems, innovation in bridging modern messaging with traditional VoIP, and the ability to architect transformative solutions that <b style='color: #28a745;'>redefine industry standards</b> at unprecedented scale while maintaining <b style='color: #ff6347;'>undetectable human-like behavior</b> across all interactions.",
-          "galleryGroup": "portfolio-gallery-project",
-          "stack": "Python | RabbitMQ | Redis | UIAutomator2 | OpenCV | Docker | AWS | Kubernetes | Zoiper | ADB",
-          "platform": "Linux | Android | Cloud | 1000+ Servers",
-          "client": "Maple Telecommunications",
-          "projectDate": "2025",
-          "projectURL": "https://www.mapletele.com/",
-          "projectURLText": "Client Page"
-        },
-        {
-          "category": "filter-project",
-          "video": "assets/video/portfolio/luna.webm",
-          "title": "L.U.N.A - Learning, Understanding Neural Assistant",
-          "shortDescription": "A sophisticated AI assistant platform combining real-time conversation, multimodal interaction, and intelligent widgets for an enhanced user experience",
-          "description": "L.U.N.A is a cutting-edge AI assistant application that seamlessly integrates multiple technologies for natural interaction. Key features include <b style='color: #007bff;'>real-time voice communication</b> with speech-to-text and text-to-speech capabilities, <b style='color: #28a745;'>live webcam integration</b> for visual context processing, and <b style='color: #ff6347;'>intelligent widgets</b> providing weather updates, maps/directions, code execution, and web search results. The application leverages <b style='color: #ffc107;'>Google's Gemini AI</b> for advanced conversation capabilities and <b style='color: #17a2b8;'>WebSocket technology</b> for smooth real-time communication. Notable features include <b style='color: #6f42c1;'>ElevenLabs voice synthesis</b> for natural speech output, <b style='color: #dc3545;'>interactive visualization</b> showing the AI's status, and <b style='color: #fd7e14;'>multiple widget integrations</b> including weather services, Google Maps, and web search functionality. Built with a modern tech stack and emphasis on real-time performance, this project showcases advanced integration of AI services with a responsive web interface.",
-          "galleryGroup": "portfolio-gallery-project",
-          "stack": "Python | React | Flask | WebSocket | Google Gemini AI | ElevenLabs TTS | Web Speech API",
-          "platform": "Web",
-          "client": "Personal Project",
-          "projectDate": "2025",
-          "projectURL": "https://mbanifawaz.github.io/",
-          "projectURLText": "Me :)"
+      {
+        "title": "MID ERP Full Stack Developer",
+        "year": "December 2023 – April 2025 (Got Promoted) (Full-Time)",
+        "company": "Syarah",
+        "responsibilities": [
+          "Conducted Frappe/ERPNext, Python, and JavaScript training, mentoring team members to enhance technical skills.",
+          "Upgraded Frappe/ERPNext from v13 to v15, separating and optimizing a built-in Vue.js application.",
+          "Created a customizable Kanban board and resolved complex related issues.",
+          "Managed environments for UAT, QA, Preproduction, and Outsourcing pipelines.",
+          "Built the Frappe Developer Toolbox, increasing development efficiency.",
+          "Built the Single View Connector, a seperate FLASK app to connect with various banking services and else."
+        ]
+      },
+      {
+        "title": "Senior Python / ERP Fullstack Developer & Consultant",
+        "year": "March 2025 – Present (Part-Time)",
+        "company": "Maple Telecommunications",
+        "responsibilities": [
+          "Designed and developed a fully dynamic Telegram bot management system using FastAPI and PostgreSQL, featuring a modern admin panel, granular permissions, and a superadmin console for process control.",
+          "Led the customization and optimization of Frappe ERPNext for Maple Telecommunications, implementing multi-company workflows, custom fields, and dynamic filters to enhance operational efficiency.",
+          "Architected a responsive HTML/JavaScript UI for the Telegram bot system, enabling seamless management of bots, commands, users, and permissions with real-time log viewing and section persistence.",
+          "Spearheaded the implementation of a robust permissions system (global and per-resource) and Dockerized deployment for scalable, production-ready Python applications.",
+          "Oversaw the integration of Telegram’s Bot API with custom API endpoints, facilitating versatile communication platforms for internal and external services.",
+          "Developed and maintained Python-based ERP solutions, including scripts for data processing, slot availability reporting, and duplicate detection in Frappe ERPNext child tables.",
+          "Provided technical consultation on ERPNext module customizations, REST API integrations, and JavaScript-based UI enhancements for improved user experience.",
+          "Mentored junior developers in Python, FastAPI, and Frappe Framework best practices, ensuring high-quality code delivery across multiple projects.",
+          "Collaborated with cross-functional teams to align ERP and Python project requirements with business objectives, driving process automation and system scalability.",
+          "Fulfilled a fully customized ERP solution for a high-profile client via Maple Telecommunications, tailoring Frappe ERPNext modules, workflows, and integrations to meet unique business requirements."
+        ]
+      },
+      {
+        "title": "ERP Full Stack Developer",
+        "year": "September 2022 – December 2023 (Full-Time)",
+        "company": "Nixpend",
+        "responsibilities": [
+          "Built custom Doctypes and modules with related reports and functionalities, including HR, appointment bookings, accounting, and procedural enhancements.",
+          "Developed a Revenue Sharing Module to automate distribution of revenue via invoices for healthcare practitioners.",
+          "Created custom APIs and integrated the ERP system with external healthcare systems like Medical.",
+          "Oversaw ticket distribution and managed weekly updates/releases, including code reviews and merge requests.",
+          "Enhanced system scalability and reliability through cloud integrations and optimized configurations."
+        ]
+      },
+      {
+        "title": "System Development Officer",
+        "year": "June 2021 – March 2022 (Full-Time)",
+        "company": "Extensya",
+        "responsibilities": [
+          "Created and maintained web forms for quality evaluations and call logging, serving ~40 clients.",
+          "Developed internal systems such as ECT (employee announcements), online/English assessments, Extensya's chat tool, and live agent help desk.",
+          "Built custom APIs, including data retrieval from Zendesk and exporting data to Excel sheets (CSV/XLS).",
+          "Developed a digital library with a file manager for upload/delete operations and a tree-view structure for file browsing.",
+          "Streamlined company workflows by creating tools and scripts for editing, debugging, and testing internal systems."
+        ]
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "text": "I highly recommend Munes as a talented and dedicated programmer. His proficiency in programming languages is commendable, and he excels in problem-solving. During our time as colleagues, Munes consistently demonstrated his expertise in coding and was a valuable asset to the team. Notably, Munes played a crucial role in assisting me during our training period. His willingness to share knowledge and provide support greatly contributed to my learning experience. I have witnessed firsthand his exceptional problem-solving skills and creative approach to programming challenges. Munes's commitment to excellence and collaborative spirit make him an outstanding team member. I am confident that his skills and positive attitude will continue to make significant contributions wherever he goes.",
+      "image": "assets/img/testimonials/aokasha.jpg",
+      "name": "Ahmad Okasha",
+      "title": "Software Engineer at Nixpend"
+    },
+    {
+      "text": "I am delighted to recommend Munis Fawaz as a software engineer. I had the pleasure of training Munis at Nixpend Sequential Technologies. His ability to grasp knowledge quickly and his innovative problem-solving skills make him a standout candidate. He is not the type of guy to complain when he faces a problem, rather he focuses on how to approach the problem and break it down. He is initiative, when discovers something to automate or a code to optimize he immediately raises the flag and takes the lead to handle it. He's got a beautiful sense of humor which is amazing to have especially in a stressful environment.",
+      "image": "assets/img/testimonials/mabdullah.jpg",
+      "name": "Mohammad Abdulla",
+      "title": "Software Engineer | AWS SAA"
+    },
+    {
+      "text": "I recommend Munes as a Full Stack Engineer. He possesses strong technical skills, consistently solving complex problems efficiently. One of the unique things about Munes is that he proposes improvements to the system, and is not just someone who carries out instructions.",
+      "image": "assets/img/testimonials/sfateh.jpg",
+      "name": "Salah Aldin Fateh",
+      "title": "DevOps Engineer at Nixpend"
+    },
+    {
+      "text": "I am writing to highly recommend my esteemed colleague, Munes Bani Fawaz, for any professional opportunity that he may pursue in the future. As a Senior Software Engineer, Munes has consistently demonstrated an extraordinary level of skill, dedication, and innovation in his work, earning him the affectionate moniker of \"Mr. Automator\" amongst our team. Munes's remarkable abilities in the field of software engineering have had a profound impact on our team and the projects we have undertaken. One of Munes's most outstanding qualities is his incredible proficiency in automating complex and time-consuming tasks. He has a unique talent for simplifying and optimizing workflows, making our daily work more efficient and less error-prone. The improvements he has made through automation have not only saved us countless hours but have also significantly reduced the margin for human error, improving the overall quality of our work. Munes is not just an automation wizard; he is also an exceptional problem solver. He possesses a keen analytical mind, which enables him to dissect complex issues and devise elegant solutions. His ability to approach challenges with creativity and logical thinking is a testament to his problem-solving prowess. Whenever our team has faced roadblocks, Munes has been the go-to person to find innovative solutions and guide us back on track. Munes's dedication to his work is unwavering. He consistently goes above and beyond to meet project deadlines and deliver high-quality results. His ability to adapt to new technologies and stay up-to-date with industry trends showcases his commitment to continuous learning and growth. His collaborative and communicative nature makes him an invaluable asset to our team, as he readily shares his knowledge and supports his colleagues.",
+      "image": "assets/img/testimonials/mshammout.jpg",
+      "name": "Moneeb Shammout",
+      "title": "Backend Engineer | Software Engineer"
+    },
+    {
+      "text": "Professional, team player & passionate about what he does! It was a privilege to work with Munes.",
+      "image": "assets/img/testimonials/akurdi.jpg",
+      "name": "Dr. Abdul Kareem Kurdi",
+      "title": "Manager of Pharmacies Department /Hakeem Claim (EHSI)"
+    },
+    {
+      "text": "I highly recommend Munes as a Full Stack Developer. His expertise in both front-end and back-end technologies is impressive. Munes consistently delivers high-quality, efficient solutions and is a valuable asset to any development team.",
+      "image": "assets/img/testimonials/wzoubi.jpg",
+      "name": "Wesam AL-Zoubi",
+      "title": "Accounting at AL-Balqa'a Applied University"
+    },
+    {
+      "text": "I have had the pleasure of working alongside Munes, and I can confidently attest to his exceptional skills as a developer. Collaborating with him is not only enjoyable but also incredibly enriching. Munes combines his technical prowess with a great sense of humor, making our work environment not just productive but also fun. His ability to lighten the atmosphere while delivering top-notch development solutions is truly remarkable. I wholeheartedly recommend Munes for his technical expertise, collaborative spirit, and the delightful touch of humor he brings to any team.",
+      "image": "assets/img/testimonials/sayman.jpg",
+      "name": "Sa'ed Ayman",
+      "title": "Software Developer @ Nixpend - Sequential Technologies"
+    },
+    {
+      "text": "I highly recommended Munes as a full_stack developer, he is very strong problem solver using simplest ways, and he is quick learner, eager to learn new things and mastered it in short time, he has a creativity thought to make special touches on his work and he is very supportive and helper person. Wish you all the best Munes.",
+      "image": "assets/img/testimonials/amomani.jpg",
+      "name": "As'har Momani",
+      "title": "Computer Engineering | Application Engineer"
+    },
+    {
+      "text": "I highly recommend Munes as a full-stack developer. His work ethic is unmatched, and he excels in resolving coding challenges. A go-to person for bug fixes, he willingly shares his extensive knowledge, making collaboration a breeze. His commitment and passion for continuous learning make him an invaluable asset to any team.",
+      "image": "assets/img/testimonials/msader.jpg",
+      "name": "Mahmoud H. Sadder",
+      "title": "Support | QA Engineer"
+    },
+    {
+      "text": "I am writing to recommend Munes based on his exceptional performance during his tenure at Extensya under my guidance. Munes exhibited an impressive ability to rapidly grasp complex concepts and swiftly apply them to tasks. His remarkable aptitude for learning was evident as he consistently displayed a deep understanding of the projects he was involved in. Moreover, his organizational skills were remarkable, allowing him to handle multiple tasks efficiently and effectively. Munes's exceptional efficiency and dedication to meeting deadlines while maintaining a high standard of work made him a key contributor to our team's success. His resourcefulness, creative approach to problem-solving, and willingness to take initiative greatly contributed to the innovative solutions we were able to implement. Overall, Munes demonstrated intelligence, resourcefulness, and an exceptional work ethic, and his positive attitude and eagerness to learn served as an inspiration to his peers. I wholeheartedly recommend Munes for any role where his technical skills, adaptability, and dedication would be valued.",
+      "image": "assets/img/testimonials/empty.png",
+      "name": "Fadia Elmabrouk",
+      "title": "Software Engineer | Extensya"
+    },
+    {
+      "text": "It is my pleasure to strongly recommend Munes Bani Fawaz for a position as a Systems Development Officer. I am Murad Fares, a Systems Development Manager at Extensya, and with my 15 years of experience in software development, I have encountered many young professionals, but Munes stands out. During our time working together, Munes displayed great talents in technical applications and programming languages, including PHP, SQL DB, CSS, CMS, JavaScript, and various data visualization tools. I am confident that Munes would be a valuable asset to your company. He not only possesses the skills and experience you're seeking, but he will also contribute significantly and help your company grow.",
+      "image": "assets/img/testimonials/murad.jpg",
+      "name": "Murad Fares",
+      "title": "Systems Development Manager | Extensya"
+    }
+  ],
+  "portfolio": {
+    "filters": [
+      {
+        "value": "*",
+        "label": "All",
+        "active": true
+      },
+      {
+        "value": ".filter-app",
+        "label": "Apps",
+        "active": false
+      },
+      {
+        "value": ".filter-web",
+        "label": "Web",
+        "active": false
+      },
+      {
+        "value": ".filter-project",
+        "label": "Projects",
+        "active": false
+      },
+      {
+        "value": ".filter-script",
+        "label": "Scripts",
+        "active": false
+      },
+      {
+        "value": ".filter-courses",
+        "label": "Courses",
+        "active": false
+      }
+    ],
+    "items": [
+      {
+        "category": "filter-app",
+        "image": "assets/img/portfolio/jordan_prayer_times.png",
+        "title": "Jordan Prayer Times",
+        "shortDescription": "Get accurate prayer times in Jordan with notifications.",
+        "description": "Jordan Prayer Times is a comprehensive and easy-to-use app that helps you stay on track with your daily <b style='color: #007bff;'>prayers</b>. Whether you're at home, at work, or on the go, this app provides accurate <b style='color: #28a745;'>prayer times</b> based on your location in <b style='color: #dc3545;'>Jordan</b> and allows you to have <b style='color: #ff6347;'>notifications</b> to suit your preferences.",
+        "galleryGroup": "portfolio-gallery-app",
+        "stack": "Flutter | Node JS",
+        "platform": "Android | iOS",
+        "client": "Munes Bani Fawaz",
+        "projectDate": "Jan 8, 2025",
+        "projectURL": "https://play.google.com/store/apps/details?id=com.mbf.jordan_prayer_times_app",
+        "projectURLText": "Google Play Store"
+      },
+      {
+        "category": "filter-app",
+        "image": "assets/img/portfolio/cmr.png",
+        "title": "Cubic Maze Runner",
+        "shortDescription": "Game Inspired By Subway And Piano Tiles",
+        "description": "Cubic Maze Runner is an exciting game inspired by the fast-paced action of <b style='color: #007bff;'>Subway Surfers</b> and the rhythm-based gameplay of <b style='color: #28a745;'>Piano Tiles</b>. In this game, players navigate through challenging levels while tapping to the beat of the music, avoiding obstacles, and scoring high points. With a smooth, addictive <b style='color: #ffc107;'>gameplay experience</b>, this game will keep you engaged for hours as you aim to beat your best <b style='color: #dc3545;'>score</b>.",
+        "galleryGroup": "portfolio-gallery-app",
+        "stack": "Unity | C#",
+        "platform": "Android | iOS | Windows",
+        "client": "Munes Bani Fawaz",
+        "projectDate": "TBA",
+        "projectURL": "#",
+        "projectURLText": "TBA"
+      },
+      {
+        "category": "filter-web",
+        "image": "assets/img/portfolio/iloveyou.png",
+        "title": "I Love You ♥♥♥",
+        "shortDescription": "A heartfelt interactive webpage featuring song lyrics with a typewriter effect.",
+        "description": "This project is a visually appealing and interactive webpage that displays <b style='color: #007bff;'>song lyrics</b> in a <b style='color: #28a745;'>typewriter effect</b>, inspired by the song '<b style='color: #ff6347;'>All of Me</b>' by <b style='color: #6f42c1;'>John Legend</b>. The page includes a <b style='color: #dc3545;'>heart-like button</b> that, when clicked, starts the animation of the song lyrics and plays the music. The background and button transition between <b style='color: #ff9900;'>grayscale</b> and <b style='color: #17a2b8;'>normal modes</b> to create a visually dynamic experience. The project is designed to evoke emotions through its <b style='color: #28a745;'>heartwarming theme</b> and smooth <b style='color: #ffc107;'>animations</b>.",
+        "galleryGroup": "portfolio-gallery-web",
+        "stack": "HTML | CSS | JavaScript",
+        "platform": "Web",
+        "client": "Munes Bani Fawaz",
+        "projectDate": "Nov 15, 2022",
+        "projectURL": "https://mrgiveitaway-tpk.github.io/I_Love_You/",
+        "projectURLText": "Visit Website"
+      },
+      {
+        "category": "filter-web",
+        "image": "assets/img/portfolio/comingsoon.png",
+        "title": "Coming Soon Template",
+        "shortDescription": "A responsive website template for a 'Coming Soon' page",
+        "description": "This '<b style='color: #007bff;'>Coming Soon</b>' template is designed to showcase a website that is currently under construction. Featuring an engaging and smooth <b style='color: #28a745;'>animation</b>, it provides visitors with an exciting preview of what's to come. The layout is fully <b style='color: #ffc107;'>responsive</b>, ensuring a seamless experience on all devices, from <b style='color: #17a2b8;'>desktops</b> to <b style='color: #ff6347;'>smartphones</b>. Perfect for <b style='color: #28a745;'>businesses</b> or <b style='color: #6f42c1;'>personal projects</b>, this template sets the tone for what's next while keeping your audience engaged and informed about the upcoming <b style='color: #dc3545;'>launch</b>.",
+        "galleryGroup": "portfolio-gallery-web",
+        "stack": "HTML | CSS | JavaScript",
+        "platform": "Web",
+        "client": "Munes Bani Fawaz",
+        "projectDate": "Feb 4, 2024",
+        "projectURL": "https://mbanifawaz.github.io/coming-soon/",
+        "projectURLText": "Visit Website"
+      },
+      {
+        "category": "filter-courses",
+        "image": "assets/img/portfolio/pythonfundementals.jpg",
+        "title": "Python Fundamentals",
+        "shortDescription": "Learn the basics of Python: setup, data types, control flow, functions, and OOP.",
+        "description": "This presentation will cover the basics of <b style='color: #007bff;'>Python programming</b>, from setting up your environment to exploring essential concepts and techniques. We will delve into <b style='color: #28a745;'>data types</b>, <b style='color: #ffc107;'>control flow</b>, <b style='color: #17a2b8;'>functions</b>, <b style='color: #ff6347;'>modules</b> and <b style='color: #6f42c1;'>object-oriented programming</b>, equipping you with the foundational knowledge necessary for effective <b style='color: #28a745;'>Python development</b>. Let's embark on this journey together!",
+        "galleryGroup": "portfolio-gallery-courses",
+        "stack": "Python",
+        "platform": "The Human Mind",
+        "client": "Munes Bani Fawaz",
+        "projectDate": "Jan 11, 2025",
+        "projectURL": "https://github.com/mbanifawaz/Python-Fundamentals-Presentation",
+        "projectURLText": "Get Material"
+      },
+      {
+        "category": "filter-courses",
+        "image": "assets/img/portfolio/pythonadvanced.jpg",
+        "title": "Python Advanced Automation Class",
+        "shortDescription": "Master advanced Python automation: log monitoring, email alerts, web scraping, and task scheduling.",
+        "description": "This session dives into <b style='color: #007bff;'>advanced Python automation</b>, equipping you with the skills to handle real-world tasks efficiently. You'll implement a <b style='color: #dc3545;'>log monitoring</b> system that detects critical errors in real-time and triggers <b style='color: #ffc107;'>email alerts</b>. Additionally, you'll automate <b style='color: #17a2b8;'>web scraping</b> to extract and store structured data, using <b style='color: #28a745;'>BeautifulSoup</b> or <b style='color: #6f42c1;'>Scrapy</b>. With cross-platform compatibility and scheduling techniques, this lecture ensures your scripts run seamlessly on both Windows and Ubuntu. Get ready to elevate your automation skills! 🚀",
+        "galleryGroup": "portfolio-gallery-courses",
+        "stack": "Python",
+        "platform": "Web | Windows | Ubuntu | Console",
+        "client": "Munes Bani Fawaz",
+        "projectDate": "Jan 11, 2025",
+        "projectURL": "https://github.com/mbanifawaz/Python-Advanced-Automation-Class",
+        "projectURLText": "Get Material"
+      },
+      {
+        "category": "filter-project",
+        "video": "assets/video/portfolio/wowly.webm",
+        "title": "Point of Sale Client Demo",
+        "shortDescription": "A seamless checkout-free shopping experience.",
+        "description": "Experience the future of shopping with a smart <b style='color: #007bff;'>Point of Sale (POS)</b> demo inspired by <a href='https://www.amazon.com' target='_blank'><b style='color: #ff9900;'>Amazon Go</b></a>. This cutting-edge system uses <b style='color: #28a745;'>barcode scanning</b> to enable a seamless, <b style='color: #ffc107;'>checkout-free</b> shopping experience. Customers can simply enter, pick up their desired items, and leave—no lines, no waiting. Payments are handled automatically through the <b style='color: #17a2b8;'>POS device</b>, delivering unmatched <b style='color: #dc3545;'>convenience</b> and <b style='color: #28a745;'>efficiency</b>. Ideal for busy individuals who prioritize their time and prefer <b style='color: #ff6347;'>hassle-free shopping</b>!",
+        "galleryGroup": "portfolio-gallery-project",
+        "stack": "Angular | Node JS | SQLite",
+        "platform": "Web | PWA",
+        "client": "Wowly",
+        "projectDate": "2023",
+        "projectURL": "https://www.itswowly.com/home",
+        "projectURLText": "Client Page"
+      },
+      {
+        "category": "filter-project",
+        "video": "assets/video/portfolio/frappekanban.mp4",
+        "title": "Frappe Kanban Demo",
+        "shortDescription": "A better Kanban Board",
+        "description": "A customizable <b style='color: #007bff;'>Kanban board</b> is a dynamic and versatile tool designed to streamline workflows, enhance collaboration, and adapt to the unique needs of any team or project. Its advanced flexibility allows for tailoring <b style='color: #28a745;'>columns</b>, <b style='color: #ff6347;'>fields</b>, <b style='color: #ffc107;'>labels</b>, and <b style='color: #17a2b8;'>filters</b> while integrating features like custom <b style='color: #6f42c1;'>JavaScript buttons</b> for real-time actions and a fully dynamic <b style='color: #fd7e14;'>settings interface</b>. This means users can modify <b style='color: #007bff;'>workflows</b>, add or remove buttons, and configure board behavior without reloading, creating a seamless and intuitive experience. The board also includes a powerful <b style='color: #6f42c1;'>modal system</b>, allowing users to click on a card and instantly access detailed information or edit data directly, reducing downtime and improving <b style='color: #dc3545;'>task management efficiency</b>. With <b style='color: #17a2b8;'>role-based access control</b>, <b style='color: #28a745;'>progress tracking</b>, and integrations with other tools (e.g., calendars or analytics), it ensures every team member has the exact tools and information they need. Custom <b style='color: #ff9900;'>color coding</b>, <b style='color: #28a745;'>drag-and-drop prioritization</b>, and detailed <b style='color: #17a2b8;'>comments</b> with <b style='color: #ffc107;'>file attachments</b> help centralize communication and reduce fragmented processes. Whether managing <b style='color: #007bff;'>agile development sprints</b>, <b style='color: #ffc107;'>marketing campaigns</b>, or <b style='color: #28a745;'>personal goals</b>, this Kanban board empowers teams with unparalleled customization, boosting productivity and enabling smarter, more agile <b style='color: #dc3545;'>decision-making</b>.",
+        "galleryGroup": "portfolio-gallery-project",
+        "stack": "Frappe/ERPNext | Python | JS | MariaDB",
+        "platform": "Web",
+        "client": "Syarah",
+        "projectDate": "2024",
+        "projectURL": "https://syarah.com",
+        "projectURLText": "Client Page"
+      },
+      {
+        "category": "filter-project",
+        "video": "assets/video/portfolio/docgenerator.webm",
+        "title": "Frappe DocGenerator Demo",
+        "shortDescription": "A better Document Generator / Template Engine",
+        "description": "The DocGenerator feature, inspired by <a href='https://www.docmosis.com' target='_blank'>Docmosis</a>, is a document generation tool designed specifically for ERP systems. It enables the dynamic creation of documents based on pre-defined Word templates, supporting both <b style='color: #007bff;'>English</b> and <b style='color: #28a745;'>Arabic</b> content. The templates preserve all <b style='color: #ff6347;'>formatting</b>, including <b style='color: #ff9900;'>colors</b>, <b style='color: #6f42c1;'>fonts</b>, and <b style='color: #17a2b8;'>styles</b>, ensuring that the final output maintains a <b style='color: #dc3545;'>professional</b> and <b style='color: #ffc107;'>consistent</b> appearance. The system also allows for the application of <b style='color: #fd7e14;'>filters</b> based on the document's data, prevents <b style='color: #dc3545;'>duplicate document creation</b> by checking for existing files, and offers a <b style='color: #17a2b8;'>preview</b> option for generated documents in <b style='color: #6f42c1;'>PDF</b> format. After generating the document, it can be converted into a <b style='color: #007bff;'>PDF</b>, with an option to exclude specific pages, and uploaded to an <b style='color: #28a745;'>S3 bucket</b> for <b style='color: #dc3545;'>secure storage</b>. This automated process efficiently handles <b style='color: #ffc107;'>document creation</b>, <b style='color: #17a2b8;'>management</b>, and <b style='color: #28a745;'>storage</b>, offering a seamless solution for ERP systems to generate formatted documents from scratch.",
+        "galleryGroup": "portfolio-gallery-project",
+        "stack": "Frappe/ERPNext | Python | JS | MariaDB",
+        "platform": "Web",
+        "client": "Syarah",
+        "projectDate": "2024",
+        "projectURL": "https://syarah.com",
+        "projectURLText": "Client Page"
+      },
+      {
+        "category": "filter-project",
+        "video": "assets/video/portfolio/singleviewconnector.mp4",
+        "title": "Single View Connector",
+        "shortDescription": "A unified interface for various services",
+        "description": "SingleViewConnector is a Flask application that connects various services into a single view, providing a unified interface for users. This application enhances productivity by allowing users to access multiple services seamlessly from one platform. With features like customizable <b style='color: #007bff;'>dashboards</b>, <b style='color: #28a745;'>user management</b>, and <b style='color: #ff6347;'>service integration</b>, it empowers teams to streamline their workflows and improve collaboration. The application is designed with a focus on <b style='color: #ffc107;'>user experience</b>, ensuring that all functionalities are easily accessible and intuitive. Whether managing <b style='color: #17a2b8;'>service consumers</b> or monitoring <b style='color: #6f42c1;'>system logs</b>, SingleViewConnector offers a comprehensive solution for modern service management.",
+        "galleryGroup": "portfolio-gallery-project",
+        "stack": "Flask | Python | Docker | SQLAlchemy",
+        "platform": "Web",
+        "client": "Syarah",
+        "projectDate": "2025",
+        "projectURL": "https://syarah.com",
+        "projectURLText": "Client Page"
+      },
+      {
+        "category": "filter-project",
+        "video": "assets/video/portfolio/cross.mp4",
+        "title": "Cross-Screen Objects",
+        "shortDescription": "A 3D visualization of interconnected spheres across multiple screens",
+        "description": "Cross-Screen Objects is an innovative web application that leverages <a href='https://threejs.org' target='_blank'>Three.js</a> to create a dynamic 3D visualization of interconnected spheres and particle systems. The application uses a custom <b style='color: #007bff;'>WindowManager</b> class to track and synchronize window positions across multiple screens via <b style='color: #28a745;'>localStorage</b>. Each window spawns a glowing main sphere with orbiting smaller spheres, connected by smooth <b style='color: #ff6347;'>Catmull-Rom curves</b> that animate in real-time. The visualization includes <b style='color: #ffc107;'>particle clouds</b> for a dense, web-like effect, with <b style='color: #17a2b8;'>custom shaders</b> for glowing aesthetics. The system supports <b style='color: #6f42c1;'>real-time updates</b> for window resizing and movement, ensuring seamless cross-screen interactions. Built with a focus on <b style='color: #dc3545;'>performance</b> and <b style='color: #fd7e14;'>visual appeal</b>, this project showcases advanced WebGL rendering and multi-window coordination.",
+        "galleryGroup": "portfolio-gallery-project",
+        "stack": "Three.js | JavaScript | Express | Node.js | WebGL",
+        "platform": "Web",
+        "client": "Personal Project",
+        "projectDate": "2024",
+        "projectURL": "https://mbanifawaz.github.io/",
+        "projectURLText": "Me :)"
+      },
+      {
+        "category": "filter-web",
+        "video": "assets/video/portfolio/raqmiyah.mp4",
+        "title": "Raqmiyah Company Main Page",
+        "shortDescription": "A modern, responsive website for a Saudi-based technology startup providing innovative IT solutions",
+        "description": "A visually stunning website built with modern web technologies featuring smooth animations, bilingual support (Arabic/English), and a dark theme. The site includes <b style='color: #007bff;'>responsive design</b> that works seamlessly across all devices, <b style='color: #28a745;'>interactive service tabs</b> showcasing ERP implementation, web development, mobile apps, custom systems and IT consulting services. The website utilizes <b style='color: #ff6347;'>ScrollReveal animations</b> for engaging user experience, <b style='color: #ffc107;'>RTL support</b> for Arabic content, and <b style='color: #17a2b8;'>custom CSS animations</b> for subtle visual effects. Features include a <b style='color: #6f42c1;'>floating contact button</b>, <b style='color: #dc3545;'>video background hero section</b>, and <b style='color: #fd7e14;'>dynamic theme switching</b>. Built with a focus on performance and user experience, this project demonstrates modern web development practices and attention to cultural requirements.",
+        "galleryGroup": "portfolio-gallery-web",
+        "stack": "HTML | CSS | JavaScript | PHP",
+        "platform": "Web",
+        "client": "Raqmiyah",
+        "projectDate": "2025",
+        "projectURL": "https://raqmiyah.com/",
+        "projectURLText": "Client Page"
+      },
+      {
+        "category": "filter-project",
+        "video": "assets/video/portfolio/node_consumer_demo.webm",
+        "title": "Global VoIP Infrastructure & Communication Platform",
+        "shortDescription": "Massive-scale distributed VoIP system operating across 1000+ servers globally with WhatsApp/Telegram automation",
+        "description": "A revolutionary <b style='color: #dc3545;'>hyperscale distributed VoIP infrastructure</b> operating across <b style='color: #ff6347;'>1000+ servers in 50+ countries</b>, orchestrating <b style='color: #ffc107;'>50,000+ Android Virtual Devices</b> to create <b style='color: #28a745;'>indistinguishable human communication patterns</b> that prevent detection and blocking. This enterprise-grade platform bridges <b style='color: #28a745;'>WhatsApp</b> and <b style='color: #17a2b8;'>Telegram</b> calls through <b style='color: #6f42c1;'>Zoiper SIP channels</b>, achieving <b style='color: #dc3545;'>90% cost reduction</b> in international calling.<br><br><b style='color: #007bff;'>🏗️ MICROSERVICES ARCHITECTURE:</b><br>• <b style='color: #28a745;'>Node Consumer:</b> Core orchestration managing AVDs, WhatsApp/Telegram activation, behavior simulation, call bridging<br>• <b style='color: #ff6347;'>Virtual Number Service:</b> Real phone numbers, OTP reception/forwarding, multi-country SMS gateways<br>• <b style='color: #17a2b8;'>API Gateway:</b> Service discovery, authentication, rate limiting, real-time metrics<br>• <b style='color: #ffc107;'>Data Consumer:</b> Analytics, CDR processing, billing, performance monitoring<br>• <b style='color: #6f42c1;'>Element Service:</b> Matrix protocol, cross-platform messaging bridge<br><br><b style='color: #dc3545;'>⚡ SCALE & PERFORMANCE:</b><br>• <b style='color: #28a745;'>500,000+</b> active WhatsApp/Telegram accounts<br>• <b style='color: #ff6347;'>100,000+</b> concurrent calls supported<br>• <b style='color: #17a2b8;'>1M+ calls</b> and <b style='color: #ffc107;'>10M+ messages</b> processed daily<br>• <b style='color: #6f42c1;'>100TB+</b> monthly data transfer<br>• <b style='color: #dc3545;'>99.99%</b> uptime with geo-redundancy<br>• <b style='color: #28a745;'><2 seconds</b> global call setup time<br>• <b style='color: #ff6347;'><50ms</b> p99 API latency<br><br><b style='color: #007bff;'>🤖 ADVANCED HUMAN BEHAVIOR SIMULATION:</b><br>• <b style='color: #dc3545;'>WhatsApp Status Updates:</b> Posting stories, viewing other nodes' statuses, reacting to updates<br>• <b style='color: #ffc107;'>Natural typing patterns</b> with variable speeds and typo corrections<br>• <b style='color: #28a745;'>Dual reply mechanisms</b> (normal text + quoted replies) for authentic interactions<br>• <b style='color: #17a2b8;'>Online/offline presence</b> management mimicking human sleep/work patterns<br>• <b style='color: #6f42c1;'>GPT-powered</b> contextual conversations with emotion simulation<br>• <b style='color: #ff6347;'>Voice/video calls</b> with duration randomization (30s-45min)<br>• <b style='color: #dc3545;'>Read receipt timing</b> variations (10s-5min delays) to avoid bot detection<br>• <b style='color: #ffc107;'>Media sharing</b> (images, documents, voice messages) with realistic intervals<br>• <b style='color: #28a745;'>Group participation</b> with lurking and occasional contributions<br>• <b style='color: #17a2b8;'>Profile updates</b> with AI-generated photos and bios<br>• <b style='color: #6f42c1;'>Contact synchronization</b> and gradual social graph building<br>• <b style='color: #ff6347;'>Account warming</b> with progressive activity increase to maintain authenticity<br><br><b style='color: #dc3545;'>🚀 KEY INNOVATIONS:</b><br>• <b style='color: #007bff;'>First-of-its-kind</b> WhatsApp/Telegram to VoIP bridge<br>• <b style='color: #28a745;'>Anti-detection algorithms</b> ensuring accounts remain unblocked<br>• <b style='color: #ff6347;'>Self-healing architecture</b> with automatic failover<br>• <b style='color: #17a2b8;'>Cross-server communication</b> via RabbitMQ clusters<br>• <b style='color: #ffc107;'>Dynamic scaling</b> based on demand<br>• <b style='color: #6f42c1;'>Zero-trust security</b> with end-to-end encryption<br>• <b style='color: #dc3545;'>Intelligent account rotation</b> to prevent rate limiting<br><br><b style='color: #007bff;'>💼 BUSINESS IMPACT:</b><br>• <b style='color: #dc3545;'>$10M+ annual savings</b> for enterprise clients<br>• <b style='color: #28a745;'>$50M+ revenue potential</b> annually<br>• <b style='color: #ff6347;'>75% reduction</b> in infrastructure costs vs traditional telco<br>• <b style='color: #17a2b8;'>60% reduction</b> in operational overhead<br>• <b style='color: #ffc107;'>40% reduction</b> in wasted resources via auto-scaling<br>• <b style='color: #6f42c1;'>80% reduction</b> in MTTR with self-healing<br><br><b style='color: #dc3545;'>🔧 TECHNICAL STACK:</b><br><b style='color: #28a745;'>Backend:</b> Python 3.x, Pika (RabbitMQ), Redis-py, Paramiko, Loguru<br><b style='color: #17a2b8;'>Android:</b> UIAutomator2, ADB, QEMU, Termux<br><b style='color: #ffc107;'>AI/Vision:</b> OpenCV, Pillow, scikit-image, Faker, Custom LLM<br><b style='color: #6f42c1;'>Infrastructure:</b> Boto3 (AWS), Docker/Kubernetes, Terraform<br><b style='color: #ff6347;'>Monitoring:</b> Prometheus/Grafana, ELK Stack<br><b style='color: #007bff;'>VoIP:</b> Zoiper SDK, Baresip, SIP Protocol<br><br>This platform represents a <b style='color: #dc3545;'>revolutionary approach</b> to global telecommunications, demonstrating technical mastery in distributed systems, innovation in bridging modern messaging with traditional VoIP, and the ability to architect transformative solutions that <b style='color: #28a745;'>redefine industry standards</b> at unprecedented scale while maintaining <b style='color: #ff6347;'>undetectable human-like behavior</b> across all interactions.",
+        "galleryGroup": "portfolio-gallery-project",
+        "stack": "Python | RabbitMQ | Redis | UIAutomator2 | OpenCV | Docker | AWS | Kubernetes | Zoiper | ADB",
+        "platform": "Linux | Android | Cloud | 1000+ Servers",
+        "client": "Maple Telecommunications",
+        "projectDate": "2025",
+        "projectURL": "https://www.mapletele.com/",
+        "projectURLText": "Client Page"
+      },
+      {
+        "category": "filter-project",
+        "video": "assets/video/portfolio/luna.webm",
+        "title": "L.U.N.A - Learning, Understanding Neural Assistant",
+        "shortDescription": "A sophisticated AI assistant platform combining real-time conversation, multimodal interaction, and intelligent widgets for an enhanced user experience",
+        "description": "L.U.N.A is a cutting-edge AI assistant application that seamlessly integrates multiple technologies for natural interaction. Key features include <b style='color: #007bff;'>real-time voice communication</b> with speech-to-text and text-to-speech capabilities, <b style='color: #28a745;'>live webcam integration</b> for visual context processing, and <b style='color: #ff6347;'>intelligent widgets</b> providing weather updates, maps/directions, code execution, and web search results. The application leverages <b style='color: #ffc107;'>Google's Gemini AI</b> for advanced conversation capabilities and <b style='color: #17a2b8;'>WebSocket technology</b> for smooth real-time communication. Notable features include <b style='color: #6f42c1;'>ElevenLabs voice synthesis</b> for natural speech output, <b style='color: #dc3545;'>interactive visualization</b> showing the AI's status, and <b style='color: #fd7e14;'>multiple widget integrations</b> including weather services, Google Maps, and web search functionality. Built with a modern tech stack and emphasis on real-time performance, this project showcases advanced integration of AI services with a responsive web interface.",
+        "galleryGroup": "portfolio-gallery-project",
+        "stack": "Python | React | Flask | WebSocket | Google Gemini AI | ElevenLabs TTS | Web Speech API",
+        "platform": "Web",
+        "client": "Personal Project",
+        "projectDate": "2025",
+        "projectURL": "https://mbanifawaz.github.io/",
+        "projectURLText": "Me :)"
       },
       {
         "category": "filter-project",
@@ -453,25 +562,38 @@
         "projectDate": "2025",
         "projectURL": "https://www.mapletele.com/",
         "projectURLText": "Client Page"
-    },{
-    "category": "filter-project",
-    "video": "assets/video/portfolio/telegram.webm",
-    "title": "Telegram Multi-Bot API System & Admin Panel",
-    "shortDescription": "Dynamic Multi-Bot Telegram API with Admin Panel, Permissions, and Console",
-    "description": "This project is a <b style='color: #007bff;'>fully dynamic Telegram bot management system</b> designed to manage <b style='color: #e83e8c;'>multiple Telegram bots</b> with a <b style='color: #28a745;'>modern admin panel</b>, <b style='color: #ff6347;'>granular permissions</b>, and a <b style='color: #6f42c1;'>superadmin console</b>. Built with <b style='color: #fd7e14;'>FastAPI</b> and <b style='color: #17a2b8;'>PostgreSQL</b>, it supports <b style='color: #20c997;'>dynamic command registration</b>, <b style='color: #ffc107;'>per-resource sharing</b>, and <b style='color: #d63384;'>ownership-based access control</b>. The <b style='color: #dc3545;'>responsive HTML/JS UI</b> enables <b style='color: #00bcd4;'>seamless management</b> of bots, commands, users, and permissions, with <b style='color: #6610f2;'>section persistence</b> and <b style='color: #f1c40f;'>real-time log viewing</b>. Features include a <b style='color: #007bff;'>robust permissions system</b> (global and per-resource), a <b style='color: #28a745;'>superadmin console</b> for <b style='color: #c82333;'>process control</b> (start/stop/restart), and <b style='color: #ff6347;'>Dockerized deployment</b> for <b style='color: #17a2b8;'>scalability</b>. The system is <b style='color: #6f42c1;'>extensible</b>, <b style='color: #28a745;'>secure</b>, and <b style='color: #fd7e14;'>production-ready</b>, showcasing the power of <b style='color: #6f42c1;'>Python</b> and <b style='color: #fd7e14;'>Telegram’s Bot API</b> for building <b style='color: #00bcd4;'>versatile communication platforms</b>. The main goal of this bot is to call <b style='color: #e83e8c;'>custom API endpoints</b> with parameters and handle the <b style='color: #20c997;'>responses</b>, making it a powerful tool for <b style='color: #ffc107;'>integrating Telegram with various services</b>.",
-    "galleryGroup": "portfolio-gallery-project",
-    "stack": "Python | FastAPI | PostgreSQL | Telegram Bot API | JavaScript | HTML/CSS | Docker | Uvicorn",
-    "platform": "Web | Telegram",
-    "client": "Maple Telecommunications",
-    "projectDate": "2025",
-    "projectURL": "https://www.mapletele.com/",
-    "projectURLText": "Client Page"
-}
-          
-        ]
       },
-    "config":
-    {
-        "maintenance_mode":0
-    }
+      {
+        "category": "filter-project",
+        "video": "assets/video/portfolio/telegram.webm",
+        "title": "Telegram Multi-Bot API System & Admin Panel",
+        "shortDescription": "Dynamic Multi-Bot Telegram API with Admin Panel, Permissions, and Console",
+        "description": "This project is a <b style='color: #007bff;'>fully dynamic Telegram bot management system</b> designed to manage <b style='color: #e83e8c;'>multiple Telegram bots</b> with a <b style='color: #28a745;'>modern admin panel</b>, <b style='color: #ff6347;'>granular permissions</b>, and a <b style='color: #6f42c1;'>superadmin console</b>. Built with <b style='color: #fd7e14;'>FastAPI</b> and <b style='color: #17a2b8;'>PostgreSQL</b>, it supports <b style='color: #20c997;'>dynamic command registration</b>, <b style='color: #ffc107;'>per-resource sharing</b>, and <b style='color: #d63384;'>ownership-based access control</b>. The <b style='color: #dc3545;'>responsive HTML/JS UI</b> enables <b style='color: #00bcd4;'>seamless management</b> of bots, commands, users, and permissions, with <b style='color: #6610f2;'>section persistence</b> and <b style='color: #f1c40f;'>real-time log viewing</b>. Features include a <b style='color: #007bff;'>robust permissions system</b> (global and per-resource), a <b style='color: #28a745;'>superadmin console</b> for <b style='color: #c82333;'>process control</b> (start/stop/restart), and <b style='color: #ff6347;'>Dockerized deployment</b> for <b style='color: #17a2b8;'>scalability</b>. The system is <b style='color: #6f42c1;'>extensible</b>, <b style='color: #28a745;'>secure</b>, and <b style='color: #fd7e14;'>production-ready</b>, showcasing the power of <b style='color: #6f42c1;'>Python</b> and <b style='color: #fd7e14;'>Telegram’s Bot API</b> for building <b style='color: #00bcd4;'>versatile communication platforms</b>. The main goal of this bot is to call <b style='color: #e83e8c;'>custom API endpoints</b> with parameters and handle the <b style='color: #20c997;'>responses</b>, making it a powerful tool for <b style='color: #ffc107;'>integrating Telegram with various services</b>.",
+        "galleryGroup": "portfolio-gallery-project",
+        "stack": "Python | FastAPI | PostgreSQL | Telegram Bot API | JavaScript | HTML/CSS | Docker | Uvicorn",
+        "platform": "Web | Telegram",
+        "client": "Maple Telecommunications",
+        "projectDate": "2025",
+        "projectURL": "https://www.mapletele.com/",
+        "projectURLText": "Client Page"
+      },
+      {
+        "category": "filter-project",
+        "video": "assets/video/portfolio/emulater_data_transfer.webm",
+        "title": "Enterprise Android Emulator Data Transfer Platform",
+        "shortDescription": "Production-grade web application for managing cross-server Android emulator data transfers with real-time monitoring and automated backup systems",
+        "description": "A comprehensive <b style='color: #dc3545;'>enterprise-grade data transfer platform</b> designed for <b style='color: #ff6347;'>large-scale Android emulator infrastructure management</b>, orchestrating <b style='color: #ffc107;'>seamless data migrations</b> across <b style='color: #28a745;'>hundreds of servers</b> with <b style='color: #17a2b8;'>zero-downtime operations</b>. This sophisticated system handles <b style='color: #6f42c1;'>cross-instance and same-instance transfers</b>, automated backups, and complete restore functionality with <b style='color: #dc3545;'>real-time progress tracking</b>.<br><br><b style='color: #007bff;'>🏗️ SYSTEM ARCHITECTURE:</b><br>• <b style='color: #28a745;'>FastAPI Backend:</b> High-performance async Python API with comprehensive validation and error handling<br>• <b style='color: #ff6347;'>PostgreSQL Database:</b> ACID-compliant data persistence with SQLAlchemy ORM and migration system<br>• <b style='color: #17a2b8;'>Real-Time Frontend:</b> Vanilla JavaScript with Server-Sent Events for live progress updates<br>• <b style='color: #ffc107;'>Docker Infrastructure:</b> Containerized deployment with PostgreSQL and application services<br>• <b style='color: #6f42c1;'>SSH Operations:</b> Secure rsync-based transfers with private key authentication<br><br><b style='color: #dc3545;'>⚡ TRANSFER CAPABILITIES:</b><br>• <b style='color: #28a745;'>Cross-Instance Transfers:</b> Intelligent file renaming and config updates (B.avd → A.avd)<br>• <b style='color: #ff6347;'>Same-Instance Transfers:</b> Direct server-to-server migrations with username updates<br>• <b style='color: #17a2b8;'>Bulk Operations:</b> Excel/CSV upload support for batch transfers<br>• <b style='color: #ffc107;'>Sequential Processing:</b> One transfer at a time with comprehensive queue management<br>• <b style='color: #6f42c1;'>Pre-Transfer Validation:</b> SSH connectivity, file existence, and disk space checks<br>• <b style='color: #dc3545;'>Automatic Cleanup:</b> Temporary file removal and rollback on failures<br><br><b style='color: #007bff;'>🔄 BACKUP & RESTORE SYSTEM:</b><br>• <b style='color: #28a745;'>Manual Backup Operations:</b> Multi-server backup with timestamp-based folder naming<br>• <b style='color: #ff6347;'>Pre-Transfer Backups:</b> Automatic backup before any destructive operation<br>• <b style='color: #17a2b8;'>Restore Functionality:</b> Complete backup restoration with cross-instance support<br>• <b style='color: #ffc107;'>Backup Management:</b> Folder browsing, deletion, and storage monitoring<br>• <b style='color: #6f42c1;'>Verification System:</b> File count validation and integrity checks<br>• <b style='color: #dc3545;'>Permission Management:</b> Automatic permission fixing (755/644)<br><br><b style='color: #dc3545;'>🚀 ADVANCED FEATURES:</b><br>• <b style='color: #007bff;'>Real-Time Progress Tracking:</b> SSE stream with keep-alive mechanism<br>• <b style='color: #28a745;'>Smart Configuration Updates:</b> Automated sed operations for username/instance replacement<br>• <b style='color: #ff6347;'>Transfer History:</b> Comprehensive audit trail with search and pagination<br>• <b style='color: #17a2b8;'>User Management:</b> Session-based authentication with superadmin privileges<br>• <b style='color: #ffc107;'>Error Recovery:</b> Self-healing operations with detailed error reporting<br>• <b style='color: #6f42c1;'>Performance Monitoring:</b> Transfer speed, duration, and success rate tracking<br>• <b style='color: #dc3545;'>Database Migrations:</b> Alembic-powered schema evolution<br><br><b style='color: #007bff;'>📊 MONITORING & ANALYTICS:</b><br>• <b style='color: #dc3545;'>Transfer Statistics:</b> Success rates, average speeds, and performance metrics<br>• <b style='color: #28a745;'>Live Duration Updates:</b> Real-time elapsed time without card re-rendering<br>• <b style='color: #ff6347;'>Progress Phases:</b> Detailed step-by-step operation tracking<br>• <b style='color: #17a2b8;'>Health Checks:</b> System status with database connectivity verification<br>• <b style='color: #ffc107;'>Comprehensive Logging:</b> Structured logging with multiple levels and file output<br>• <b style='color: #6f42c1;'>Activity Tracking:</b> User actions and system events audit trail<br><br><b style='color: #dc3545;'>💼 BUSINESS IMPACT:</b><br>• <b style='color: #dc3545;'>95% reduction</b> in manual transfer operations<br>• <b style='color: #28a745;'>99.9% data integrity</b> with comprehensive verification<br>• <b style='color: #ff6347;'>80% time savings</b> in emulator environment management<br>• <b style='color: #17a2b8;'>100% auditability</b> with complete transfer history<br>• <b style='color: #ffc107;'>Zero data loss</b> with automatic backup systems<br>• <b style='color: #6f42c1;'>50% reduction</b> in operational overhead<br><br><b style='color: #007bff;'>🔧 TECHNICAL INNOVATIONS:</b><br>• <b style='color: #28a745;'>Server Mapping System:</b> Intelligent parsing of node-user-instance format<br>• <b style='color: #ff6347;'>SSE Keep-Alive:</b> Custom implementation preventing UI card disappearance<br>• <b style='color: #17a2b8;'>Smart Change Detection:</b> Prevents unnecessary UI rebuilds from timestamp updates<br>• <b style='color: #ffc107;'>Cross-Instance Logic:</b> Automatic file renaming and configuration updates<br>• <b style='color: #6f42c1;'>Unified Task Tracking:</b> Single system for transfers, backups, and restores<br>• <b style='color: #dc3545;'>Dynamic Progress Updates:</b> Inline duration updates without card re-rendering<br><br><b style='color: #dc3545;'>🔧 TECHNICAL STACK:</b><br><b style='color: #28a745;'>Backend:</b> FastAPI, SQLAlchemy, Alembic, Pydantic, Asyncio, Paramiko<br><b style='color: #17a2b8;'>Frontend:</b> Vanilla JavaScript, Server-Sent Events, Bootstrap, Chart.js<br><b style='color: #ffc107;'>Database:</b> PostgreSQL with async drivers, connection pooling<br><b style='color: #6f42c1;'>Infrastructure:</b> Docker Compose, rsync, SSH, Linux utilities<br><b style='color: #ff6347;'>Security:</b> bcrypt, session management, private key authentication<br><b style='color: #007bff;'>Monitoring:</b> Structured logging, health checks, performance metrics<br><br>This platform demonstrates <b style='color: #dc3545;'>advanced system integration expertise</b>, showcasing the ability to build <b style='color: #28a745;'>production-grade enterprise solutions</b> that handle <b style='color: #ff6347;'>complex data migration scenarios</b> with <b style='color: #17a2b8;'>bulletproof reliability</b> and <b style='color: #ffc107;'>comprehensive monitoring capabilities</b>.",
+        "galleryGroup": "portfolio-gallery-project",
+        "stack": "FastAPI | PostgreSQL | SQLAlchemy | Docker | JavaScript | SSH | rsync | Alembic",
+        "platform": "Linux | Docker | Web | Multi-Server",
+        "client": "Maple Telecommunications",
+        "projectDate": "2025",
+        "projectURL": "https://www.mapletele.com/",
+        "projectURLText": "Client Page"
+      }
+    ]
+  },
+  "config": {
+    "maintenance_mode": 0
   }
+}
