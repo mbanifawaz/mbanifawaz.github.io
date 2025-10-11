@@ -9,24 +9,12 @@
       "icon": "bi bi-github"
     },
     {
-      "href": "https://www.youtube.com/@munesbanifawaz",
-      "icon": "bi bi-youtube"
-    },
-    {
       "href": "https://wa.me/962789336602",
       "icon": "bi bi-whatsapp"
     },
     {
-      "href": "https://www.facebook.com/munes.mutasem.1",
-      "icon": "bi bi-facebook"
-    },
-    {
-      "href": "https://www.instagram.com/munes.bani.fawaz",
-      "icon": "bi bi-instagram"
-    },
-    {
-      "href": "https://www.twitch.tv/mrgiveitaway_tpk",
-      "icon": "bi bi-twitch"
+      "href": "https://www.youtube.com/@munesbanifawaz",
+      "icon": "bi bi-youtube"
     }
   ],
   "skills": {
