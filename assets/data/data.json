@@ -171,7 +171,7 @@
     ],
     "experience": [
       {
-        "title": "Senior ERP Full Stack Developer / ERP Squad Lead",
+        "title": "ERP Squad Lead - Senior ERP Full Stack Developer",
         "year": "April 2025 – Present (Full-Time)",
         "company": "Syarah",
         "responsibilities": [
@@ -180,6 +180,7 @@
           "I continue to apply my technical expertise in Python, JavaScript, and DevOps while taking on leadership responsibilities such as prioritizing tasks, mentoring team members, conducting performance reviews, and ensuring team alignment with company goals.",
           "I lead code reviews to ensure clean, efficient, and maintainable code, fostering a culture of quality and collaboration within the team.",
           "I have spearheaded the implementation of scalable solutions, including advanced database optimization and integration with third-party services, and played a critical role in the implementation of high-availability systems.",
+          "Successfully upgraded Frappe/ERPNext from v15 to v16, overseeing the Docker image, DevOps Helm chart, NGINX, and all related configuration — delivering a smooth, issue-free migration across both the ERP application and our DevOps infrastructure.",
           "My focus remains on fostering a collaborative and innovative environment that drives continuous improvement and business growth."
         ]
       },
@@ -198,7 +199,7 @@
       },
       {
         "title": "Senior Python / ERP Fullstack Developer & Consultant",
-        "year": "March 2025 – Present (Part-Time)",
+        "year": "March 2025 – March 2026 (Part-Time)",
         "company": "Maple Telecommunications",
         "responsibilities": [
           "Designed and developed a fully dynamic Telegram bot management system using FastAPI and PostgreSQL, featuring a modern admin panel, granular permissions, and a superadmin console for process control.",
@@ -216,13 +217,23 @@
       {
         "title": "ERP Full Stack Developer",
         "year": "September 2022 – December 2023 (Full-Time)",
-        "company": "Nixpend",
+        "company": "Nixpend - Sequential Technologies",
         "responsibilities": [
           "Built custom Doctypes and modules with related reports and functionalities, including HR, appointment bookings, accounting, and procedural enhancements.",
           "Developed a Revenue Sharing Module to automate distribution of revenue via invoices for healthcare practitioners.",
           "Created custom APIs and integrated the ERP system with external healthcare systems like Medical.",
           "Oversaw ticket distribution and managed weekly updates/releases, including code reviews and merge requests.",
           "Enhanced system scalability and reliability through cloud integrations and optimized configurations."
+        ]
+      },
+      {
+        "title": "Freelance Software Engineer",
+        "year": "March 2022 – September 2022 (Freelance)",
+        "company": "Freelancer.com",
+        "responsibilities": [
+          "Delivered custom web and backend solutions for international clients through Freelancer.com, covering the full lifecycle from requirements to delivery.",
+          "Built REST APIs, automation scripts, and full-stack features using Python, JavaScript, and PHP.",
+          "Managed projects independently, handling client communication, timelines, and remote delivery."
         ]
       },
       {
