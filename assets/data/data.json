@@ -135,13 +135,25 @@
       {
         "name": "Flask",
         "level": 100
+      },
+      {
+        "name": "FastAPI",
+        "level": 90
+      },
+      {
+        "name": "MongoDB",
+        "level": 70
+      },
+      {
+        "name": "Redis",
+        "level": 75
       }
     ]
   },
   "resume": {
     "summary": {
       "name": "MUNES BANI FAWAZ",
-      "description": "Senior Full Stack Developer A.K.A Mr. Automator AIO - Developer - Front, Back, Mobile, Shell- Just Name It!",
+      "description": "Senior Software Engineer A.K.A Mr. Automator — AIO Developer: Front, Back, Mobile, Shell — Just Name It! Python (Frappe/ERPNext, FastAPI, Flask), PHP (Laravel), JavaScript, and the DevOps to run it all.",
       "contact": [
         "Phone: +962789336602",
         "Email: m.banifawaz@outlook.com",
@@ -171,30 +183,33 @@
     ],
     "experience": [
       {
-        "title": "ERP Squad Lead - Senior ERP Full Stack Developer",
+        "title": "Senior Software Engineer · ERP Squad Lead",
         "year": "April 2025 – Present (Full-Time)",
         "company": "Syarah",
         "responsibilities": [
-          "As an ERP Squad Lead, I oversee the strategic direction and execution of ERPNext and Frappe-related projects, leading a dedicated team of developers to drive system enhancements, optimizations, and custom solutions.",
-          "In this role, I ensure seamless coordination across multiple teams, maintaining high-quality deliverables, managing project timelines, and ensuring the successful rollout of ERP upgrades and features.",
-          "I continue to apply my technical expertise in Python, JavaScript, and DevOps while taking on leadership responsibilities such as prioritizing tasks, mentoring team members, conducting performance reviews, and ensuring team alignment with company goals.",
+          "As Squad Lead I own the strategic direction and execution of our ERPNext/Frappe projects and the backend services built around them, leading a dedicated team of developers to deliver system enhancements, optimizations, and custom solutions.",
+          "In this role I ensure seamless coordination across multiple teams, maintaining high-quality deliverables, managing project timelines, and ensuring the successful rollout of ERP upgrades, features, and the services that integrate with them.",
+          "I continue to apply my technical expertise in Python (Frappe/ERPNext, FastAPI, Flask), PHP (Laravel), JavaScript, and DevOps while taking on leadership responsibilities such as prioritizing tasks, mentoring team members, and conducting performance reviews to align with company goals.",
           "I lead code reviews to ensure clean, efficient, and maintainable code, fostering a culture of quality and collaboration within the team.",
-          "I have spearheaded the implementation of scalable solutions, including advanced database optimization and integration with third-party services, and played a critical role in the implementation of high-availability systems.",
+          "I have spearheaded the implementation of scalable solutions — advanced database optimization, third-party and payment-provider integrations, event-driven flows over REST APIs, webhooks and queues — and played a critical role in our high-availability systems.",
+          "Built a provider-agnostic escrow payments microservice in Laravel (PHP 8.4, MySQL, MongoDB, queued workers) that brokers a licensed escrow provider behind one stable internal API, with idempotent money movement and two-directional webhooks.",
+          "Integrated that service end to end into the live ERP as a parallel payment path — seller registration and virtual IBAN issuance, a three-step clearing process, ledger postings driven only by confirmed provider callbacks, refunds, reconciliation when a callback is lost, and SLA monitoring with operational reports.",
           "Successfully upgraded Frappe/ERPNext from v15 to v16, overseeing the Docker image, DevOps Helm chart, NGINX, and all related configuration — delivering a smooth, issue-free migration across both the ERP application and our DevOps infrastructure.",
-          "My focus remains on fostering a collaborative and innovative environment that drives continuous improvement and business growth."
+          "I define architecture across ERP and standalone services, and my focus remains on systems that stay correct under retries, outages and partial failure, in a team that keeps improving how it builds them."
         ]
       },
       {
-        "title": "MID ERP Full Stack Developer",
+        "title": "MID Software Engineer",
         "year": "December 2023 – April 2025 (Got Promoted) (Full-Time)",
         "company": "Syarah",
         "responsibilities": [
-          "Conducted Frappe/ERPNext, Python, and JavaScript training, mentoring team members to enhance technical skills.",
+          "Conducted Frappe/ERPNext, Python, JavaScript and REST API training, mentoring team members to enhance technical skills.",
           "Upgraded Frappe/ERPNext from v13 to v15, separating and optimizing a built-in Vue.js application.",
           "Created a customizable Kanban board and resolved complex related issues.",
           "Managed environments for UAT, QA, Preproduction, and Outsourcing pipelines.",
           "Built the Frappe Developer Toolbox, increasing development efficiency.",
-          "Built the Single View Connector, a seperate FLASK app to connect with various banking services and else."
+          "Built the Single View Connector, a separate Flask app connecting the ERP to banking and third-party services.",
+          "Built and maintained standalone Python services (Flask, FastAPI) exposing REST APIs for internal integrations, deployed alongside the ERP."
         ]
       },
       {
@@ -588,6 +603,20 @@
         "client": "Maple Telecommunications",
         "projectDate": "2025",
         "projectURL": "https://www.mapletele.com/",
+        "projectURLText": "Client Page"
+      },
+      {
+        "category": "filter-project",
+        "image": "assets/img/portfolio/escrow-service.png",
+        "title": "Escrow Payments Service & ERP Integration",
+        "shortDescription": "A provider-agnostic escrow payment broker, and the ERP flow built on it",
+        "description": "A <b style='color: #007bff;'>provider-agnostic escrow payments microservice</b> built in <b style='color: #fd7e14;'>Laravel</b> that brokers a <b style='color: #e83e8c;'>licensed escrow provider</b> behind one stable internal API, so internal systems integrate with three values — base URL, client id and secret — and never learn the provider behind it. Every money-moving write is <b style='color: #28a745;'>idempotent on the caller&#39;s own reference</b>, so a retry through a provider outage cannot pay a seller twice. <b style='color: #6f42c1;'>Two-directional webhooks</b>: provider notification batches ingested idempotently, and per-client callbacks delivered from a <b style='color: #17a2b8;'>queue with retries</b> and full delivery logs. It ships <b style='color: #20c997;'>multi-environment</b> (separate sandbox and production provider paths with per-environment credentials), with an <b style='color: #ffc107;'>admin console</b> for client onboarding and credential rotation, health probes, and <b style='color: #d63384;'>scheduled safety-net jobs</b> that fill in a confirmation that never arrived.<br><br>The second half is the <b style='color: #dc3545;'>ERP integration</b>: a parallel payment path added to a live ERPNext deployment without altering the flow carrying current volume — <b style='color: #00bcd4;'>seller registration and virtual IBAN issuance</b>, a three-step clearing process, <b style='color: #28a745;'>ledger postings driven only by confirmed provider callbacks</b>, refunds, reconciliation actions for a lost callback, and <b style='color: #f1c40f;'>SLA monitoring</b> with operational reporting.",
+        "galleryGroup": "portfolio-gallery-project",
+        "stack": "Laravel | PHP 8.4 | MySQL | MongoDB | Redis | Docker | Frappe/ERPNext | Python",
+        "platform": "Web | REST API",
+        "client": "Syarah",
+        "projectDate": "2026",
+        "projectURL": "https://syarah.com",
         "projectURLText": "Client Page"
       }
     ]
