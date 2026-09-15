@@ -375,6 +375,10 @@ async function loadPortfolio(portfolio) {
           const projectDate = item.projectDate
           const projectURL = item.projectURL
           const projectURLText = item.projectURLText
+          // Optional second link, for a project that has both a store page and
+          // a site of its own. Entries without it render exactly as before.
+          const projectURL2 = item.projectURL2
+          const projectURLText2 = item.projectURLText2
       
           // Populate modal with the first image (or any image you prefer)
           const portfolioImage = document.querySelector('#portfolioDetailsModal .portfolio-image');
@@ -400,6 +404,7 @@ async function loadPortfolio(portfolio) {
               <li><strong>Client</strong>: ${client}</li>
               <li><strong>Project Date</strong>: ${projectDate}</li>
               <li><strong>Project URL</strong>: <a href="${projectURL}" target="_blank">${projectURLText}</a></li>
+              ${projectURL2 ? `<li><strong>Website</strong>: <a href="${projectURL2}" target="_blank">${projectURLText2 || projectURL2}</a></li>` : ''}
           `;
       
           // Populate description

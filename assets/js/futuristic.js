@@ -340,6 +340,10 @@ function openProjectModal(index) {
         <a href="${project.projectURL}" target="_blank" class="cyber-btn">
             ${project.projectURLText || 'VISIT PROJECT'}
         </a>
+        ${project.projectURL2 ? `
+        <a href="${project.projectURL2}" target="_blank" class="cyber-btn">
+            ${project.projectURLText2 || 'WEBSITE'}
+        </a>` : ''}
         <button class="cyber-btn" onclick="closeModal()">CLOSE</button>
     `;
     
