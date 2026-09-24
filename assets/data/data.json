@@ -101,6 +101,10 @@
         "level": 90
       },
       {
+        "name": "Kotlin",
+        "level": 85
+      },
+      {
         "name": "Node.js",
         "level": 100
       },
@@ -153,7 +157,7 @@
   "resume": {
     "summary": {
       "name": "MUNES BANI FAWAZ",
-      "description": "Senior Software Engineer A.K.A Mr. Automator — AIO Developer: Front, Back, Mobile, Shell — Just Name It! Python (Frappe/ERPNext, FastAPI, Flask), PHP (Laravel), JavaScript, and the DevOps to run it all.",
+      "description": "Senior Software Engineer A.K.A Mr. Automator — AIO Developer: Front, Back, Mobile, Shell — Just Name It! Python (Frappe/ERPNext, FastAPI, Flask), PHP (Laravel), JavaScript, Flutter and Kotlin for mobile, and the DevOps to run it all.",
       "contact": [
         "Phone: +962789336602",
         "Email: m.banifawaz@outlook.com",
@@ -381,7 +385,13 @@
         "projectURL": "https://play.google.com/store/apps/details?id=com.mbf.jordan_prayer_times_app",
         "projectURLText": "Google Play Store",
         "projectURL2": "https://mbanifawaz.github.io/Jordan_Prayer_Times_Website/",
-        "projectURLText2": "Project Website"
+        "projectURLText2": "Project Website",
+        "featured": true,
+        "highlights": [
+          "Alarms that survive Doze and battery saver and reschedule themselves",
+          "One product on phone, Wear OS and Android TV",
+          "Fully offline — no accounts, no ads, no tracking"
+        ]
       },
       {
         "category": "filter-app",
@@ -563,7 +573,13 @@
         "client": "Personal Project",
         "projectDate": "2025",
         "projectURL": "https://mbanifawaz.github.io/",
-        "projectURLText": "Me :)"
+        "projectURLText": "Me :)",
+        "featured": true,
+        "highlights": [
+          "Real-time voice conversation over WebSocket",
+          "Gemini AI with ElevenLabs speech and live webcam context",
+          "Widgets for weather, maps, code execution and web search"
+        ]
       },
       {
         "category": "filter-project",
@@ -619,11 +635,18 @@
         "client": "Syarah",
         "projectDate": "2026",
         "projectURL": "https://syarah.com",
-        "projectURLText": "Client Page"
+        "projectURLText": "Client Page",
+        "featured": true,
+        "highlights": [
+          "Idempotent money movement — a retry can never pay a seller twice",
+          "Two-way webhooks with queued retries and full delivery logs",
+          "New payment path added to a live ERPNext without touching current volume"
+        ]
       }
     ]
   },
   "config": {
-    "maintenance_mode": 0
+    "maintenance_mode": 0,
+    "cv_url": "https://mrgiveitaway-tpk.github.io/C.V/"
   }
 }

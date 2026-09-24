@@ -2,874 +2,371 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portal - Choose Your Kingdom</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-  
-  <!-- Favicons -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Munes Bani Fawaz — Senior Full Stack Software Engineer</title>
+  <meta name="description" content="Munes Bani Fawaz, Senior Full Stack Software Engineer. Web, backend services, mobile, watch and TV apps, AI, games, DevOps and automation, built to hold up in production.">
+  <meta name="theme-color" content="#05060a">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Munes Bani Fawaz — Senior Full Stack Software Engineer">
+  <meta property="og:description" content="From payment microservices to Android TV apps: I build it, ship it and keep it running.">
+  <meta property="og:image" content="https://mbanifawaz.github.io/assets/img/profile.png">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  
-  <!-- Fonts -->
+
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    body {
-      font-family: 'Orbitron', monospace;
-      background: #000;
-      overflow: hidden;
-      position: relative;
-      height: 100vh;
-      width: 100vw;
-    }
-
-    /* Animated starfield background */
-    .stars {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-    }
-
-    .star {
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background: white;
-      border-radius: 50%;
-      animation: twinkle 3s infinite;
-    }
-
-    @keyframes twinkle {
-      0%, 100% { opacity: 0; }
-      50% { opacity: 1; }
-    }
-
-    /* Main portal container */
-    .portal-container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      padding: 20px;
-      max-width: 1200px;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      z-index: 10;
-    }
-
-    /* Title */
-    .portal-title {
-      font-size: clamp(1rem, 8vw, 4rem);
-      font-weight: 900;
-      text-align: center;
-      margin-bottom: 1rem;
-      background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff);
-      background-size: 300% 300%;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: gradientShift 3s ease infinite;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-shadow: 0 0 40px rgba(0, 255, 255, 0.5);
-      padding: 0 10px;
-    }
-
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .subtitle {
-      font-size: clamp(0.8rem, 3vw, 1.2rem);
-      color: #888;
-      margin-bottom: 2rem;
-      text-align: center;
-      font-family: 'Space Mono', monospace;
-      letter-spacing: 0.05em;
-      padding: 0 10px;
-    }
-
-    /* Portal buttons container */
-    .portals {
-      display: flex;
-      gap: clamp(1rem, 5vw, 4rem);
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      width: 100%;
-      padding: 0 20px;
-    }
-
-    /* Individual portal */
-    .portal {
-      position: relative;
-      width: min(80vw, 300px);
-      height: clamp(300px, 50vh, 400px);
-      cursor: pointer;
-      transition: transform 0.3s ease;
-      margin-bottom: 60px;
-    }
-
-    .portal:hover {
-      transform: scale(1.05);
-    }
-
-    /* Portal frame */
-    .portal-frame {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-      background: linear-gradient(135deg, transparent 20%, rgba(255, 255, 255, 0.1) 50%, transparent 80%);
-      box-shadow: 
-        inset 0 0 50px rgba(0, 255, 255, 0.5),
-        0 0 100px rgba(0, 255, 255, 0.3),
-        0 0 150px rgba(0, 255, 255, 0.2);
-      animation: portalPulse 3s ease-in-out infinite;
-    }
-
-    .portal.futuristic .portal-frame {
-      box-shadow: 
-        inset 0 0 50px rgba(255, 0, 255, 0.5),
-        0 0 100px rgba(255, 0, 255, 0.3),
-        0 0 150px rgba(255, 0, 255, 0.2);
-    }
-
-    @keyframes portalPulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.02); }
-    }
-
-    /* Portal vortex effect */
-    .portal-vortex {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80%;
-      height: 60%;
-      border-radius: 50%;
-      background: radial-gradient(ellipse at center, 
-        rgba(0, 255, 255, 0.8) 0%,
-        rgba(0, 150, 255, 0.6) 20%,
-        rgba(0, 50, 150, 0.4) 40%,
-        rgba(0, 0, 50, 0.2) 60%,
-        transparent 80%);
-      animation: vortexSpin 10s linear infinite;
-      filter: blur(2px);
-    }
-
-    .portal.futuristic .portal-vortex {
-      background: radial-gradient(ellipse at center, 
-        rgba(255, 0, 255, 0.8) 0%,
-        rgba(200, 0, 200, 0.6) 20%,
-        rgba(150, 0, 150, 0.4) 40%,
-        rgba(100, 0, 100, 0.2) 60%,
-        transparent 80%);
-    }
-
-    @keyframes vortexSpin {
-      from { transform: translate(-50%, -50%) rotate(0deg); }
-      to { transform: translate(-50%, -50%) rotate(360deg); }
-    }
-
-    /* Portal inner glow */
-    .portal-inner {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 60%;
-      height: 45%;
-      border-radius: 50%;
-      background: radial-gradient(ellipse at center,
-        rgba(255, 255, 255, 0.9) 0%,
-        rgba(0, 255, 255, 0.6) 30%,
-        transparent 70%);
-      animation: innerPulse 2s ease-in-out infinite alternate;
-    }
-
-    .portal.futuristic .portal-inner {
-      background: radial-gradient(ellipse at center,
-        rgba(255, 255, 255, 0.9) 0%,
-        rgba(255, 0, 255, 0.6) 30%,
-        transparent 70%);
-    }
-
-    @keyframes innerPulse {
-      from { opacity: 0.6; transform: translate(-50%, -50%) scale(0.8); }
-      to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-    }
-
-    /* Portal button */
-    .portal-button {
-      position: absolute;
-      bottom: -50px;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: clamp(10px, 2vh, 15px) clamp(20px, 5vw, 40px);
-      font-size: clamp(0.9rem, 3vw, 1.1rem);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      background: linear-gradient(45deg, #00ffff, #0099ff);
-      border: 2px solid rgba(0, 255, 255, 0.5);
-      color: white;
-      cursor: pointer;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-      box-shadow: 
-        0 0 20px rgba(0, 255, 255, 0.5),
-        inset 0 0 20px rgba(0, 255, 255, 0.2);
-      font-family: 'Rajdhani', sans-serif;
-      white-space: nowrap;
-    }
-
-    .portal.futuristic .portal-button {
-      background: linear-gradient(45deg, #ff00ff, #9900ff);
-      border: 2px solid rgba(255, 0, 255, 0.5);
-      box-shadow: 
-        0 0 20px rgba(255, 0, 255, 0.5),
-        inset 0 0 20px rgba(255, 0, 255, 0.2);
-    }
-
-    .portal-button:hover {
-      transform: translateX(-50%) translateY(-5px);
-      box-shadow: 
-        0 10px 30px rgba(0, 255, 255, 0.7),
-        inset 0 0 30px rgba(0, 255, 255, 0.3);
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-    }
-
-    .portal.futuristic .portal-button:hover {
-      box-shadow: 
-        0 10px 30px rgba(255, 0, 255, 0.7),
-        inset 0 0 30px rgba(255, 0, 255, 0.3);
-    }
-
-    /* Portal label */
-    .portal-label {
-      position: absolute;
-      top: -40px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: clamp(1.2rem, 4vw, 1.5rem);
-      font-weight: 700;
-      color: #00ffff;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
-      font-family: 'Rajdhani', sans-serif;
-      white-space: nowrap;
-    }
-
-    .portal.futuristic .portal-label {
-      color: #ff00ff;
-      text-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
-    }
-
-    /* Particle effects */
-    .particles {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      pointer-events: none;
-    }
-
-    .particle {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: rgba(0, 255, 255, 0.8);
-      border-radius: 50%;
-      animation: float 8s infinite linear;
-    }
-
-    .portal.futuristic .particle {
-      background: rgba(255, 0, 255, 0.8);
-    }
-
-    @keyframes float {
-      from {
-        transform: translateY(100%) translateX(0);
-        opacity: 0;
-      }
-      10% {
-        opacity: 1;
-      }
-      90% {
-        opacity: 1;
-      }
-      to {
-        transform: translateY(-100vh) translateX(100px);
-        opacity: 0;
-      }
-    }
-
-    /* Mobile optimizations */
-    @media (max-width: 768px) {
-      .portal-container {
-        padding: 10px;
-        height: auto;
-        min-height: 100vh;
-        justify-content: flex-start;
-        padding-top: max(60px, env(safe-area-inset-top) + 40px);
-      }
-
-      .portals {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 0 10px;
-        margin-top: 1rem;
-      }
-      
-      .portal {
-        width: min(85vw, 280px);
-        height: min(35vh, 280px);
-        margin-bottom: 80px;
-        min-height: 240px;
-      }
-      
-      .portal-title {
-        font-size: clamp(1rem, 8vw, 2rem);
-        margin-bottom: 0.5rem;
-      }
-
-      .subtitle {
-        font-size: 0.85rem;
-        margin-bottom: 1rem;
-      }
-
-      .portal-label {
-        font-size: 1rem;
-        top: -25px;
-      }
-
-      .portal-button {
-        font-size: 0.8rem;
-        padding: 8px 16px;
-        bottom: -35px;
-      }
-
-      .audio-control {
-        bottom: 10px;
-        right: 10px;
-        width: 35px;
-        height: 35px;
-      }
-      
-      .portal-frame {
-        box-shadow: 
-          inset 0 0 30px rgba(0, 255, 255, 0.5),
-          0 0 50px rgba(0, 255, 255, 0.3),
-          0 0 80px rgba(0, 255, 255, 0.2);
-      }
-      
-      .portal.futuristic .portal-frame {
-        box-shadow: 
-          inset 0 0 30px rgba(255, 0, 255, 0.5),
-          0 0 50px rgba(255, 0, 255, 0.3),
-          0 0 80px rgba(255, 0, 255, 0.2);
-      }
-    }
-
-    /* Small mobile devices */
-    @media (max-width: 480px) {
-      .portal-container {
-        padding-top: max(40px, env(safe-area-inset-top) + 20px);
-      }
-      
-      .portal {
-        width: 80vw;
-        height: 30vh;
-        min-height: 220px;
-        margin-bottom: 70px;
-      }
-
-      .portal-title {
-        font-size: 1rem;
-        margin-bottom: 0.3rem;
-      }
-
-      .subtitle {
-        font-size: 0.75rem;
-        margin-bottom: 0.8rem;
-      }
-      
-      .portal-label {
-        font-size: 0.9rem;
-        top: -20px;
-      }
-
-      .portal-button {
-        font-size: 0.75rem;
-        padding: 8px 15px;
-        bottom: -30px;
-      }
-      
-      .portal-vortex {
-        width: 70%;
-        height: 50%;
-      }
-      
-      .portal-inner {
-        width: 50%;
-        height: 35%;
-      }
-      
-      /* Hide particles on very small screens for performance */
-      .particles {
-        display: none;
-      }
-    }
-
-    /* Landscape mobile */
-    @media (max-height: 600px) and (orientation: landscape) {
-      .portal-container {
-        padding: 5px;
-        padding-top: 20px;
-        min-height: 100vh;
-      }
-
-      .portals {
-        flex-direction: row;
-        gap: 1.5rem;
-      }
-
-      .portal {
-        width: 180px;
-        height: 50vh;
-        margin-bottom: 60px;
-        min-height: 200px;
-      }
-
-      .portal-title {
-        font-size: 1rem;
-        margin-bottom: 0.3rem;
-      }
-
-      .subtitle {
-        font-size: 0.8rem;
-        margin-bottom: 0.8rem;
-      }
-      
-      .portal-label {
-        font-size: 0.9rem;
-        top: -20px;
-      }
-
-      .portal-button {
-        font-size: 0.7rem;
-        padding: 6px 12px;
-        bottom: -30px;
-      }
-      
-      .portal-vortex {
-        width: 70%;
-        height: 50%;
-      }
-      
-      .portal-inner {
-        width: 50%;
-        height: 35%;
-      }
-    }
-
-    /* Lightning effect */
-    .lightning {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      opacity: 0;
-      animation: lightning 4s infinite;
-    }
-
-    @keyframes lightning {
-      0%, 90%, 100% { opacity: 0; }
-      91% { opacity: 1; }
-      92% { opacity: 0; }
-      93% { opacity: 0.8; }
-      94% { opacity: 0; }
-    }
-
-    .lightning-bolt {
-      position: absolute;
-      width: 2px;
-      height: 100%;
-      background: linear-gradient(to bottom, 
-        transparent,
-        rgba(255, 255, 255, 0.8),
-        rgba(0, 255, 255, 1),
-        transparent);
-      filter: blur(1px);
-      transform: skewX(-5deg);
-    }
-
-    /* Audio control */
-    .audio-control {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 40px;
-      height: 40px;
-      background: rgba(0, 255, 255, 0.2);
-      border: 2px solid rgba(0, 255, 255, 0.5);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 100;
-      transition: all 0.3s ease;
-    }
-
-    .audio-control:hover {
-      background: rgba(0, 255, 255, 0.4);
-      transform: scale(1.1);
-    }
-
-    .audio-control.muted {
-      background: rgba(255, 0, 0, 0.2);
-      border-color: rgba(255, 0, 0, 0.5);
-    }
-
-    .audio-icon {
-      width: 20px;
-      height: 20px;
-      fill: white;
-    }
-  </style>
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/site.css" rel="stylesheet">
 </head>
 
-<body>
-  <!-- Audio Control Button -->
-  <div class="audio-control" id="audioControl" onclick="toggleSound()" style="opacity: 0; transition: opacity 1s ease-in;">
-    <svg class="audio-icon" viewBox="0 0 24 24" id="audioIcon">
-      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
-    </svg>
+<body class="is-loading">
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-mark">MBF</div>
+    <div class="preloader-bar"><span></span></div>
   </div>
 
-  <!-- Starfield background -->
-  <div class="stars" id="stars" style="opacity: 0; transition: opacity 1s ease-in;"></div>
-  
-  <!-- Main container -->
-  <div class="portal-container" id="portalContainer" style="opacity: 0; transition: opacity 1s ease-in;">
-    <h1 class="portal-title">Choose Your Destiny</h1>
-    <p class="subtitle">Enter the realm that calls to you</p>
-    
-    <div class="portals">
-      <!-- Classic Kingdom Portal -->
-      <div class="portal classic" onclick="enterPortal('index-classic.html')">
-        <div class="portal-label">Classic</div>
-        <div class="particles" id="classicParticles"></div>
-        <div class="portal-frame"></div>
-        <div class="portal-vortex"></div>
-        <div class="portal-inner"></div>
-        <button class="portal-button">Enter Classic Portfolio</button>
-        <div class="lightning">
-          <div class="lightning-bolt" style="left: 30%;"></div>
-          <div class="lightning-bolt" style="left: 70%; animation-delay: 0.5s;"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Nav -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="brand" aria-label="Munes Bani Fawaz, home">
+        <span class="brand-mark">M</span>
+        <span class="brand-name">Munes Bani Fawaz</span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Main">
+        <a href="#impact">Impact</a>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#words">Testimonials</a>
+        <a href="#contact">Contact</a>
+        <a href="#" class="nav-cv" data-cv target="_blank" rel="noopener"><i class="bi bi-file-earmark-person"></i> Full CV</a>
+      </nav>
+      <a href="#contact" class="btn btn-primary btn-sm nav-hire">Hire me</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <canvas class="hero-canvas" id="particles" aria-hidden="true"></canvas>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+
+      <div class="hero-inner container">
+        <div class="hero-copy" id="heroCopy">
+          <a href="#contact" class="pill">
+            <span class="pill-dot"></span> Open to new opportunities
+            <i class="bi bi-arrow-right"></i>
+          </a>
+
+          <h1>
+            I build <span class="grad glitch" data-text="whatever you need">whatever you need</span>
+            and keep it running.
+          </h1>
+
+          <p class="typer mono" aria-label="Roles">
+            <span class="typer-prompt">&gt;</span> <span id="typer">Senior Full Stack Software Engineer</span><span class="typer-caret">_</span>
+          </p>
+
+          <p class="hero-sub">
+            I'm <strong>Munes Bani Fawaz</strong>, a.k.a. <strong>Mr. Automator</strong>. Web platforms, backend services
+            and APIs, apps for phone, watch and TV, AI assistants, games, and the DevOps to run them all.
+            Building software since 2016: <span id="yearsText">10</span> years of systems that keep working through retries, outages and partial failure.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#" class="btn btn-primary" data-cv target="_blank" rel="noopener">
+              <i class="bi bi-file-earmark-person"></i> View full CV
+            </a>
+            <a href="#work" class="btn btn-glass">See my work <i class="bi bi-arrow-down"></i></a>
+          </div>
+
+          <ul class="socials" id="socials" aria-label="Social links"></ul>
+        </div>
+
+        <div class="hero-visual" id="heroVisual">
+          <div class="portrait">
+            <div class="portrait-ring" aria-hidden="true"></div>
+            <img src="assets/img/profile.png" alt="Portrait of Munes Bani Fawaz" width="512" height="512">
+            <div class="portrait-meta">
+              <div>
+                <strong>Munes Bani Fawaz</strong>
+                <span>Amman, Jordan</span>
+              </div>
+              <span class="live"><span class="live-dot"></span>Available</span>
+            </div>
+          </div>
+          <div class="float-chip chip-a"><i class="bi bi-braces"></i> Python · PHP · JS · Kotlin · Dart</div>
+          <div class="float-chip chip-b"><i class="bi bi-phone"></i> Phone · Watch · TV · Web</div>
+          <div class="float-chip chip-c"><i class="bi bi-shield-check"></i> Built to survive failure</div>
         </div>
       </div>
-      
-      <!-- Futuristic Kingdom Portal -->
-      <div class="portal futuristic" onclick="enterPortal('index-futuristic.html')">
-        <div class="portal-label">Futuristic</div>
-        <div class="particles" id="futuristicParticles"></div>
-        <div class="portal-frame"></div>
-        <div class="portal-vortex"></div>
-        <div class="portal-inner"></div>
-        <button class="portal-button">Enter Cyber Portfolio</button>
-        <div class="lightning">
-          <div class="lightning-bolt" style="left: 30%;"></div>
-          <div class="lightning-bolt" style="left: 70%; animation-delay: 0.5s;"></div>
+
+      <a href="#impact" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- Logos -->
+    <section class="logos" aria-label="Companies and clients">
+      <p class="logos-title mono">Trusted by teams and clients at</p>
+      <div class="logos-mask"><div class="logos-track" id="logos"></div></div>
+    </section>
+
+    <!-- Impact -->
+    <section class="section container" id="impact">
+      <header class="section-head">
+        <span class="kicker">Why teams hire me</span>
+        <h2>Impact, <span class="grad">not just code.</span></h2>
+        <p>I take a system from idea to production and own it after launch: architecture, delivery, reviews and the late-night fix.</p>
+      </header>
+
+      <div class="counters">
+        <div class="counter glass spot"><strong data-count="0" id="yearsCount">0</strong><span>Years building software, since 2016</span></div>
+        <div class="counter glass spot"><strong data-count="78">0</strong><span>Projects delivered</span></div>
+        <div class="counter glass spot"><strong data-count="10">0</strong><span>Happy clients</span></div>
+        <div class="counter glass spot"><strong data-count="45">0</strong><span>Hours of support whenever it's needed</span></div>
+      </div>
+
+      <div class="bento">
+        <article class="tile glass spot tile-lg">
+          <div class="tile-icon"><i class="bi bi-safe2"></i></div>
+          <h3>Money that can't be paid twice</h3>
+          <p>Designed a provider-agnostic escrow payments microservice in Laravel (PHP 8.4, MySQL, MongoDB, queued workers): one stable internal API, idempotent money movement and two-way webhooks. Shipped as a ~26-ticket epic without touching the payment flow already carrying live volume.</p>
+          <div class="tile-code mono" aria-hidden="true">
+            <span><b>POST</b> /payouts &nbsp;<i>Idempotency-Key: ord_8841</i></span>
+            <span><b>POST</b> /payouts &nbsp;<i>Idempotency-Key: ord_8841</i></span>
+            <span class="ok">✓ 1 payout · retry safely ignored</span>
+          </div>
+        </article>
+        <article class="tile glass spot">
+          <div class="tile-icon"><i class="bi bi-tv"></i></div>
+          <h3>Phone, watch and TV</h3>
+          <p>Jordan Prayer Times: Flutter on Android, iOS and Wear OS, and native Kotlin on Android TV, with alarms that survive Doze and reschedule themselves.</p>
+        </article>
+        <article class="tile glass spot">
+          <div class="tile-icon"><i class="bi bi-cpu"></i></div>
+          <h3>AI that talks and sees</h3>
+          <p>L.U.N.A: a real-time voice assistant on Gemini, ElevenLabs and WebSockets, with live webcam context.</p>
+        </article>
+        <article class="tile glass spot">
+          <div class="tile-icon"><i class="bi bi-cloud-check"></i></div>
+          <h3>DevOps without drama</h3>
+          <p>Moved files to AWS S3, set up RDS high availability with master-replica replication, plus Docker, Helm, ArgoCD and Jenkins.</p>
+        </article>
+        <article class="tile glass spot">
+          <div class="tile-icon"><i class="bi bi-lightning-charge"></i></div>
+          <h3>Mr. Automator</h3>
+          <p>A developer toolbox, a containerized devbox and Bash/Python scripts that turn hours of setup into one command.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="section container" id="work">
+      <header class="section-head">
+        <span class="kicker">Case studies</span>
+        <h2>Selected <span class="grad">work.</span></h2>
+        <p>Flagship projects first, then everything else: apps, web, backend platforms, games and courses.</p>
+      </header>
+
+      <div class="featured" id="featured"></div>
+
+      <div class="work-bar">
+        <h3>All projects</h3>
+        <div class="filters" id="filters" role="tablist" aria-label="Filter projects"></div>
+      </div>
+      <div class="work-grid" id="workGrid"></div>
+    </section>
+
+    <!-- Services -->
+    <section class="section container" id="services">
+      <header class="section-head">
+        <span class="kicker">What I do</span>
+        <h2>One engineer, <span class="grad">the whole stack.</span></h2>
+        <p>Hire me for a single piece or the entire product. Here's what I build.</p>
+      </header>
+      <div class="services">
+        <article class="glass spot"><i class="bi bi-window-stack"></i><h3>Full-Stack Web</h3><p>Web apps and sites in React, Angular, Vue.js, Laravel and plain HTML/CSS/JS, from landing pages to internal tools.</p></article>
+        <article class="glass spot"><i class="bi bi-hdd-stack"></i><h3>Backend Services &amp; APIs</h3><p>FastAPI, Flask, Laravel and Node.js services with REST APIs, webhooks and queues, plus banking and payment integrations.</p></article>
+        <article class="glass spot"><i class="bi bi-phone"></i><h3>Mobile, TV &amp; Games</h3><p>Flutter and native Kotlin apps for phone, Wear OS and Android TV, and games in Unity and Unreal Engine.</p></article>
+        <article class="glass spot"><i class="bi bi-diagram-3"></i><h3>ERP &amp; Business Systems</h3><p>Frappe/ERPNext modules, upgrades, document generation, sync modules and custom workflows.</p></article>
+        <article class="glass spot"><i class="bi bi-cloud-arrow-up"></i><h3>DevOps &amp; Cloud</h3><p>Docker, Helm, ArgoCD, Jenkins, NGINX, Cloudflare and AWS (S3, RDS), from environments to production pipelines.</p></article>
+        <article class="glass spot"><i class="bi bi-robot"></i><h3>Automation &amp; AI</h3><p>Bash and Python automation, bots, scraping, monitoring and AI assistants built on modern LLM and voice APIs.</p></article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section container" id="experience">
+      <header class="section-head section-head-row">
+        <div>
+          <span class="kicker">Career</span>
+          <h2>Experience <span class="grad">&amp; résumé.</span></h2>
+          <p id="summary"></p>
         </div>
+        <a href="#" class="btn btn-primary" data-cv target="_blank" rel="noopener">
+          <i class="bi bi-file-earmark-arrow-down"></i> Full CV &amp; download
+        </a>
+      </header>
+
+      <div class="exp-grid">
+        <ol class="timeline" id="timeline"></ol>
+
+        <aside class="exp-side">
+          <div class="glass side-card">
+            <h3 class="side-title"><i class="bi bi-person-vcard"></i> At a glance</h3>
+            <ul class="facts">
+              <li><span>Based in</span>Amman, Jordan</li>
+              <li><span>Birthday</span>4 Sep 1998</li>
+              <li><span>Age</span><b id="age">—</b></li>
+              <li><span>Nationality</span>Jordanian</li>
+              <li><span>Degree</span>B.Sc. Software Engineering</li>
+              <li><span>Website</span><a href="https://www.mbanifawaz.com" target="_blank" rel="noopener">mbanifawaz.com</a></li>
+              <li><span>Email</span><a href="mailto:m.banifawaz@outlook.com">m.banifawaz@outlook.com</a></li>
+              <li><span>Phone</span><a href="tel:+962789336602">+962 789 336 602</a></li>
+              <li><span>Freelance</span><b class="ok">Available</b></li>
+            </ul>
+          </div>
+          <div class="glass side-card">
+            <h3 class="side-title"><i class="bi bi-translate"></i> Languages</h3>
+            <ul class="langs">
+              <li><span>Arabic</span><em>Native</em><i style="--w:100%"></i></li>
+              <li><span>English</span><em>Fluent</em><i style="--w:90%"></i></li>
+              <li><span>German</span><em>Intermediate</em><i style="--w:55%"></i></li>
+            </ul>
+          </div>
+          <div class="glass side-card">
+            <h3 class="side-title"><i class="bi bi-trophy"></i> Accomplishments</h3>
+            <ul class="accomplish">
+              <li>Built the Jordan Prayer Times app</li>
+              <li>Designed and published the Cubic Maze Runner game</li>
+              <li>Created the Philadelphia University Forms project</li>
+              <li>Developed the Mecca School website (Abha, KSA)</li>
+            </ul>
+          </div>
+          <div class="glass side-card">
+            <h3 class="side-title"><i class="bi bi-mortarboard"></i> Education</h3>
+            <ul class="edu" id="education"></ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section container" id="skills">
+      <header class="section-head">
+        <span class="kicker">Toolbox</span>
+        <h2>Skills <span class="grad">&amp; stack.</span></h2>
+        <p>The languages, frameworks and platforms I ship with, and how deep I go in each.</p>
+      </header>
+      <div class="skills glass" id="skillsList"></div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section container" id="words">
+      <header class="section-head section-head-row">
+        <div>
+          <span class="kicker">Testimonials</span>
+          <h2>What people <span class="grad">say.</span></h2>
+        </div>
+        <div class="carousel-btns">
+          <button class="icon-btn" id="prevQuote" aria-label="Previous testimonial"><i class="bi bi-arrow-left"></i></button>
+          <button class="icon-btn" id="nextQuote" aria-label="Next testimonial"><i class="bi bi-arrow-right"></i></button>
+        </div>
+      </header>
+      <div class="quotes" id="quotes"></div>
+      <div class="dots" id="quoteDots" role="tablist" aria-label="Choose testimonial"></div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section container" id="contact">
+      <div class="contact glass">
+        <canvas class="matrix" id="matrix" aria-hidden="true"></canvas>
+        <div class="contact-copy">
+          <span class="kicker">Contact</span>
+          <h2>Got something to build? <span class="grad">Let's talk.</span></h2>
+          <p>A role, a freelance project or just a question. I reply fast.</p>
+          <ul class="contact-list">
+            <li><i class="bi bi-envelope"></i><a href="mailto:m.banifawaz@outlook.com">m.banifawaz@outlook.com</a></li>
+            <li><i class="bi bi-telephone"></i><a href="tel:+962789336602">+962 789 336 602</a></li>
+            <li><i class="bi bi-whatsapp"></i><a href="https://wa.me/962789336602" target="_blank" rel="noopener">Chat on WhatsApp</a></li>
+            <li><i class="bi bi-geo-alt"></i><span>Hijaz Towers, Mecca St., Amman</span></li>
+          </ul>
+          <a href="#" class="btn btn-glass" data-cv target="_blank" rel="noopener"><i class="bi bi-file-earmark-person"></i> View full CV</a>
+        </div>
+
+        <form id="contact-form" class="form" novalidate>
+          <div class="row2">
+            <label>Name<input type="text" id="name-field" name="name" required autocomplete="name" placeholder="Your name"></label>
+            <label>Email<input type="email" id="email-field" name="email" required autocomplete="email" placeholder="you@company.com"></label>
+          </div>
+          <label>Subject<input type="text" id="subject-field" name="subject" required placeholder="Role, project or question"></label>
+          <label>Message<textarea id="message-field" name="message" rows="5" required placeholder="Tell me a bit about it"></textarea></label>
+          <div class="form-foot">
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            <button type="submit" class="btn btn-primary">Send message <i class="bi bi-send"></i></button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div>
+      <strong>© <span id="year"></span> MBANIFAWAZ™</strong>
+      <span>Munes Bani Fawaz, Senior Full Stack Software Engineer</span>
+    </div>
+    <ul class="socials socials-sm" id="footerSocials"></ul>
+  </footer>
+
+  <!-- Floating dock: sound, WhatsApp, call, back to top -->
+  <div class="dock" id="dock" aria-label="Quick actions">
+    <div class="dock-extra" id="dockExtra">
+      <button class="dock-btn" id="soundToggle" aria-label="Play background music" aria-pressed="false"><i class="bi bi-volume-mute-fill"></i></button>
+      <a class="dock-btn" href="tel:+962789336602" aria-label="Call"><i class="bi bi-telephone-fill"></i></a>
+    </div>
+    <button class="dock-btn dock-more" id="dockMore" aria-label="More quick actions" aria-expanded="false" aria-controls="dockExtra"><i class="bi bi-three-dots"></i></button>
+    <a class="dock-btn dock-wa" href="https://wa.me/962789336602" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+    <a class="dock-btn dock-top" href="#top" id="toTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
+  </div>
+  <audio id="bgAudio" src="assets/audio/background.mp3" loop preload="none"></audio>
+
+  <!-- Project modal -->
+  <dialog class="modal" id="modal" aria-labelledby="modalTitle">
+    <div class="modal-top">
+      <span class="mono" id="modalCount"></span>
+      <div class="modal-nav">
+        <button class="icon-btn" id="modalPrev" aria-label="Previous project"><i class="bi bi-chevron-left"></i></button>
+        <button class="icon-btn" id="modalNext" aria-label="Next project"><i class="bi bi-chevron-right"></i></button>
+        <button class="icon-btn" id="modalClose" aria-label="Close"><i class="bi bi-x-lg"></i></button>
       </div>
     </div>
-  </div>
-
-  <!-- Background Audio -->
-  <audio id="backgroundAudio" loop>
-    <source src="assets/audio/background.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-
-  <!-- Audio Permission Overlay -->
-  <div id="audioPrompt" style="
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 100000;
-    backdrop-filter: blur(15px);
-    transition: opacity 0.5s ease-out;
-    padding: 20px;
-  ">
-    <div style="
-      background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
-      border: 2px solid rgba(0, 255, 255, 0.5);
-      border-radius: 20px;
-      padding: 2rem;
-      text-align: center;
-      max-width: 500px;
-      width: 100%;
-      animation: glow 2s ease-in-out infinite alternate;
-    ">
-      <h2 style="color: #00ffff; font-size: clamp(0.9rem, 3vw, 1.2rem); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px;">
-        Welcome To Munes Bani Fawaz Portfolio Portal
-      </h2>
-      <p style="color: #b8b8c8; margin-bottom: 2rem; font-size: clamp(0.9rem, 3vw, 1.1rem);">
-        Please Enable immersive audio for the full experience
-      </p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <button onclick="enableAudio()" style="
-          padding: 12px 30px;
-          background: linear-gradient(45deg, #00ffff, #0099ff);
-          border: none;
-          color: white;
-          font-size: clamp(0.9rem, 3vw, 1.1rem);
-          font-weight: bold;
-          border-radius: 50px;
-          cursor: pointer;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          transition: transform 0.3s;
-          flex: 1;
-          min-width: 120px;
-        " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-          Enable Audio
-        </button>
-        <button onclick="skipAudio()" style="
-          padding: 12px 30px;
-          background: transparent;
-          border: 2px solid rgba(255, 255, 255, 0.3);
-          color: #b8b8c8;
-          font-size: clamp(0.9rem, 3vw, 1.1rem);
-          border-radius: 50px;
-          cursor: pointer;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          transition: all 0.3s;
-          flex: 1;
-          min-width: 120px;
-        " onmouseover="this.style.borderColor='rgba(255, 255, 255, 0.6)'" onmouseout="this.style.borderColor='rgba(255, 255, 255, 0.3)'">
-          Continue Silent
-        </button>
-      </div>
+    <div class="modal-media" id="modalMedia"></div>
+    <div class="speed" id="speed" hidden>
+      <span class="mono">Speed</span>
+      <button data-rate="1">1×</button><button data-rate="2">2×</button><button data-rate="4">4×</button>
     </div>
-  </div>
+    <div class="modal-body">
+      <span class="kicker" id="modalCat"></span>
+      <h3 id="modalTitle"></h3>
+      <dl class="modal-meta" id="modalMeta"></dl>
+      <ul class="checks" id="modalHighlights"></ul>
+      <div class="modal-desc" id="modalDesc"></div>
+      <div class="modal-links" id="modalLinks"></div>
+    </div>
+  </dialog>
 
-  <script>
-    // Audio management
-    let audioEnabled = false;
-    let isMuted = false;
-    const backgroundAudio = document.getElementById('backgroundAudio');
-    backgroundAudio.volume = 0.3;
-
-    function showPortalContent() {
-      // Fade in the portal content
-      document.getElementById('portalContainer').style.opacity = '1';
-      document.getElementById('stars').style.opacity = '1';
-      document.getElementById('audioControl').style.opacity = '1';
-    }
-
-    function enableAudio() {
-      audioEnabled = true;
-      backgroundAudio.play().then(() => {
-        console.log('Audio started successfully');
-      }).catch(err => {
-        console.log('Audio play failed:', err);
-      });
-      
-      // Fade out the prompt
-      const prompt = document.getElementById('audioPrompt');
-      prompt.style.opacity = '0';
-      setTimeout(() => {
-        prompt.style.display = 'none';
-        showPortalContent();
-      }, 500);
-      
-      // Update audio control button
-      const audioControl = document.getElementById('audioControl');
-      audioControl.classList.remove('muted');
-    }
-
-    function skipAudio() {
-      audioEnabled = false;
-      isMuted = true;
-      
-      // Fade out the prompt
-      const prompt = document.getElementById('audioPrompt');
-      prompt.style.opacity = '0';
-      setTimeout(() => {
-        prompt.style.display = 'none';
-        showPortalContent();
-      }, 500);
-      
-      // Update audio control button
-      const audioControl = document.getElementById('audioControl');
-      audioControl.classList.add('muted');
-    }
-
-    function toggleSound() {
-      const audioControl = document.getElementById('audioControl');
-      const audioIcon = document.getElementById('audioIcon');
-      
-      if (!audioEnabled) {
-        // First time enabling audio
-        audioEnabled = true;
-        isMuted = false;
-        backgroundAudio.muted = false;
-        backgroundAudio.play();
-        audioControl.classList.remove('muted');
-        audioIcon.innerHTML = '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>';
-      } else if (isMuted) {
-        // Unmute audio
-        isMuted = false;
-        backgroundAudio.muted = false;
-        if (backgroundAudio.paused) {
-          backgroundAudio.play();
-        }
-        audioControl.classList.remove('muted');
-        audioIcon.innerHTML = '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>';
-      } else {
-        // Mute audio (keep playing but muted)
-        isMuted = true;
-        backgroundAudio.muted = true;
-        audioControl.classList.add('muted');
-        audioIcon.innerHTML = '<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>';
-      }
-    }
-
-    // Show audio prompt immediately on page load
-    window.addEventListener('DOMContentLoaded', () => {
-      // Audio prompt is already visible by default (no display: none)
-      // Just ensure it's showing
-      const audioPrompt = document.getElementById('audioPrompt');
-      audioPrompt.style.display = 'flex';
-      audioPrompt.style.opacity = '1';
-      
-      // Add glow animation
-      const style = document.createElement('style');
-      style.textContent = `
-        @keyframes glow {
-          from { box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); }
-          to { box-shadow: 0 0 40px rgba(0, 255, 255, 0.8), 0 0 60px rgba(255, 0, 255, 0.4); }
-        }
-      `;
-      document.head.appendChild(style);
-      
-      // Initialize stars and particles but keep them hidden
-      createStars();
-      createParticles('classicParticles');
-      createParticles('futuristicParticles');
-    });
-
-    // Create starfield
-    function createStars() {
-      const starsContainer = document.getElementById('stars');
-      const numStars = 200;
-      
-      for (let i = 0; i < numStars; i++) {
-        const star = document.createElement('div');
-        star.className = 'star';
-        star.style.left = Math.random() * 100 + '%';
-        star.style.top = Math.random() * 100 + '%';
-        star.style.animationDelay = Math.random() * 3 + 's';
-        star.style.animationDuration = (Math.random() * 3 + 2) + 's';
-        starsContainer.appendChild(star);
-      }
-    }
-    
-    // Create particles for portals
-    function createParticles(containerId, color) {
-      const container = document.getElementById(containerId);
-      const numParticles = 20;
-      
-      for (let i = 0; i < numParticles; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 8 + 's';
-        particle.style.animationDuration = (Math.random() * 5 + 5) + 's';
-        container.appendChild(particle);
-      }
-    }
-    
-    // Portal navigation
-    function enterPortal(destination) {
-      const portal = event.currentTarget;
-      portal.style.animation = 'portalEnter 1s ease-in forwards';
-      
-      // Add zoom effect to body
-      document.body.style.transition = 'transform 1s ease-in, opacity 1s ease-in';
-      document.body.style.transform = 'scale(10)';
-      document.body.style.opacity = '0';
-      
-      // Store audio state for the next page
-      if (backgroundAudio) {
-        sessionStorage.setItem('audioEnabled', audioEnabled ? 'true' : 'false');
-        sessionStorage.setItem('audioMuted', isMuted ? 'true' : 'false');
-        sessionStorage.setItem('audioTime', backgroundAudio.currentTime.toString());
-        sessionStorage.setItem('fromPortal', 'true');
-      }
-      
-      // Don't stop the audio, just fade slightly
-      if (backgroundAudio && !backgroundAudio.paused) {
-        let currentVolume = backgroundAudio.volume;
-        const fadeInterval = setInterval(() => {
-          if (currentVolume > 0.1) {
-            currentVolume -= 0.02;
-            backgroundAudio.volume = Math.max(0.1, currentVolume);
-          } else {
-            clearInterval(fadeInterval);
-          }
-        }, 50);
-      }
-      
-      setTimeout(() => {
-        window.location.href = destination;
-      }, 1000);
-    }
-    
-    // Add portal enter animation
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes portalEnter {
-        to {
-          transform: scale(5);
-          opacity: 0;
-        }
-      }
-    `;
-    document.head.appendChild(style);
-  </script>
+  <script src="assets/vendor/email/email.min.js"></script>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>
