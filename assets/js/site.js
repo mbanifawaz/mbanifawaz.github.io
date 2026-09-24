@@ -43,6 +43,13 @@
     document.body.classList.remove('is-loading');
   };
   setTimeout(hidePreloader, 2500); // never block the page for long
+  // Let the eat(); sleep(); code(); repeat(); line finish typing, but only on the first visit of a session.
+  let firstVisit = true;
+  try {
+    firstVisit = !sessionStorage.getItem('mbf-seen');
+    sessionStorage.setItem('mbf-seen', '1');
+  } catch { /* storage blocked: treat as first visit */ }
+  const preloaderReady = new Promise(r => setTimeout(r, firstVisit && !reduceMotion ? 900 : 0));
 
   /* ---------- Static bits ---------- */
   const now = new Date();
@@ -308,7 +315,7 @@
       if (entry.isIntersecting) { skills.classList.add('in'); obs.disconnect(); }
     }, { threshold: 0.2 }).observe(skills);
 
-    hidePreloader();
+    preloaderReady.then(hidePreloader);
 
     // Content arrives after load, so honour a #section link once it exists.
     const target = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
@@ -610,6 +617,22 @@
     if (!reduceMotion) setInterval(() => {
       if (!paused && !document.hidden && !track.querySelector('.quote.open')) goTo(current() + 1);
     }, 5000);
+  }
+
+  /* ---------- The daily loop: highlight eat → sleep → code → repeat ---------- */
+  const loopSteps = $$('.loop-code .fn');
+  if (loopSteps.length && !reduceMotion) {
+    let step = 0, timer = 0;
+    const advance = () => {
+      loopSteps.forEach((f, i) => f.classList.toggle('on', i === step));
+      step = (step + 1) % loopSteps.length;
+    };
+    new IntersectionObserver(([entry]) => {
+      clearInterval(timer);
+      if (entry.isIntersecting) { advance(); timer = setInterval(advance, 1100); }
+    }).observe($('.loop-card'));
+  } else {
+    loopSteps.forEach(f => f.classList.add('on'));
   }
 
   /* ---------- Dock "more" toggle (phones only) ---------- */

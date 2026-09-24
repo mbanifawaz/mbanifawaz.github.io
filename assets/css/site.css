@@ -65,6 +65,13 @@ button { font: inherit; color: inherit; }
 }
 .preloader.done { opacity: 0; visibility: hidden; }
 .preloader-mark { font: 700 2.2rem var(--sans); letter-spacing: 0.2em; padding-left: 0.2em; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+/* eat(); sleep(); code(); repeat(); — typed out while the page loads */
+.preloader-code { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 12px; margin: 0; padding: 0 16px; font-size: 0.95rem; color: var(--muted); }
+.preloader-code .fn { opacity: 0; animation: type-in 0.25s var(--ease) forwards; }
+.preloader-code .fn:nth-child(2) { animation-delay: 0.18s; }
+.preloader-code .fn:nth-child(3) { animation-delay: 0.36s; }
+.preloader-code .fn:nth-child(4) { animation-delay: 0.54s; }
+@keyframes type-in { from { opacity: 0; transform: translateY(6px); clip-path: inset(0 100% 0 0); } to { opacity: 1; transform: none; clip-path: inset(0 0 0 0); } }
 .preloader-bar { width: 140px; height: 2px; border-radius: 2px; background: var(--line); overflow: hidden; }
 .preloader-bar span { display: block; height: 100%; width: 40%; background: var(--grad); animation: load 1s var(--ease) infinite; }
 @keyframes load { from { transform: translateX(-100%); } to { transform: translateX(250%); } }
@@ -575,8 +582,34 @@ button { font: inherit; color: inherit; }
 .form-status.ok { color: var(--green); }
 .form-status.err { color: #fb7185; }
 
+/* ---------- The daily loop (footer easter egg, also used on 404) ---------- */
+.fn b { font-weight: 500; }
+.fn-eat b { color: #a78bfa; }
+.fn-sleep b { color: #818cf8; }
+.fn-code b { color: var(--cyan); }
+.fn-repeat b { color: var(--green); }
+
+.loop { margin-top: clamp(80px, 10vw, 120px); display: flex; justify-content: center; }
+.loop-card { width: min(100%, 460px); overflow: hidden; }
+.loop-bar { display: flex; align-items: center; gap: 7px; padding: 11px 14px; border-bottom: 1px solid var(--line); font-size: 0.74rem; color: var(--faint); }
+.loop-bar i { width: 10px; height: 10px; border-radius: 50%; background: rgba(255, 255, 255, 0.12); }
+.loop-bar i:nth-child(1) { background: #f87171; }
+.loop-bar i:nth-child(2) { background: #fbbf24; }
+.loop-bar i:nth-child(3) { background: #34d399; }
+.loop-bar span { margin-left: auto; }
+.loop-code { margin: 0; padding: 20px 24px 22px; font-size: 0.98rem; line-height: 1.9; color: var(--muted); overflow-x: auto; }
+.loop-code .kw { color: #c084fc; }
+.loop-code .var { color: var(--text); }
+.loop-code .fn { display: inline-flex; align-items: center; padding: 0 8px; margin-left: -8px; border-radius: 8px; color: var(--muted); transition: color 0.35s, background 0.35s, box-shadow 0.35s; }
+.loop-code .fn i { width: 18px; margin-right: 10px; text-align: center; font-size: 0.9rem; color: var(--faint); transition: color 0.35s, transform 0.35s var(--ease); }
+.loop-code .fn.on { color: var(--text); background: rgba(139, 92, 246, 0.12); box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.25) inset; }
+.loop-code .fn-eat.on i { color: #a78bfa; transform: scale(1.15); }
+.loop-code .fn-sleep.on i { color: #818cf8; transform: scale(1.15); }
+.loop-code .fn-code.on i { color: var(--cyan); transform: scale(1.15); }
+.loop-code .fn-repeat.on i { color: var(--green); transform: rotate(180deg) scale(1.15); }
+
 /* ---------- Footer ---------- */
-.footer { margin-top: clamp(80px, 10vw, 120px); padding-top: 28px; padding-bottom: 36px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.footer { margin-top: 40px; padding-top: 28px; padding-bottom: 36px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
 .footer strong { display: block; font-weight: 600; font-size: 0.92rem; }
 .footer span { font-size: 0.84rem; color: var(--faint); }
 

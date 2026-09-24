@@ -9,6 +9,7 @@ A single static page with no build step. GitHub Pages serves the repo as is.
 
 ```
 index.html            the page
+404.html              "you broke the loop" page GitHub Pages shows for missing URLs
 assets/css/site.css   all styles
 assets/js/site.js     all behaviour; renders content from data.json
 assets/data/data.json the content: projects, experience, skills, testimonials, links

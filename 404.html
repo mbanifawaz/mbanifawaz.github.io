@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found — Munes Bani Fawaz</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#05060a">
+
+  <!-- Served for any missing path, so every URL here is root-absolute -->
+  <link href="/assets/img/favicon.png" rel="icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="/assets/css/site.css" rel="stylesheet">
+  <style>
+    .lost { position: relative; min-height: 100svh; display: grid; place-items: center; padding: 96px 0; overflow: hidden; }
+    .lost-inner { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .lost-code { font-size: clamp(5rem, 14vw, 9rem); font-weight: 700; line-height: 0.9; letter-spacing: -0.06em; margin: 18px 0 16px; }
+    .lost h1 { margin: 0 0 12px; font-size: clamp(1.7rem, 3.4vw, 2.4rem); font-weight: 650; letter-spacing: -0.035em; }
+    .lost p { margin: 0 0 30px; color: var(--muted); max-width: 42ch; }
+    .lost .hero-actions { gap: 10px; }
+    .loop-card { width: 100%; }
+    .loop-code .broken { color: #fb7185; background: rgba(251, 113, 133, 0.1); box-shadow: 0 0 0 1px rgba(251, 113, 133, 0.35) inset; }
+    .loop-code .broken i { color: #fb7185; }
+    .loop-code .note { color: var(--faint); font-style: italic; }
+    .loop-code .strike b, .loop-code .strike { text-decoration: line-through; text-decoration-color: #fb7185; }
+    @media (max-width: 820px) { .lost-inner { grid-template-columns: 1fr; gap: 36px; } }
+  </style>
+</head>
+
+<body>
+  <main class="lost">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+
+    <div class="lost-inner container">
+      <div>
+        <span class="kicker">Error 404</span>
+        <div class="lost-code grad" aria-hidden="true">404</div>
+        <h1>You broke the loop.</h1>
+        <p>This page doesn't exist, or it moved. Everything else still eats, sleeps and codes on the home page.</p>
+        <div class="hero-actions">
+          <a href="/" class="btn btn-primary"><i class="bi bi-house-door"></i> Back home</a>
+          <a href="/#work" class="btn btn-glass">See my work</a>
+          <a href="https://mrgiveitaway-tpk.github.io/C.V/" class="btn btn-glass" target="_blank" rel="noopener"><i class="bi bi-file-earmark-person"></i> Full CV</a>
+        </div>
+      </div>
+
+      <div class="loop-card glass">
+        <div class="loop-bar mono" aria-hidden="true"><i></i><i></i><i></i><span>life.js</span></div>
+        <pre class="loop-code mono"><span class="kw">while</span> (<span class="var">alive</span>) {
+  <span class="fn fn-eat on"><i class="bi bi-cup-hot-fill"></i>eat<b>()</b>;</span>
+  <span class="fn fn-sleep on"><i class="bi bi-moon-stars-fill"></i>sleep<b>()</b>;</span>
+  <span class="fn fn-code on"><i class="bi bi-code-slash"></i>code<b>()</b>;</span>
+  <span class="fn fn-repeat broken strike"><i class="bi bi-x-circle-fill"></i>repeat<b>()</b>;</span>
+  <span class="note">// 404: not in the loop</span>
+}</pre>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

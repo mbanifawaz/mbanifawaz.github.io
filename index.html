@@ -28,6 +28,12 @@
   <!-- Preloader -->
   <div class="preloader" id="preloader" aria-hidden="true">
     <div class="preloader-mark">MBF</div>
+    <p class="preloader-code mono">
+      <span class="fn fn-eat">eat<b>()</b>;</span>
+      <span class="fn fn-sleep">sleep<b>()</b>;</span>
+      <span class="fn fn-code">code<b>()</b>;</span>
+      <span class="fn fn-repeat">repeat<b>()</b>;</span>
+    </p>
     <div class="preloader-bar"><span></span></div>
   </div>
 
@@ -320,6 +326,19 @@
       </div>
     </section>
   </main>
+
+  <!-- Easter egg: the daily loop -->
+  <section class="loop container" aria-label="The daily loop">
+    <div class="loop-card glass">
+      <div class="loop-bar mono" aria-hidden="true"><i></i><i></i><i></i><span>life.js</span></div>
+      <pre class="loop-code mono"><span class="kw">while</span> (<span class="var">alive</span>) {
+  <span class="fn fn-eat" data-step="0"><i class="bi bi-cup-hot-fill"></i>eat<b>()</b>;</span>
+  <span class="fn fn-sleep" data-step="1"><i class="bi bi-moon-stars-fill"></i>sleep<b>()</b>;</span>
+  <span class="fn fn-code" data-step="2"><i class="bi bi-code-slash"></i>code<b>()</b>;</span>
+  <span class="fn fn-repeat" data-step="3"><i class="bi bi-arrow-repeat"></i>repeat<b>()</b>;</span>
+}</pre>
+    </div>
+  </section>
 
   <footer class="footer container">
     <div>
