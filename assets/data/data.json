@@ -271,6 +271,12 @@
   },
   "testimonials": [
     {
+      "text": "I had the pleasure of working with Munis at Syarah, where he worked under my supervision as part of the team responsible for the ERP platform. Munis is an excellent developer with strong expertise in Python and backend development. He consistently demonstrated solid technical skills, strong problem-solving abilities, and the ability to understand complex business requirements and translate them into reliable technical solutions. He was a valuable member of the team, dependable in his work, and always willing to take ownership and collaborate with others to solve challenges.",
+      "image": "assets/img/testimonials/ftunsi.jpg",
+      "name": "Firas Al Tunsi",
+      "title": "Head of Engineering at Fadaat Media · Managed Munes at Syarah"
+    },
+    {
       "text": "I highly recommend Munes as a talented and dedicated programmer. His proficiency in programming languages is commendable, and he excels in problem-solving. During our time as colleagues, Munes consistently demonstrated his expertise in coding and was a valuable asset to the team. Notably, Munes played a crucial role in assisting me during our training period. His willingness to share knowledge and provide support greatly contributed to my learning experience. I have witnessed firsthand his exceptional problem-solving skills and creative approach to programming challenges. Munes's commitment to excellence and collaborative spirit make him an outstanding team member. I am confident that his skills and positive attitude will continue to make significant contributions wherever he goes.",
       "image": "assets/img/testimonials/aokasha.jpg",
       "name": "Ahmad Okasha",
