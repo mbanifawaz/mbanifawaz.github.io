@@ -682,6 +682,25 @@
           "Two-way webhooks with queued retries and full delivery logs",
           "New payment path added to a live ERPNext without touching current volume"
         ]
+      },
+      {
+        "category": "filter-project",
+        "image": "assets/img/portfolio/quote_factory.jpg",
+        "title": "Quote Factory",
+        "shortDescription": "A self-hosted pipeline that turns Arabic and English quotes into YouTube Shorts, never repeating a quote, style, clip or track, and publishes them on a schedule.",
+        "description": "Quote Factory is a self-hosted pipeline that turns <b>bilingual Arabic and English quotes into YouTube Shorts</b> and publishes them on a schedule, all from one web dashboard. One press of <b>Generate new</b> runs the whole chain: fetch a quote (alternating between authentic Arabic and English sources, so half the channel isn't translated), translate it, pick a background clip and a music track nobody has used, render, and write the title, description and hashtags. Then it stops and waits: <b>nothing uploads without a review and an approval</b>.<br><br>Every video is typed out letter by letter at one steady rhythm, Arabic then English then the author, with Arabic re-shaped at every step so the letters join correctly mid-word. Each render samples a point in a <b>design space of tens of millions of styles</b> (fonts, colour, layout, camera motion, grain and more), hashes it and refuses any style already used, and the same zero-repeat rule, enforced in the database, covers quotes, background clips and music. When the music library runs dry it composes a fresh ambient bed for that video alone.<br><br>Approved videos get publish slots at least four hours apart and go out through the YouTube Data API. A check every five minutes catches up on missed slots even after the machine was switched off. Views, retention and likes come back through the Analytics API, and an <b>insights</b> page compares performance by length, language, theme and music to answer what to make more of. A Telegram bot mirrors the dashboard: notifications, a daily summary, approvals and corrections to a translation from the chat.<br><br>It runs as three Docker containers (Postgres, a Flask dashboard behind gunicorn, and a job worker on a Postgres queue), and every outside service it uses has a free tier.",
+        "galleryGroup": "portfolio-gallery-project",
+        "stack": "Python | Flask | PostgreSQL | FFmpeg | Docker | YouTube Data API | Telegram Bot API | htmx | Tailwind",
+        "platform": "Web dashboard | Docker | YouTube Shorts",
+        "client": "Personal Project",
+        "projectDate": "Sep 19, 2026",
+        "projectURL": "https://www.youtube.com/@QuoteFactory-mbf",
+        "projectURLText": "YouTube Channel",
+        "highlights": [
+          "One button: quote, translation, clip, music, render and metadata",
+          "Zero repetition of quotes, styles, clips and music, enforced in the database",
+          "Scheduled publishing, analytics insights and Telegram control"
+        ]
       }
     ]
   },
