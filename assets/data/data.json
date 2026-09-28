@@ -277,6 +277,18 @@
       "title": "Head of Engineering at Fadaat Media · Managed Munes at Syarah"
     },
     {
+      "text": "I worked with Munes at Syarah as a technical lead on a different team, and we collaborated on multiple integrations and services connecting our platforms with the ERP system. Munes combines strong hands-on engineering with real leadership. His expertise in ERPNext/Frappe and Python is excellent, and he's equally comfortable with Kubernetes and DevOps, which made working with him smooth from design all the way to production. When we worked on integrations, he took ownership of the ERP side, asked the right questions early, and delivered clean, well-structured solutions. He also invests in his team through code reviews and mentoring, which shows in the quality of what his squad delivers. I highly recommend Munes to anyone looking for a senior engineer or lead who is both technically sharp and a great collaborator.",
+      "image": "assets/img/testimonials/aalsayed.jpg",
+      "name": "Abdallah Al-Sayed",
+      "title": "Technical Team Lead · Backend, Payments & Fintech · Worked with Munes at Syarah"
+    },
+    {
+      "text": "I highly recommend Munes. He is a genius at tech; nothing can stop him. He is motivated, and he continues to develop himself. I'm so happy I knew and worked with him.",
+      "image": "assets/img/testimonials/ialeisawi.jpg",
+      "name": "Issa Aleisawi",
+      "title": "Senior Software Quality Engineer · ISTQB® CTFL, CTFL-AT, PSM I"
+    },
+    {
       "text": "I highly recommend Munes as a talented and dedicated programmer. His proficiency in programming languages is commendable, and he excels in problem-solving. During our time as colleagues, Munes consistently demonstrated his expertise in coding and was a valuable asset to the team. Notably, Munes played a crucial role in assisting me during our training period. His willingness to share knowledge and provide support greatly contributed to my learning experience. I have witnessed firsthand his exceptional problem-solving skills and creative approach to programming challenges. Munes's commitment to excellence and collaborative spirit make him an outstanding team member. I am confident that his skills and positive attitude will continue to make significant contributions wherever he goes.",
       "image": "assets/img/testimonials/aokasha.jpg",
       "name": "Ahmad Okasha",
@@ -397,6 +409,26 @@
           "Alarms that survive Doze and battery saver and reschedule themselves",
           "One product on phone, Wear OS and Android TV",
           "Fully offline — no accounts, no ads, no tracking"
+        ]
+      },
+      {
+        "category": "filter-app",
+        "image": "assets/img/portfolio/kids_mode.png",
+        "title": "Kids Mode",
+        "shortDescription": "Hand your phone to your child safely: only the apps you choose, with the notification bar, settings and power menu locked away. No root needed.",
+        "description": "Kids Mode lets a parent hand their phone to a child safely: the child sees a friendly Kids screen with <b>only the apps the parent chose</b>, and nothing else is in reach. It brings back the Kids Mode that Transsion (TECNO / Infinix / itel) phones shipped with before an update removed it, and it works on any Android phone.<br><br>The <b>full lock</b> needs no root, no computer and no Shizuku: Kids Mode pairs once with the phone's <b>own Wireless debugging</b> and runs its own on-device ADB client, then switches off the notification bar, quick settings, recent apps and the power-button shortcuts at system level, and grants itself everything else it needs. An accessibility guard sends the child straight back to the Kids screen from any app, Settings, assistant or link they weren't allowed, and device admin stops it from being uninstalled. After a reboot the phone goes straight back to Kids Mode.<br><br>Parents get <b>time limits</b> and <b>forced breaks</b> that close the open app and show a break timer, a maximum volume, per-app usage for today and the last 7 days, and PIN, fingerprint or face unlock. <b>Eye comfort</b> adds a warm screen filter and a too-close warning that uses the proximity sensor or, on phones where it can't be used, the front camera with on-device ML Kit face detection, calibrated to each phone and nothing saved.<br><br>Phone calls still come through, a calm night-sky theme is gentler on young eyes, and every screen is in English and Arabic with a full right-to-left layout. No account, no ads, no tracking: nothing leaves the phone. Coming soon to Google Play.",
+        "galleryGroup": "portfolio-gallery-app",
+        "stack": "Kotlin | Jetpack Compose | ML Kit | On-device ADB | Accessibility Service",
+        "platform": "Android 8.0+ (full lock on Android 11+)",
+        "client": "Munes Bani Fawaz",
+        "projectDate": "Sep 27, 2026",
+        "projectURL": "#",
+        "projectURLText": "Coming soon to Google Play",
+        "featured": true,
+        "highlights": [
+          "Full system lock with no root: pairs with the phone's own Wireless debugging",
+          "Time limits, forced breaks and a max-volume cap, all unlocked by PIN or biometrics",
+          "Too-close eye warning with on-device ML Kit, nothing saved or sent"
         ]
       },
       {
