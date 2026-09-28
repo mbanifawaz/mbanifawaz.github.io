@@ -23,8 +23,10 @@ assets/vendor/        Bootstrap Icons and the EmailJS browser SDK
 
 Almost everything lives in `assets/data/data.json`:
 
-- `portfolio.items`: projects. Set `"featured": true` and add a `highlights` list to show a project
-  as a case study at the top of the Work section. Use `image` or `video` for the media.
+- `portfolio.items`: projects, shown **in the order they appear in the file** (the order is curated,
+  not by date). Set `"featured": true` and add a `highlights` list to show a project as a case
+  study at the top of the Work section; case studies follow the same order. Use `image` or `video`
+  for the media.
 - `resume.experience` / `resume.education`: the career timeline and education.
 - `skills.data`: skill names and levels (0–100).
 - `testimonials`: quotes, names, titles and photos.

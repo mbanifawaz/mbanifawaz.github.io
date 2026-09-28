@@ -352,10 +352,9 @@
 
   function renderWork({ filters, items }) {
     labels = Object.fromEntries(filters.map(f => [f.value.replace('.', ''), f.label]));
-    const year = i => parseInt((String(i.projectDate).match(/\d{4}/) || [0])[0], 10);
-    const sorted = items.map((it, idx) => ({ it, idx }))
-      .sort((a, b) => year(b.it) - year(a.it) || a.idx - b.idx)
-      .map(x => x.it);
+    // Shown in the order of data.json: that order is curated so the first
+    // projects show the range (languages, platforms, scale), not just the newest.
+    const sorted = items;
 
     // Featured case studies
     const featured = items.filter(i => i.featured);
